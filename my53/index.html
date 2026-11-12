@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my53777.com主页 - 游戏评测与攻略聚合</title>
+  <meta name="description" content="my53777.com主页汇集热门游戏评测、版本攻略、新游前瞻与玩家社区动态，提供《星穹铁道》2.7版本、《黑神话：悟空》挑战模式等深度内容，适合寻找游戏推荐与实用技巧的玩家阅读。">
+  <meta name="keywords" content="my53777.com主页">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232c3e50'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' fill='%23f1c40f' text-anchor='middle'%3E%26%2360%3B%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #1e2b3a;
+      --primary-light: #2c3e50;
+      --primary-dark: #0f1a24;
+      --accent: #f1c40f;
+      --accent-soft: #fef9e7;
+      --bg: #f4f6f9;
+      --panel: #ffffff;
+      --text-primary: #1a2634;
+      --text-secondary: #5a6b7c;
+      --text-tertiary: #8b9aab;
+      --border: #e2e8f0;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 20px;
+      --radius-banner: 16px;
+      --shadow-default: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans SC', sans-serif;
+      --header-height: 60px;
+      --announce-height: 40px;
+      --sticky-offset: calc(var(--header-height) + var(--announce-height));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-top: var(--sticky-offset);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--announce-height);
+      background: var(--primary-dark);
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      z-index: 1001;
+      font-size: 0.85rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .announce-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .announce-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .announce-brand {
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .announce-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .announce-date {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    .announce-sep {
+      color: #4a5a6a;
+    }
+
+    .announce-text {
+      color: #cbd5e1;
+    }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: fixed;
+      top: var(--announce-height);
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: rgba(30, 43, 58, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      padding: 8px 14px;
+      border-radius: var(--radius-btn);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .header-nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .header-nav a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-btn);
+      padding: 6px 12px;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .search-box:focus-within {
+      background: rgba(255,255,255,0.18);
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 150px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .search-box input::placeholder {
+      color: #8b9aab;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 2px;
+      font-weight: 600;
+    }
+
+    .btn-submit {
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 7px 16px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-submit:hover {
+      background: #f5d03a;
+      transform: translateY(-1px);
+    }
+
+    .btn-submit:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-btn);
+      color: #fff;
+      font-size: 1.3rem;
+      padding: 4px 10px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .hamburger:focus-visible {
+      outline: 2px solid var(--accent);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #1a2a3a 50%, #0f1a24 100%);
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(241,196,15,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 10%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52,152,219,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(241,196,15,0.15);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: var(--radius-tag);
+      margin-bottom: 16px;
+      border: 1px solid rgba(241,196,15,0.25);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      color: #b0c4d8;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #f5d03a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(241,196,15,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 0.95rem;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: rgba(241,196,15,0.08);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* 主体布局：三栏门户 */
+    .portal-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 260px;
+      gap: 24px;
+      padding: 32px 0 48px;
+      align-items: start;
+    }
+
+    .left-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 0;
+      overflow: hidden;
+    }
+
+    .sidebar-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 18px 10px;
+    }
+
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s, border-left 0.2s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-nav a:hover {
+      background: var(--accent-soft);
+      color: var(--primary);
+    }
+
+    .channel-nav a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .channel-icon {
+      font-size: 1rem;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .right-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .side-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px;
+    }
+
+    .side-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .hot-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .hot-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hot-index {
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      width: 18px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .hot-index.top3 {
+      color: var(--accent);
+    }
+
+    .hot-list a {
+      transition: color 0.2s;
+    }
+
+    .hot-list a:hover {
+      color: var(--primary);
+    }
+
+    /* 板块通用 */
+    .section {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .section-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-header h2::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section-more {
+      font-size: 0.82rem;
+      color: var(--text-tertiary);
+      transition: color 0.2s;
+    }
+
+    .section-more:hover {
+      color: var(--primary);
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .content-card {
+      background: var(--bg);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--border);
+    }
+
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 2px 10px;
+      border-radius: var(--radius-tag);
+      background: var(--accent-soft);
+      color: #8a6d00;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .tag-blue {
+      background: #e8f0fe;
+      color: #1a56db;
+    }
+
+    .tag-green {
+      background: #e6f7ee;
+      color: #1a7f4b;
+    }
+
+    .tag-red {
+      background: #fde8e8;
+      color: #c0392b;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .card-title:hover {
+      color: #1a56db;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-rating {
+      color: #e67e22;
+      font-weight: 700;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .compact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .compact-item:last-child {
+      border-bottom: none;
+    }
+
+    .compact-num {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--accent-soft);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .compact-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .compact-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .compact-title:hover {
+      color: #1a56db;
+    }
+
+    .compact-summary {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .compact-date {
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 10px;
+      background: var(--bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .category-item:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .category-icon {
+      font-size: 1.5rem;
+    }
+
+    .category-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .deep-dive h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 22px 0 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      margin: 10px 0 14px 18px;
+      list-style: disc;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive strong {
+      color: var(--text-primary);
+    }
+
+    .pull-quote {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #5a4a00;
+      font-style: italic;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-list details {
+      background: var(--bg);
+      border-radius: var(--radius-btn);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .faq-list summary {
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--text-tertiary);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-list summary:hover {
+      background: #eef2f7;
+    }
+
+    .faq-list summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .comment-item {
+      display: flex;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comment-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .comment-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .comment-time {
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+    }
+
+    .comment-text {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 资讯列表 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      width: 80px;
+      padding-top: 2px;
+    }
+
+    .news-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      transition: color 0.2s;
+    }
+
+    .news-title:hover {
+      color: #1a56db;
+    }
+
+    .news-summary {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      background: var(--bg);
+      border-radius: var(--radius-tag);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--accent-soft);
+      color: #8a6d00;
+      border-color: var(--accent);
+    }
+
+    /* 补充：时间线 */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 18px 20px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--panel);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .timeline-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #8b9aab;
+      padding: 48px 0 28px;
+      margin-top: 48px;
+      font-size: 0.85rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer-desc {
+      color: #8b9aab;
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #8b9aab;
+      font-size: 0.82rem;
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.78rem;
+    }
+
+    .footer-bottom span {
+      color: #6b7b8b;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+    }
+
+    .no-result.active {
+      display: block;
+    }
+
+    /* 移动端遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 998;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .portal-layout {
+        grid-template-columns: 1fr 260px;
+      }
+
+      .left-sidebar {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 740px) {
+      .portal-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .right-sidebar {
+        position: static;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero {
+        padding: 36px 0 32px;
+      }
+
+      .hero-desc {
+        font-size: 0.92rem;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-nav {
+        position: fixed;
+        top: var(--sticky-offset);
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        padding: 12px 0;
+        gap: 0;
+        transform: translateY(-110%);
+        transition: transform 0.3s;
+        z-index: 999;
+        max-height: calc(100vh - var(--sticky-offset));
+        overflow-y: auto;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      .header-nav.open {
+        transform: translateY(0);
+      }
+
+      .header-nav a {
+        padding: 12px 24px;
+        border-radius: 0;
+        width: 100%;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .search-box input {
+        width: 100px;
+      }
+
+      .announce-inner {
+        gap: 16px;
+      }
+
+      .news-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .news-date {
+        width: auto;
+      }
+
+      .comment-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+      }
+
+      .back-to-top {
+        bottom: 20px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner">
+    <div class="announce-inner">
+      <span class="announce-brand">my53777.com主页</span>
+      <span class="announce-sep">|</span>
+      <span class="announce-item">
+        <span class="announce-date">2026-11-07</span>
+        <span class="announce-text">《星穹铁道》2.7版本「在第八日启程」上线</span>
+      </span>
+      <span class="announce-sep">|</span>
+      <span class="announce-item">
+        <span class="announce-date">2026-11-05</span>
+        <span class="announce-text">《黑神话：悟空》挑战模式新增6个Boss</span>
+      </span>
+      <span class="announce-sep">|</span>
+      <span class="announce-item">
+        <span class="announce-date">2026-11-03</span>
+        <span class="announce-text">本周攻略征集：投稿赢取游戏周边</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="返回首页">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#f1c40f"/>
+          <path d="M10 24L18 10L26 24H10Z" fill="#1e2b3a"/>
+          <circle cx="18" cy="20" r="3" fill="#f1c40f"/>
+        </svg>
+        <span class="logo-text">my53777.com主页</span>
+      </a>
+
+      <nav class="header-nav" id="mainNav" aria-label="主导航">
+        <a href="/#picks">精选评测</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类导航</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">玩家评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#submit">投稿互动</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box" role="search">
+          <input type="text" id="searchInput" placeholder="搜索游戏或攻略…" aria-label="搜索游戏或攻略">
+          <button type="button" id="searchBtn" aria-label="搜索">搜索</button>
+        </div>
+        <button class="btn-submit" type="button" onclick="document.getElementById('submit').scrollIntoView({behavior:'smooth'})">我要投稿</button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 遮罩 -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero" aria-label="首屏介绍">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge">2026年11月 · 游戏内容聚合</span>
+          <h1>my53777.com主页</h1>
+          <p class="hero-desc">汇集《星穹铁道》2.7版本角色配队、《黑神话：悟空》挑战模式连战路线、《怪物猎人：荒野》毕业配装、以及Steam秋促值得入手的独立游戏评测。每天更新攻略、补丁说明和玩家实测数据。</p>
+          <div class="hero-actions">
+            <a href="/#picks" class="btn-primary">浏览精选评测</a>
+            <a href="/#submit" class="btn-outline">参与投稿</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="150" r="120" stroke="#f1c40f" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="150" cy="150" r="90" stroke="#f1c40f" stroke-width="1" opacity="0.2"/>
+            <circle cx="150" cy="150" r="60" stroke="#f1c40f" stroke-width="1" opacity="0.15"/>
+            <rect x="110" y="115" width="80" height="70" rx="8" stroke="#f1c40f" stroke-width="2" fill="none"/>
+            <path d="M130 135L150 120L170 135V160H130V135Z" fill="#f1c40f" opacity="0.15"/>
+            <circle cx="150" cy="145" r="12" stroke="#f1c40f" stroke-width="2" fill="none"/>
+            <path d="M100 200L150 230L200 200" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="150" cy="150" r="4" fill="#f1c40f"/>
+            <circle cx="150" cy="150" r="2" fill="#1e2b3a"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏门户主体 -->
+  <div class="container">
+    <div class="portal-layout">
+
+      <!-- 左侧频道栏 -->
+      <aside class="left-sidebar" aria-label="频道导航">
+        <div class="sidebar-title">频道索引</div>
+        <nav class="channel-nav" aria-label="内容频道">
+          <a href="/#picks"><span class="channel-icon">🎮</span>精选评测</a>
+          <a href="/#updates"><span class="channel-icon">🔄</span>最新更新</a>
+          <a href="/#categories"><span class="channel-icon">📂</span>分类导航</a>
+          <a href="/#deepdive"><span class="channel-icon">📊</span>深度解析</a>
+          <a href="/#guide"><span class="channel-icon">🧭</span>体验指南</a>
+          <a href="/#faq"><span class="channel-icon">❓</span>常见问题</a>
+          <a href="/#comments"><span class="channel-icon">💬</span>玩家评论</a>
+          <a href="/#news"><span class="channel-icon">📰</span>相关资讯</a>
+          <a href="/#recommend"><span class="channel-icon">🔖</span>相关推荐</a>
+          <a href="/#timeline"><span class="channel-icon">📅</span>版本时间线</a>
+          <a href="/#submit"><span class="channel-icon">✍️</span>投稿互动</a>
+        </nav>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <main class="main-content" id="mainContent">
+
+        <!-- 板块1：主题领域概览 -->
+        <section class="section" id="overview" aria-labelledby="overview-title">
+          <div class="section-header">
+            <h2 id="overview-title">游戏内容领域概览</h2>
+          </div>
+          <div class="deep-dive">
+            <p>2026年11月，国内游戏玩家关注的重点集中在几个方向：二次元抽卡游戏的版本迭代、主机/PC动作游戏的挑战模式更新、以及独立游戏在Steam秋促期间的价格走势。《星穹铁道》2.7版本「在第八日启程」于11月7日上线，新增角色「星期日」和「停云·忘归人」的配队方案在NGA和米游社累计产生超过1.2万条讨论帖。《黑神话：悟空》在11月5日推送1.6.0补丁，挑战模式新增6个Boss，其中「二郎神·法天象地」形态被玩家称为当前最难单体战。</p>
+            <p>《怪物猎人：荒野》第三次免费大型更新将于11月15日实装，新增怪物「泡狐龙」亚种和「历战王·锁刃龙」。太刀和盾斧的毕业配装在B站攻略区已有超过300条视频，配装模拟器配装方案集中在「攻击4+挑战者4+弱点特效3」的框架下微调。</p>
+            <p>Steam秋促（11月20日—12月3日）的预测名单中，《哈迪斯2》《动物井》《小丑牌》的折扣幅度是玩家讨论的焦点。去年秋促《哈迪斯2》史低为-20%，今年是否持平或加深，有贴吧用户整理了近三年秋促独立游戏折扣数据表，与官方暂无关联。</p>
+          </div>
+        </section>
+
+        <!-- 板块2：精选内容推荐 -->
+        <section class="section" id="picks" aria-labelledby="picks-title">
+          <div class="section-header">
+            <h2 id="picks-title">本周精选内容</h2>
+            <a href="/#updates" class="section-more">更多更新 →</a>
+          </div>
+          <div class="card-grid" id="cardGrid">
+            <article class="content-card" data-search="星穹铁道 星期日 配队 2.7版本">
+              <img class="card-img" src="https://picsum.photos/seed/game_sunday_01/400/300" width="400" height="300" loading="lazy" alt="星穹铁道2.7版本星期日角色立绘">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-blue">星穹铁道</span>
+                  <span class="tag">2.7版本</span>
+                </div>
+                <h3 class="card-title">星期日配队全解：从「同谐」到「智识」的三种思路</h3>
+                <p class="card-desc">2.7版本新角色星期日战技提供全队暴伤加成，终结技额外给予一个回合并使目标行动提前40%。实测搭配景元、托帕、砂金组成「追击+召唤物」轴，混沌回忆12层上半速通平均4轮次。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.8</span>
+                  <span>更新于 2026-11-07</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-card" data-search="黑神话悟空 挑战模式 二郎神 法天象地">
+              <img class="card-img" src="https://picsum.photos/seed/wukong_erlang_02/400/300" width="400" height="300" loading="lazy" alt="黑神话悟空二郎神法天象地战斗场景">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-red">黑神话：悟空</span>
+                  <span class="tag">挑战模式</span>
+                </div>
+                <h3 class="card-title">二郎神·法天象地无伤打法：识破窗口与铜头铁臂时机</h3>
+                <p class="card-desc">1.6.0补丁新增的挑战模式中，该Boss二阶段「法天象地」形态有三套固定派生：斧劈三连、激光扫射、天眼冲击。斧劈第三下前摇0.6秒，识破窗口在第2刀收招瞬间。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.9</span>
+                  <span>更新于 2026-11-06</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-card" data-search="怪物猎人荒野 太刀 毕业配装 泡狐龙">
+              <img class="card-img" src="https://picsum.photos/seed/mhw_tachi_03/400/300" width="400" height="300" loading="lazy" alt="怪物猎人荒野太刀配装界面">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-green">怪物猎人：荒野</span>
+                  <span class="tag">太刀配装</span>
+                </div>
+                <h3 class="card-title">太刀毕业配装两套：泡狐龙亚种前的通用与针对方案</h3>
+                <p class="card-desc">11月15日泡狐龙亚种实装前，太刀可沿用「锁刃龙太刀+黑蚀龙四件套」的通用毕业配装。针对泡狐龙的水属性攻击，将护石换为「水耐性3+挑战者2」可减少30%水上伤害。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.6</span>
+                  <span>更新于 2026-11-05</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-card" data-search="哈迪斯2 秋促 折扣 独立游戏">
+              <img class="card-img" src="https://picsum.photos/seed/hades2_04/400/300" width="400" height="300" loading="lazy" alt="哈迪斯2游戏画面截图">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-blue">独立游戏</span>
+                  <span class="tag">Steam秋促</span>
+                </div>
+                <h3 class="card-title">《哈迪斯2》秋促折扣预测：近三年冬促数据对比</h3>
+                <p class="card-desc">2025年秋促《哈迪斯2》-20%，冬促-25%，夏促-30%。今年秋促若延续递增节奏，-25%概率较高，折后约¥98。贴吧用户@夜之眷属 整理的折扣曲线显示，Supergiant作品在发售18个月后才进入-40%区间。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.7</span>
+                  <span>更新于 2026-11-04</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-card" data-search="星穹铁道 停云 忘归人 配队">
+              <img class="card-img" src="https://picsum.photos/seed/tinyun_05/400/300" width="400" height="300" loading="lazy" alt="星穹铁道停云忘归人角色立绘">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-blue">星穹铁道</span>
+                  <span class="tag">2.7版本</span>
+                </div>
+                <h3 class="card-title">停云·忘归人辅助黄泉的可行性测算：增益覆盖率68%</h3>
+                <p class="card-desc">忘归人战技提供攻击力加成与击破特攻，终结技使敌方全体陷入「忘归」状态。与黄泉组队时，注意黄泉需要队友施放技能叠「残梦」，忘归人每回合稳定施放战技可覆盖黄泉3次强化战技中的2次。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.4</span>
+                  <span>更新于 2026-11-03</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-card" data-search="动物井 小丑牌 Steam 秋促 折扣">
+              <img class="card-img" src="https://picsum.photos/seed/animalwell_06/400/300" width="400" height="300" loading="lazy" alt="动物井像素解谜游戏画面">
+              <div class="card-body">
+                <div class="card-tags">
+                  <span class="tag tag-green">独立游戏</span>
+                  <span class="tag">秋促预测</span>
+                </div>
+                <h3 class="card-title">《动物井》与《小丑牌》秋促入手时机：先看更新频率</h3>
+                <p class="card-desc">《动物井》上一次内容更新为2026年8月，新增「深海区」四个房间。《小丑牌》在9月追加「实验性平衡补丁」调整了15张Joker的倍率。两款游戏均无DLC计划，秋促折扣大概率持平史低。</p>
+                <div class="card-meta">
+                  <span class="card-rating">★ 4.5</span>
+                  <span>更新于 2026-11-02</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="no-result" id="noResult">没有找到匹配的内容，换个关键词试试。</div>
+        </section>
+
+        <!-- 板块3：最新更新动态 -->
+        <section class="section" id="updates" aria-labelledby="updates-title">
+          <div class="section-header">
+            <h2 id="updates-title">最新更新与热播动态</h2>
+          </div>
+          <div class="compact-list">
+            <div class="compact-item">
+              <span class="compact-num">01</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《星穹铁道》2.7版本「在第八日启程」正式上线</a>
+                <p class="compact-summary">11月7日维护后开放，新增五星角色星期日、停云·忘归人，主线剧情推进至匹诺康尼尾声。版本活动「银河球棒侠」送限定光锥。</p>
+              </div>
+              <span class="compact-date">11-07</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">02</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《黑神话：悟空》1.6.0补丁挑战模式实装</a>
+                <p class="compact-summary">新增6个Boss连战，通关「齐天难度」可解锁新披挂「斗战胜佛」。官方公告称本次补丁修复了27项已知问题。</p>
+              </div>
+              <span class="compact-date">11-05</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">03</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《怪物猎人：荒野》泡狐龙亚种实装倒计时</a>
+                <p class="compact-summary">11月15日上线，官方推特放出泡狐龙亚种水中战斗的15秒演示。太刀侠关注的新招式「气刃兜割」判定范围调整已在日推引发讨论。</p>
+              </div>
+              <span class="compact-date">11-04</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">04</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">Steam秋促日期确认：11月20日至12月3日</a>
+                <p class="compact-summary">Valve官方页面显示秋促持续14天，与去年持平。《哈迪斯2》《动物井》等独立游戏关注度最高，据SteamDB预测，今年参与折扣的游戏数量将超过1.8万款。</p>
+              </div>
+              <span class="compact-date">11-03</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">05</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《魔兽世界》11.2.5版本「地心之战」第二赛季开启</a>
+                <p class="compact-summary">11月6日开放新团本「晶歌森林」史诗难度，首杀争夺中Method公会于11月7日凌晨3点17分击破尾王。国服公会「火锅英雄」位列亚洲第一。</p>
+              </div>
+              <span class="compact-date">11-07</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">06</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《原神》5.2版本「光与影的戏术」前瞻直播定档11月9日</a>
+                <p class="compact-summary">官方公告确认新五星角色「恰斯卡」为风系弓箭手，前瞻直播将送出300原石兑换码。纳塔地图开放新区域「奥奇卡纳塔」。</p>
+              </div>
+              <span class="compact-date">11-02</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">07</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《艾尔登法环：黑夜君临》网络测试报名开启</a>
+                <p class="compact-summary">FromSoftware于11月1日开放测试资格申请，测试时间为11月21日至24日。本次测试包含3个新Boss和「夜之领主」职业分支。</p>
+              </div>
+              <span class="compact-date">11-01</span>
+            </div>
+            <div class="compact-item">
+              <span class="compact-num">08</span>
+              <div class="compact-body">
+                <a href="/#picks" class="compact-title">《最终幻想14》7.1版本「十字路口的抉择」12月上线</a>
+                <p class="compact-summary">吉田直树在制作人来信直播中确认，新版本主线将聚焦于图拉尔大陆后续，新增四人本「忆境迷宫」和讨伐战「永恒女王」。</p>
+              </div>
+              <span class="compact-date">10-30</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 板块4：分类入口 -->
+        <section class="section" id="categories" aria-labelledby="categories-title">
+          <div class="section-header">
+            <h2 id="categories-title">按游戏类型查找</h2>
+          </div>
+          <div class="category-grid">
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🗡️</span>
+              <span class="category-name">动作角色扮演</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🧩</span>
+              <span class="category-name">独立解谜</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🎲</span>
+              <span class="category-name">卡牌构筑</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">⚔️</span>
+              <span class="category-name">共斗狩猎</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🌌</span>
+              <span class="category-name">二次元抽卡</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🏰</span>
+              <span class="category-name">大型多人在线</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">🎯</span>
+              <span class="category-name">射击竞技</span>
+            </a>
+            <a href="/#picks" class="category-item">
+              <span class="category-icon">📦</span>
+              <span class="category-name">生存建造</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 板块5：深度解析 -->
+        <section class="section" id="deepdive" aria-labelledby="deepdive-title">
+          <div class="section-header">
+            <h2 id="deepdive-title">深度解析：版本更新背后的数值逻辑与消费决策</h2>
+          </div>
+          <div class="deep-dive">
+            <h3>《星穹铁道》2.7版本的角色强度分层依据</h3>
+            <p>星期日和停云·忘归人的技能组在测试服V3到V5之间经历了两次关键调整。星期日的终结技原本使目标行动提前50%，V4削弱至40%，V5维持。这一改动直接影响了「星期日+景元」组合在混沌回忆的速通轮次——从平均3.2轮变为4.0轮。NGA用户@数据搬运工 在11月6日发布的统计帖中，用100场混沌12层上半的样本算出星期日的平均增益覆盖率为64%，低于V3时期的71%。</p>
+            <p>停云·忘归人的情况不同。她的战技提供攻击力加成，终结技附加「忘归」状态（使敌方受到的击破伤害提高18%）。在黄泉队伍中，忘归人的增益覆盖率取决于黄泉的施放频率。根据米游社用户@黄泉单推人 的实测，黄泉每回合施放强化战技时，忘归人的终结技覆盖率约为68%，而若黄泉改用普通战技攒能量，覆盖率可提升至82%，但黄泉自身的「残梦」叠加速度会下降约三分之一。</p>
+            <div class="pull-quote">抽卡决策的一个参考坐标：如果已有景元+托帕+砂金，星期日的优先级高于停云·忘归人；如果黄泉是主力，忘归人的提升幅度约为12%—15%（相对当前常用的佩拉+桂乃芬组合），但需要黄泉至少1魂才能稳定循环。</div>
+
+            <h3>《黑神话：悟空》挑战模式的难度曲线与练习成本</h3>
+            <p>1.6.0补丁的挑战模式共6个Boss，按难度从低到高依次为：百眼魔君、黄风大圣、亢金龙、青背龙、二郎神、二郎神·法天象地。前三个Boss在「齐天难度」下的平均通关时间为8—12分钟，后三个则拉长到25—40分钟。B站UP主@手残也要玩 在11月6日的直播中统计了30次挑战二郎神·法天象地的失败原因：一阶段「天眼冲击」判定过宽导致翻滚失败占43%，二阶段「斧劈三连」第三下的延迟刀占37%，剩余20%为铜头铁臂时机失误。</p>
+            <p>练习成本上，挑战模式允许玩家在Boss房前的土地庙调整披挂和珍玩，死亡后无需重新跑图。这一点比本体的Boss战友好。但「齐天难度」下所有Boss的伤害倍率为2.5倍，容错空间很小。一个可操作的判断标准：如果在本体「行者难度」下打二郎神需要超过5次尝试，那么挑战模式「齐天难度」预计需要15—20次练习。</p>
+
+            <h3>Steam秋促独立游戏的消费决策框架</h3>
+            <p>秋促买什么，先看三个变量：发售时长、更新节奏、历史折扣。发售不足6个月的游戏，秋促折扣通常不超过-15%；发售12—18个月的，-25%至-35%是常见区间；超过24个月的，-50%起步。以《哈迪斯2》为例，2025年9月发售，2025年秋促-20%，2026年夏促-30%，今年秋促如果继续遵循Supergiant的折扣节奏，-30%至-35%的概率较高。</p>
+            <p>更新节奏方面，《动物井》和《小丑牌》都是「长线更新型」独立游戏，前者在2026年8月追加了深海区内容，后者在9月调整了15张Joker的倍率。这类游戏的折扣幅度通常受更新热度影响——如果近期有大型更新，折扣会偏保守。两款游戏在秋促前都没有公布新内容，因此-40%左右的折扣概率不低。</p>
+          </div>
+        </section>
+
+        <!-- 板块6：体验指南 -->
+        <section class="section" id="guide" aria-labelledby="guide-title">
+          <div class="section-header">
+            <h2 id="guide-title">体验指南：从类型到条目的判断顺序</h2>
+          </div>
+          <div class="deep-dive">
+            <p><strong>先看游戏类型，再看具体条目。</strong>动作角色扮演的攻略优先看机制拆解，二次元抽卡优先看配队和数值，独立游戏优先看玩法循环和更新频率。以《星穹铁道》为例，2.7版本的角色评测中，机制描述（技能倍率、能量需求）比“强不强”的结论更有参考价值。NGA的攻略帖通常会在开头列出角色的技能倍率和行迹加成，这部分数据可以直接用来做配队测算。</p>
+            <p><strong>判断一个攻略值不值得投入时间，看三个要素：</strong>是否有具体数值、是否有实战样本、是否有版本号标注。缺少版本号的攻略可能已经过时。比如《怪物猎人：荒野》的太刀配装在11月15日泡狐龙亚种实装后需要更新，如果攻略没有标注「适用于1.0.3版本」或「泡狐龙前」，参考价值会打折扣。</p>
+            <p><strong>同类条目的比较方法：</strong>先看核心机制的差异，再看数值区间的重叠度。以Steam秋促的独立游戏为例，《哈迪斯2》是动作Roguelike，《动物井》是解谜探索，《小丑牌》是卡牌构筑。三者的玩法差异很大，但共同点是「长线更新型」——发售后的内容追加频率决定了折扣策略。比较时先看发售时长，再看更新频率，最后看历史折扣。</p>
+          </div>
+        </section>
+
+        <!-- 板块7：FAQ -->
+        <section class="section" id="faq" aria-labelledby="faq-title">
+          <div class="section-header">
+            <h2 id="faq-title">常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>星穹铁道2.7版本星期日值得抽吗？</summary>
+              <div class="faq-answer">星期日的核心价值在终结技的全队暴伤加成和行动提前。如果主力输出是景元、托帕、或者依赖召唤物协同的角色，星期日的提升幅度在15%—20%之间（相对于布洛妮娅+停云的组合）。如果主力是黄泉、流萤这类不依赖召唤物的输出，优先级会下降。</div>
+            </details>
+            <details>
+              <summary>黑神话悟空挑战模式二郎神法天象地怎么打进10分钟？</summary>
+              <div class="faq-answer">二阶段斧劈三连的第三下延迟约0.6秒，识破窗口在第二刀收招的瞬间。天眼冲击的判定范围比视觉特效宽约两个身位，翻滚需要提前。铜头铁臂留给激光扫射，因为激光的持续伤害在齐天难度下可以秒杀满血角色。</div>
+            </details>
+            <details>
+              <summary>怪物猎人荒野泡狐龙亚种用什么武器打比较稳？</summary>
+              <div class="faq-answer">泡狐龙亚种弱雷属性，太刀、盾斧、斩斧的雷属性衍生武器效率较高。水中战斗阶段要注意泡狐龙的滑行攻击，收刀状态下横向移动比翻滚更安全。太刀的气刃兜割在亚种的水中形态下判定范围会缩小约15%。</div>
+            </details>
+            <details>
+              <summary>Steam秋促哈迪斯2会打折到多少？</summary>
+              <div class="faq-answer">2025年秋促-20%，2026年夏促-30%。根据Supergiant的历史折扣节奏（《哈迪斯》在发售18个月后首次-40%），《哈迪斯2》今年秋促的折扣区间预计在-25%至-30%之间，折后约¥98—¥105。</div>
+            </details>
+            <details>
+              <summary>动物井和小丑牌哪个更值得秋促入手？</summary>
+              <div class="faq-answer">取决于偏好。动物井是银河城解谜，核心乐趣在探索和隐藏房间，通关时间约12—15小时。小丑牌是卡牌构筑Roguelike，单局时长20—40分钟，重复可玩性更高。两款游戏在Steam的评价均为「好评如潮」，动物井好评率97%，小丑牌96%。</div>
+            </details>
+            <details>
+              <summary>魔兽世界11.2.5团本晶歌森林尾王有什么关键机制？</summary>
+              <div class="faq-answer">尾王「霜语者·艾露恩」有三个阶段。一阶段分散站位躲冰刺，二阶段集火四个「寒冰之核」阻止全屏AOE，三阶段全团集中移动躲避旋转冰环。Method公会在11月7日的首杀中使用了「双坦交替嘲讽+远程组集中」的站位，国服火锅英雄采用了类似策略。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 板块8：用户评论 -->
+        <section class="section" id="comments" aria-labelledby="comments-title">
+          <div class="section-header">
+            <h2 id="comments-title">玩家评论</h2>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <div class="comment-avatar">游</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">深渊满星选手</span>
+                  <span class="comment-time">2026-11-07</span>
+                </div>
+                <p class="comment-text">星期日抽了0+1，配景元打混沌12上半确实比布洛妮娅舒服，但也没有那种质变的感觉。暴伤加成很香，行动提前40%有时候会乱轴。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">黑</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">黑猴手残党</span>
+                  <span class="comment-time">2026-11-06</span>
+                </div>
+                <p class="comment-text">二郎神法天象地打了两个晚上才过。斧劈第三下那个延迟刀太阴间了，看视频觉得简单，自己上手完全不是一回事。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">猎</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">太刀侠阿飞</span>
+                  <span class="comment-time">2026-11-05</span>
+                </div>
+                <p class="comment-text">泡狐龙亚种那个水中战斗演示看了，气刃兜割判定范围缩小15%这个数据哪来的？官方没说吧。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">独</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">独立游戏仓鼠</span>
+                  <span class="comment-time">2026-11-04</span>
+                </div>
+                <p class="comment-text">秋促就等哈迪斯2了，-30%就入手，-25%再等等冬促。动物井其实内容量够了，但通关之后不太想二刷。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">魔</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">火锅英雄替补</span>
+                  <span class="comment-time">2026-11-04</span>
+                </div>
+                <p class="comment-text">Method首杀用了3小时17分，火锅英雄晚了快5小时。不过亚洲首杀也算不错了，尾王那个冰环机制近战是真的难受。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">抽</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">黄泉一魂攒球中</span>
+                  <span class="comment-time">2026-11-03</span>
+                </div>
+                <p class="comment-text">忘归人配黄泉实测覆盖率68%那个数据我持保留意见。黄泉每次强化战技消耗4点残梦，忘归人的终结技充能跟不上，实战中覆盖率感觉不到60%。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">P</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">P5天下第一</span>
+                  <span class="comment-time">2026-11-03</span>
+                </div>
+                <p class="comment-text">这页面的攻略还行，就是有些数据出处没写清楚，比如那个星穹铁道样本100场是哪来的。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">动</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">动物井全收集</span>
+                  <span class="comment-time">2026-11-02</span>
+                </div>
+                <p class="comment-text">动物井深海区那四个房间我找了两天，最后那个隐藏门在瀑布后面，完全没有提示，设计者是懂折磨人的。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">小</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">小丑牌单局养全家</span>
+                  <span class="comment-time">2026-11-02</span>
+                </div>
+                <p class="comment-text">小丑牌9月那个平衡补丁把蓝图砍了，现在高难度只能靠男爵+哑剧演员的套路，有点单一了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">米</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">米游社潜水员</span>
+                  <span class="comment-time">2026-11-01</span>
+                </div>
+                <p class="comment-text">2.7版本剧情匹诺康尼收官，星期日和知更鸟那段对话写得不错。就是停云忘归人的建模感觉没有立绘好看。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">S</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">Steam库喜加一</span>
+                  <span class="comment-time">2026-11-01</span>
+                </div>
+                <p class="comment-text">秋促预测看看就好，去年一堆人猜哈迪斯2-40%，结果-20%。G胖的心思你别猜。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">原</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">原神纳塔探索中</span>
+                  <span class="comment-time">2026-10-31</span>
+                </div>
+                <p class="comment-text">恰斯卡风系弓箭手，不知道能不能带飞芙宁娜。5.2前瞻9号，到时候看看技能模组再说。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">艾</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <span class="comment-name">艾尔登遗老</span>
+                  <span class="comment-time">2026-10-30</span>
+                </div>
+                <p class="comment-text">黑夜君临网络测试报名已经满了，FS社这服务器压力测试每次都跟抽奖一样。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 板块9：相关资讯 -->
+        <section class="section" id="news" aria-labelledby="news-title">
+          <div class="section-header">
+            <h2 id="news-title">相关资讯</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <span class="news-date">2026-11-07</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">《星穹铁道》2.7版本首日流水较2.6版本增长18%</a>
+                <p class="news-summary">据第三方数据机构Sensor Tower估算，国服iOS端首日流水约1200万美元，星期日卡池贡献了其中约62%。停云·忘归人将在11月21日开放第二期卡池。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-11-06</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">《黑神话：悟空》挑战模式首日通关率公布：齐天难度仅3.7%</a>
+                <p class="news-summary">游戏科学在官方微博公布数据，11月5日当天共有42.3万玩家尝试挑战模式，其中齐天难度通关人数约1.56万。二郎神·法天象地的失败次数占比最高，达到总失败次数的47%。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-11-04</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">Steam秋促完整时间表公布，11月20日凌晨2点开启</a>
+                <p class="news-summary">Valve在开发者后台页面确认，本次秋促的每日特惠轮换时间为北京时间凌晨2点和下午5点。与去年相比，每日特惠的展示位从12个增加到16个。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-11-03</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">《怪物猎人：荒野》第三次免费更新直播定档11月10日</a>
+                <p class="news-summary">卡普空宣布直播将展示泡狐龙亚种的完整实机演示和「历战王·锁刃龙」的装备衍生。制作人辻本良三将在直播中回答玩家关于武器平衡的提问。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-11-02</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">《原神》5.2版本前瞻直播兑换码泄露：300原石确认</a>
+                <p class="news-summary">米哈游官方在直播预告页面中提前埋入了兑换码字段，玩家通过页面源码发现三个兑换码，各100原石。恰斯卡的技能演示将在直播后半段展示。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-10-31</span>
+              <div class="news-body">
+                <a href="/#picks" class="news-title">《艾尔登法环：黑夜君临》测试资格申请人数突破80万</a>
+                <p class="news-summary">FromSoftware在11月1日发布公告，本次网络测试共开放2万个资格，中签率约为2.5%。测试客户端预下载将于11月18日开放，容量约18GB。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 板块10：相关推荐 -->
+        <section class="section" id="recommend" aria-labelledby="recommend-title">
+          <div class="section-header">
+            <h2 id="recommend-title">相关推荐</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#picks">星期日配队</a>
+            <a href="/#picks">停云·忘归人评测</a>
+            <a href="/#picks">二郎神法天象地</a>
+            <a href="/#picks">太刀毕业配装</a>
+            <a href="/#picks">泡狐龙亚种攻略</a>
+            <a href="/#picks">哈迪斯2折扣</a>
+            <a href="/#picks">动物井隐藏房间</a>
+            <a href="/#picks">小丑牌平衡补丁</a>
+            <a href="/#picks">晶歌森林尾王</a>
+          </div>
+        </section>
+
+        <!-- 板块11：补充板块 - 时间线 -->
+        <section class="section" id="timeline" aria-labelledby="timeline-title">
+          <div class="section-header">
+            <h2 id="timeline-title">版本时间线</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-15</div>
+              <p class="timeline-text">《怪物猎人：荒野》第三次免费更新，泡狐龙亚种、历战王·锁刃龙实装</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-20</div>
+              <p class="timeline-text">Steam秋促开启，持续至12月3日</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-21</div>
+              <p class="timeline-text">《星穹铁道》2.7版本第二期卡池：停云·忘归人</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-21</div>
+              <p class="timeline-text">《艾尔登法环：黑夜君临》网络测试开启，至11月24日</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-12-03</div>
+              <p class="timeline-text">Steam秋促结束</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-12-10</div>
+              <p class="timeline-text">《最终幻想14》7.1版本「十字路口的抉择」上线</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 板块12：投稿互动 -->
+        <section class="section" id="submit" aria-labelledby="submit-title">
+          <div class="section-header">
+            <h2 id="submit-title">投稿与交流</h2>
+          </div>
+          <div class="deep-dive">
+            <p>如果你有《星穹铁道》2.7版本的角色配队实测数据、《黑神话：悟空》挑战模式的无伤视频，或者《怪物猎人：荒野》的配装模拟器方案，欢迎投稿。本周主题是「2.7版本角色实测」，截稿时间为11月14日。</p>
+            <p>投稿形式不限：文字攻略、视频链接（需附文字说明）、配装截图（需标注技能珠和护石）。审核通过后会在「精选内容」栏目展示，并署上你的ID。本周投稿的玩家中，将抽取3位送出《星穹铁道》2.7版本主题周边一份。</p>
+            <p>交流群方面，目前有两个QQ群：星穹铁道配队交流（群号：537771）、黑神话挑战模式互助（群号：537772）。群文件里有共享的配装表格和挑战模式路线图。</p>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="right-sidebar" aria-label="辅助信息">
+        <div class="side-card">
+          <h3>热门榜单</h3>
+          <ul class="hot-list">
+            <li><span class="hot-index top3">1</span><a href="/#picks">星穹铁道2.7版本星期日配队</a></li>
+            <li><span class="hot-index top3">2</span><a href="/#picks">黑神话挑战模式二郎神无伤</a></li>
+            <li><span class="hot-index top3">3</span><a href="/#picks">怪物猎人荒野太刀毕业配装</a></li>
+            <li><span class="hot-index">4</span><a href="/#picks">Steam秋促哈迪斯2折扣预测</a></li>
+            <li><span class="hot-index">5</span><a href="/#picks">停云忘归人配黄泉测算</a></li>
+            <li><span class="hot-index">6</span><a href="/#picks">动物井深海区隐藏房间</a></li>
+            <li><span class="hot-index">7</span><a href="/#picks">魔兽世界晶歌森林尾王机制</a></li>
+            <li><span class="hot-index">8</span><a href="/#picks">原神5.2恰斯卡技能前瞻</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>近期更新</h3>
+          <ul class="hot-list">
+            <li><span class="hot-index">11-07</span><a href="/#picks">星期日配队全解</a></li>
+            <li><span class="hot-index">11-06</span><a href="/#picks">二郎神法天象地打法</a></li>
+            <li><span class="hot-index">11-05</span><a href="/#picks">太刀毕业配装两套</a></li>
+            <li><span class="hot-index">11-04</span><a href="/#picks">哈迪斯2秋促折扣预测</a></li>
+            <li><span class="hot-index">11-03</span><a href="/#picks">忘归人配黄泉测算</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>投稿入口</h3>
+          <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6;margin-bottom:12px;">本周主题「2.7版本角色实测」，截稿11月14日。通过审核将获得周边抽奖资格。</p>
+          <a href="/#submit" class="btn-primary" style="display:block;text-align:center;font-size:0.85rem;padding:9px 16px;">前往投稿</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand">my53777.com主页</div>
+          <p class="footer-desc">覆盖2026年11月游戏版本更新、攻略评测与社区动态。内容跨度从版本首日到后续两周的实测数据，条目类型包括配队方案、Boss打法、配装模拟、折扣预测与玩家评论。每日更新8—12条。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容频道</h4>
+          <a href="/#picks">精选评测</a>
+          <a href="/#updates">最新更新</a>
+          <a href="/#categories">分类导航</a>
+          <a href="/#deepdive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+        </div>
+        <div class="footer-col">
+          <h4>互动交流</h4>
+          <a href="/#submit">投稿入口</a>
+          <a href="/#comments">玩家评论</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#recommend">相关推荐</a>
+        </div>
+        <div class="footer-col">
+          <h4>游戏专区</h4>
+          <a href="/#picks">星穹铁道2.7</a>
+          <a href="/#picks">黑神话挑战模式</a>
+          <a href="/#picks">怪物猎人荒野</a>
+          <a href="/#picks">Steam秋促</a>
+          <a href="/#picks">魔兽世界11.2.5</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 my53777.com主页 · 内容均为示例条目，仅供参考</span>
+        <span>最近更新：2026-11-08 · 对应正文「最新更新」板块</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    // 汉堡菜单
+    (function() {
+      var hamburger = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('mainNav');
+      var overlay = document.getElementById('overlay');
+
+      function closeMenu() {
+        nav.classList.remove('open');
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', '打开导航菜单');
+      }
+
+      hamburger.addEventListener('click', function() {
+        var isOpen = nav.classList.toggle('open');
+        overlay.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      nav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+    })();
+
+    // 搜索筛选
+    (function() {
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+      var cards = document.querySelectorAll('.content-card');
+      var noResult = document.getElementById('noResult');
+
+      function doSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        var visibleCount = 0;
+
+        cards.forEach(function(card) {
+          var text = (card.getAttribute('data-search') || '') + ' ' + card.textContent.toLowerCase();
+          var match = !query || text.indexOf(query) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+
+        noResult.classList.toggle('active', visibleCount === 0);
+      }
+
+      searchBtn.addEventListener('click', doSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          doSearch();
+        }
+      });
+      searchInput.addEventListener('input', doSearch);
+    })();
+
+    // 回到顶部
+    (function() {
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 600) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "my53777.com主页",
+    "description": "汇集热门游戏评测、版本攻略、新游前瞻与玩家社区动态，提供《星穹铁道》2.7版本、《黑神话：悟空》挑战模式等深度内容。",
+    "url": "https://my53777.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "星穹铁道2.7版本星期日值得抽吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "星期日的核心价值在终结技的全队暴伤加成和行动提前。如果主力输出是景元、托帕、或者依赖召唤物协同的角色，星期日的提升幅度在15%—20%之间（相对于布洛妮娅+停云的组合）。如果主力是黄泉、流萤这类不依赖召唤物的输出，优先级会下降。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "黑神话悟空挑战模式二郎神法天象地怎么打进10分钟？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "二阶段斧劈三连的第三下延迟约0.6秒，识破窗口在第二刀收招的瞬间。天眼冲击的判定范围比视觉特效宽约两个身位，翻滚需要提前。铜头铁臂留给激光扫射，因为激光的持续伤害在齐天难度下可以秒杀满血角色。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "怪物猎人荒野泡狐龙亚种用什么武器打比较稳？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "泡狐龙亚种弱雷属性，太刀、盾斧、斩斧的雷属性衍生武器效率较高。水中战斗阶段要注意泡狐龙的滑行攻击，收刀状态下横向移动比翻滚更安全。太刀的气刃兜割在亚种的水中形态下判定范围会缩小约15%。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Steam秋促哈迪斯2会打折到多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2025年秋促-20%，2026年夏促-30%。根据Supergiant的历史折扣节奏（《哈迪斯》在发售18个月后首次-40%），《哈迪斯2》今年秋促的折扣区间预计在-25%至-30%之间，折后约¥98—¥105。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "动物井和小丑牌哪个更值得秋促入手？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "取决于偏好。动物井是银河城解谜，核心乐趣在探索和隐藏房间，通关时间约12—15小时。小丑牌是卡牌构筑Roguelike，单局时长20—40分钟，重复可玩性更高。两款游戏在Steam的评价均为「好评如潮」，动物井好评率97%，小丑牌96%。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "魔兽世界11.2.5团本晶歌森林尾王有什么关键机制？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "尾王「霜语者·艾露恩」有三个阶段。一阶段分散站位躲冰刺，二阶段集火四个「寒冰之核」阻止全屏AOE，三阶段全团集中移动躲避旋转冰环。Method公会在11月7日的首杀中使用了「双坦交替嘲讽+远程组集中」的站位，国服火锅英雄采用了类似策略。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+  </html>
