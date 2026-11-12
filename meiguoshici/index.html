@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美国十次导航 - 生活实用条目聚合</title>
+  <meta name="description" content="美国十次导航汇集赴美生活与旅居者高频查阅的十个实用方向，涵盖租房合同、驾照笔试、医保选择、报税流程、超市会员、银行开户、电话套餐、学区查询、宠物就医与搬家物流等具体条目与判断经验，适合新到美国或计划长住的人参考。">
+  <meta name="keywords" content="美国十次导航">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a4d6b'/%3E%3Cpath d='M8 22h16M8 16h10M8 10h16' stroke='%23e6f2f7' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='16' r='2.4' fill='%23e6a34a'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --brand: #1a4d6b;
+      --brand-light: #2f6e8f;
+      --brand-dark: #0f3449;
+      --brand-pale: #e6f2f7;
+      --accent: #e6a34a;
+      --accent-soft: #fdf3e0;
+      --bg: #f7f9fb;
+      --surface: #ffffff;
+      --text-primary: #1b2a33;
+      --text-secondary: #4f6470;
+      --text-tertiary: #7d919d;
+      --border: #dde6ec;
+      --radius-card: 16px;
+      --radius-btn: 10px;
+      --radius-tag: 6px;
+      --radius-banner: 12px;
+      --shadow-default: 0 2px 12px rgba(0, 20, 30, 0.06);
+      --shadow-hover: 0 8px 24px rgba(0, 20, 30, 0.10);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --sticky-offset: 96px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--brand-light);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--brand);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .notice-bar {
+      background: var(--brand-dark);
+      color: #f0f7fc;
+      font-size: 0.82rem;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .notice-bar .notice-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .notice-bar .notice-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .notice-bar .notice-tag {
+      background: var(--accent);
+      color: var(--brand-dark);
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 1px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .notice-bar .brand-mark {
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      max-width: 1360px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon svg {
+      width: 36px;
+      height: 36px;
+      display: block;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.3px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--brand-pale);
+      color: var(--brand);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px 4px 4px 14px;
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--brand-light);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 0.85rem;
+      width: 150px;
+      outline: none;
+      font-family: inherit;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .search-box button {
+      background: var(--brand);
+      border: none;
+      border-radius: 20px;
+      padding: 5px 12px;
+      color: #fff;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: var(--brand-dark);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 6px 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 200;
+      backdrop-filter: blur(2px);
+    }
+
+    .mobile-menu-overlay.active {
+      display: block;
+    }
+
+    .mobile-menu-panel {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      max-width: 85vw;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 201;
+      padding: 24px 18px;
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+      overflow-y: auto;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mobile-menu-panel.active {
+      display: flex;
+    }
+
+    .mobile-menu-panel a {
+      padding: 10px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .mobile-menu-panel a:hover {
+      background: var(--brand-pale);
+    }
+
+    .mobile-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-secondary);
+      padding: 4px 8px;
+      margin-bottom: 8px;
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #0f3449 0%, #1a4d6b 55%, #2f6e8f 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -60px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(230, 163, 74, 0.18) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero-text .hero-desc {
+      font-size: 0.98rem;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta a {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .hero-cta .primary-btn {
+      background: var(--accent);
+      color: var(--brand-dark);
+    }
+
+    .hero-cta .primary-btn:hover {
+      background: #f0b65c;
+      transform: translateY(-2px);
+    }
+
+    .hero-cta .ghost-btn {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-cta .ghost-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2));
+    }
+
+    /* 布局容器 */
+    .layout-wrapper {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 28px;
+      padding: 32px 0 48px;
+      align-items: start;
+    }
+
+    /* 左频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 0;
+      border: 1px solid var(--border);
+    }
+
+    .channel-sidebar h2 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-tertiary);
+      padding: 0 16px 10px;
+      font-weight: 600;
+    }
+
+    .channel-nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .channel-nav a:hover,
+    .channel-nav a:focus-visible {
+      background: var(--brand-pale);
+      color: var(--brand);
+      border-left-color: var(--brand-light);
+    }
+
+    .channel-nav a .ch-icon {
+      font-size: 0.95rem;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* 右辅助栏 */
+    .right-aside {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .aside-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+      padding: 18px;
+    }
+
+    .aside-card h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hot-list li {
+      display: flex;
+      gap: 8px;
+      font-size: 0.82rem;
+      align-items: flex-start;
+    }
+
+    .hot-list .hot-index {
+      background: var(--brand-pale);
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.7rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .hot-list li a {
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .hot-list li a:hover {
+      color: var(--brand-light);
+    }
+
+    .update-feed {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .update-feed li {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      padding-left: 10px;
+      border-left: 2px solid var(--border);
+    }
+
+    .update-feed .feed-date {
+      display: block;
+      color: var(--text-tertiary);
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+
+    /* 主内容区 */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      min-width: 0;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+      padding: 24px;
+    }
+
+    .section-heading {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .section-intro {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    /* 概览段落 */
+    .overview-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .overview-text p {
+      margin-bottom: 10px;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .content-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--surface);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--brand-pale);
+    }
+
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .card-type {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      align-self: flex-start;
+      letter-spacing: 0.2px;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .card-tags span {
+      font-size: 0.68rem;
+      background: var(--brand-pale);
+      color: var(--brand);
+      padding: 2px 7px;
+      border-radius: var(--radius-tag);
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      margin-top: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-time {
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      width: 68px;
+      padding-top: 2px;
+    }
+
+    .update-content {
+      flex: 1;
+    }
+
+    .update-content strong {
+      font-size: 0.88rem;
+      color: var(--text-primary);
+    }
+
+    .update-content p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 6px;
+      background: var(--bg);
+      border-radius: var(--radius-btn);
+      border: 1px solid transparent;
+      text-align: center;
+      transition: background 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background: var(--brand-pale);
+      border-color: var(--brand-light);
+    }
+
+    .category-item .cat-icon {
+      font-size: 1.4rem;
+    }
+
+    .category-item .cat-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .category-item .cat-count {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 20px 0 8px;
+    }
+
+    .deep-dive h3:first-child {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .deep-dive ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .deep-dive li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .data-panel {
+      background: var(--bg);
+      border-radius: var(--radius-btn);
+      padding: 14px 18px;
+      margin: 14px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .data-panel .data-item {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .data-panel .data-item strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    /* 体验指南步骤 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brand-pale);
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-body strong {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .step-body p {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .faq-item summary {
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.15s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      color: var(--text-tertiary);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .faq-item[open] summary::after {
+      content: '–';
+    }
+
+    .faq-item summary:hover {
+      background: var(--bg);
+    }
+
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .comment-card {
+      background: var(--bg);
+      border-radius: var(--radius-btn);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .comment-card:hover {
+      border-color: var(--border);
+    }
+
+    .comment-user {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .comment-text {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .comment-meta {
+      font-size: 0.68rem;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .news-thumb {
+      width: 100px;
+      height: 68px;
+      object-fit: cover;
+      border-radius: var(--radius-btn);
+      flex-shrink: 0;
+      background: var(--brand-pale);
+    }
+
+    .news-body {
+      flex: 1;
+    }
+
+    .news-body strong {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .news-body p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .news-date {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud .tag-link {
+      font-size: 0.82rem;
+      padding: 6px 14px;
+      background: var(--bg);
+      border-radius: 30px;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .tag-cloud .tag-link:hover {
+      background: var(--brand-pale);
+      border-color: var(--brand-light);
+      color: var(--brand);
+    }
+
+    /* 补充板块：时间线 */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 18px 16px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -17px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-date {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .timeline-text {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .timeline-text strong {
+      color: var(--text-primary);
+    }
+
+    /* 投稿互动板块 */
+    .interact-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, var(--brand-pale) 0%, #f4fafd 100%);
+      border-radius: var(--radius-card);
+      padding: 18px 22px;
+      border: 1px dashed var(--brand-light);
+    }
+
+    .interact-bar .interact-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .interact-bar .interact-text strong {
+      color: var(--brand);
+    }
+
+    .interact-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .interact-actions .btn-outline {
+      padding: 8px 18px;
+      border: 1px solid var(--brand-light);
+      border-radius: var(--radius-btn);
+      background: var(--surface);
+      color: var(--brand);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .interact-actions .btn-outline:hover {
+      background: var(--brand-pale);
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--brand-dark);
+      color: rgba(255, 255, 255, 0.75);
+      padding: 36px 24px 24px;
+      margin-top: 16px;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand .footer-logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-col ul a {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.15s;
+    }
+
+    .footer-col ul a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 24px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      z-index: 90;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .back-to-top.visible {
+      display: flex;
+    }
+
+    .back-to-top:hover {
+      background: var(--brand-dark);
+      transform: translateY(-2px);
+    }
+
+    /* 筛选反馈 */
+    .filter-feedback {
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      margin-top: 12px;
+      display: none;
+    }
+
+    .filter-feedback.visible {
+      display: block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-grid {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .hero-text h1 {
+        font-size: 2.1rem;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .main-nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .right-aside {
+        position: static;
+        order: 2;
+      }
+      .main-content {
+        order: 1;
+      }
+      .hero {
+        padding: 32px 16px 28px;
+      }
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+      .layout-wrapper {
+        padding: 0 14px;
+      }
+      .page-header {
+        padding: 8px 14px;
+      }
+      .search-box input {
+        width: 100px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .notice-bar {
+        font-size: 0.72rem;
+        gap: 8px;
+        padding: 5px 12px;
+      }
+      .notice-bar .notice-items {
+        gap: 10px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .comment-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .news-thumb {
+        width: 72px;
+        height: 52px;
+      }
+      .data-panel {
+        grid-template-columns: 1fr;
+      }
+      .back-to-top {
+        bottom: 16px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+      }
+      .section-card {
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 滚动偏移 */
+    [id] {
+      scroll-margin-top: var(--sticky-offset);
+    }
+
+    /* 焦点可见 */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 + 页头 -->
+  <div class="sticky-top">
+    <div class="notice-bar">
+      <div class="notice-items">
+        <span class="brand-mark">美国十次导航</span>
+        <span class="notice-item"><span class="notice-tag">更新</span> 2026-11-07 加州DMV笔试预约周期缩短至11天</span>
+        <span class="notice-item"><span class="notice-tag">新增</span> 2026-11-06 全美20城租房押金中位数对比表</span>
+      </div>
+      <span style="font-size:0.7rem;opacity:0.6;white-space:nowrap;">2026-11-08 周日</span>
+    </div>
+    <header class="page-header">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="9" fill="#1a4d6b"/>
+            <path d="M9 25h18M9 18h12M9 11h18" stroke="#e6f2f7" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="27" cy="18" r="2.8" fill="#e6a34a"/>
+          </svg>
+        </div>
+        <span class="logo-text">美国十次导航</span>
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#overview">领域概览</a>
+        <a href="#featured">精选条目</a>
+        <a href="#updates">最新动态</a>
+        <a href="#categories">分类入口</a>
+        <a href="#deep-dive">深度解析</a>
+        <a href="#guide">体验指南</a>
+        <a href="#faq">常见问答</a>
+        <a href="#comments">用户评论</a>
+        <a href="#news">相关资讯</a>
+        <a href="#related">相关推荐</a>
+        <a href="#timeline">时间线</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索条目或类别" aria-label="搜索条目或类别">
+          <button id="searchBtn" type="button">查找</button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- 移动菜单遮罩与面板 -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu-panel" id="mobilePanel" role="dialog" aria-label="移动端导航">
+    <button class="mobile-close" id="mobileClose" aria-label="关闭菜单">✕</button>
+    <a href="#overview">领域概览</a>
+    <a href="#featured">精选条目</a>
+    <a href="#updates">最新动态</a>
+    <a href="#categories">分类入口</a>
+    <a href="#deep-dive">深度解析</a>
+    <a href="#guide">体验指南</a>
+    <a href="#faq">常见问答</a>
+    <a href="#comments">用户评论</a>
+    <a href="#news">相关资讯</a>
+    <a href="#related">相关推荐</a>
+    <a href="#timeline">时间线</a>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>美国十次导航</h1>
+        <p class="hero-desc">汇集赴美长住与短期旅居者高频查阅的十个实用方向：从DMV驾照笔试预约到租房押金追回、从医保计划比价到年度报税节点，每个条目附带具体时间窗口、材料清单和判断依据，帮你在面对各州差异时少跑一趟冤枉路。</p>
+        <div class="hero-cta">
+          <a href="#featured" class="primary-btn">浏览精选条目</a>
+          <a href="#guide" class="ghost-btn">查看体验指南</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="30" width="320" height="220" rx="18" fill="rgba(255,255,255,0.08)"/>
+          <rect x="40" y="52" width="130" height="10" rx="4" fill="rgba(255,255,255,0.2)"/>
+          <rect x="40" y="70" width="80" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
+          <rect x="40" y="96" width="70" height="48" rx="8" fill="rgba(230,163,74,0.25)"/>
+          <rect x="120" y="96" width="70" height="48" rx="8" fill="rgba(255,255,255,0.1)"/>
+          <rect x="200" y="96" width="70" height="48" rx="8" fill="rgba(255,255,255,0.1)"/>
+          <rect x="40" y="160" width="150" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
+          <rect x="40" y="176" width="110" height="8" rx="3" fill="rgba(255,255,255,0.1)"/>
+          <circle cx="280" cy="72" r="22" fill="rgba(230,163,74,0.3)"/>
+          <circle cx="280" cy="72" r="10" fill="#e6a34a" opacity="0.7"/>
+          <rect x="240" y="180" width="80" height="44" rx="8" fill="rgba(255,255,255,0.07)"/>
+          <rect x="252" y="192" width="40" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+          <rect x="252" y="204" width="56" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主体三栏布局 -->
+  <div class="layout-wrapper">
+    <div class="main-grid">
+
+      <!-- 左频道索引 -->
+      <aside class="channel-sidebar" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <nav class="channel-nav">
+          <a href="#overview"><span class="ch-icon">📋</span>领域概览</a>
+          <a href="#featured"><span class="ch-icon">⭐</span>精选条目</a>
+          <a href="#updates"><span class="ch-icon">🔄</span>最新动态</a>
+          <a href="#categories"><span class="ch-icon">📂</span>分类入口</a>
+          <a href="#deep-dive"><span class="ch-icon">🔍</span>深度解析</a>
+          <a href="#guide"><span class="ch-icon">🧭</span>体验指南</a>
+          <a href="#faq"><span class="ch-icon">❓</span>常见问答</a>
+          <a href="#comments"><span class="ch-icon">💬</span>用户评论</a>
+          <a href="#news"><span class="ch-icon">📰</span>相关资讯</a>
+          <a href="#related"><span class="ch-icon">🔗</span>相关推荐</a>
+          <a href="#timeline"><span class="ch-icon">📅</span>时间线</a>
+        </nav>
+      </aside>
+
+      <!-- 中主内容 -->
+      <main class="main-content">
+
+        <!-- 1. 主题领域概览 -->
+        <section id="overview" class="section-card">
+          <h2 class="section-heading">赴美生活条目概览</h2>
+          <div class="overview-text">
+            <p>围绕在美生活的高频事务，可拆为十个具体方向：车辆与驾照（DMV笔试路考预约、车辆注册与年检）、住房（租房合同审查、押金追回、租客保险）、医疗（医保计划选择、Urgent Care与急诊区分、处方药比价）、税务（W-2与1099报税节点、标准抵扣与逐项抵扣）、日常金融（银行开户所需材料、信用分建立与监控）、通信（家庭套餐与预付费卡选择）、教育（公立学区查询与注册材料）、宠物（疫苗记录与宠物医保）、搬家（跨州物流比价与地址变更清单）、以及社区融入（图书馆卡与成人教育课程）。</p>
+            <p>2026年11月值得留意的变化：加州DMV自11月1日起将普通驾照笔试预约等待期从平均23天压缩到11天，洛杉矶县与圣迭戈县先行试点；纽约州2027年1月起将要求租房押金存入托管账户的新规已进入公众评议期，目前评议截止日为2026年12月15日。德州奥斯汀市10月更新的租客权利手册中，将维修请求响应时限从14天明确为“紧急问题24小时、非紧急7个工作日”。</p>
+            <p>医保方面，2027年开放注册期（Open Enrollment）从2026年11月1日持续到2027年1月15日，加州全保（Covered California）在11月3日发布了2027年保费调整区间，标准银计划平均上调6.4%，但收入在联邦贫困线150%至250%区间的投保人仍可获额外补贴。报税节点上，IRS已确认2027年报税季从1月26日开始接受电子申报。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section id="featured" class="section-card">
+          <h2 class="section-heading">近期高频查阅条目</h2>
+          <p class="section-intro">按过去30天站内查阅量排序，每个条目附具体判断依据和适用场景。</p>
+          <div class="card-grid" id="featuredGrid">
+
+            <article class="content-card" data-searchable="DMV驾照笔试预约 加州 等待期 2026">
+              <img class="card-thumb" src="https://picsum.photos/seed/dmv2026/400/300" width="400" height="300" loading="lazy" alt="加州DMV驾照笔试考场实景">
+              <div class="card-body">
+                <span class="card-type">驾照与车辆</span>
+                <h3 class="card-title">加州DMV笔试预约：洛杉矶县11天等待期实测</h3>
+                <p class="card-desc">2026年11月1日起洛杉矶县预约等待期从23天降到11天。实测圣莫尼卡分局11月5日最早可约11月16日，但下午时段比上午多出约3倍空位。注意：笔试当天需携带两份居住证明，电子版账单截图不被接受。</p>
+                <div class="card-tags"><span>DMV</span><span>笔试</span><span>加州</span></div>
+                <div class="card-meta"><span>查阅 4.2k</span><span>更新于 11-07</span></div>
+              </div>
+            </article>
+
+            <article class="content-card" data-searchable="租房押金追回 加州 民法典 1950.5 时限">
+              <img class="card-thumb" src="https://picsum.photos/seed/rental2026/400/300" width="400" height="300" loading="lazy" alt="租房合同与押金支票特写">
+              <div class="card-body">
+                <span class="card-type">住房租赁</span>
+                <h3 class="card-title">租房押金追回：加州21天规则与扣款明细要求</h3>
+                <p class="card-desc">加州民法典1950.5规定退租后21天内房东需退还押金或提供逐项扣款清单。2026年10月圣何塞小额法庭一则判例中，房东因只写“清洁费300美元”未附收据，被判全额退还并加罚两倍押金。清单需含工时、单价和第三方发票。</p>
+                <div class="card-tags"><span>押金</span><span>加州</span><span>租客权利</span></div>
+                <div class="card-meta"><span>查阅 3.8k</span><span>更新于 11-06</span></div>
+              </div>
+            </article>
+
+            <article class="content-card" data-searchable="医保 开放注册 2027 Covered California 保费">
+              <img class="card-thumb" src="https://picsum.photos/seed/health2026/400/300" width="400" height="300" loading="lazy" alt="医保计划对比表格与计算器">
+              <div class="card-body">
+                <span class="card-type">医疗健康</span>
+                <h3 class="card-title">2027年加州全保开放注册：银计划保费涨6.4%后的比价策略</h3>
+                <p class="card-desc">11月1日开放注册启动，Covered California于11月3日公布2027年标准银计划平均上调6.4%。收入在FPL 150%-250%区间者补贴后自付额增幅不超过2%。同保费档位下，Kaiser与Blue Shield的处方药自付上限差出400美元。</p>
+                <div class="card-tags"><span>医保</span><span>开放注册</span><span>加州</span></div>
+                <div class="card-meta"><span>查阅 3.5k</span><span>更新于 11-05</span></div>
+              </div>
+            </article>
+
+            <article class="content-card" data-searchable="报税 W-2 1099 截止日 2027 IRS">
+              <img class="card-thumb" src="https://picsum.photos/seed/tax2026/400/300" width="400" height="300" loading="lazy" alt="W-2与1099税表叠放桌面">
+              <div class="card-body">
+                <span class="card-type">税务申报</span>
+                <h3 class="card-title">W-2与1099混合收入报税：2027年1月26日开放电子申报</h3>
+                <p class="card-desc">IRS确认2027年报税季从1月26日开始接受电子申报，4月15日截止。自雇收入超过600美元的1099-NEC需在2027年1月31日前寄出。混合收入者常忽略季度预缴税，2026年未缴足额者4月会触发罚款，罚款按联邦短期利率加3%计算。</p>
+                <div class="card-tags"><span>报税</span><span>W-2</span><span>1099</span></div>
+                <div class="card-meta"><span>查阅 3.1k</span><span>更新于 11-04</span></div>
+              </div>
+            </article>
+
+            <article class="content-card" data-searchable="银行开户 Chase 所需材料 信用分">
+              <img class="card-thumb" src="https://picsum.photos/seed/bank2026/400/300" width="400" height="300" loading="lazy" alt="银行开户文件与借记卡">
+              <div class="card-body">
+                <span class="card-type">日常金融</span>
+                <h3 class="card-title">Chase总检查账户开户：ITIN持有者的三份替代文件</h3>
+                <p class="card-desc">无SSN但有ITIN的申请人，在Chase开户需提供护照、ITIN信函和一份美国地址证明（租约或水电账单）。2026年10月起部分网点接受外国驾照加银行对账单组合，但大通客服确认政策因州而异，建议先致电目标网点确认再前往。</p>
+                <div class="card-tags"><span>银行开户</span><span>ITIN</span><span>Chase</span></div>
+                <div class="card-meta"><span>查阅 2.9k</span><span>更新于 11-03</span></div>
+              </div>
+            </article>
+
+            <article class="content-card" data-searchable="学区查询 公立学校 GreatSchools 注册材料">
+              <img class="card-thumb" src="https://picsum.photos/seed/school2026/400/300" width="400" height="300" loading="lazy" alt="公立学校教室与注册材料">
+              <div class="card-body">
+                <span class="card-type">教育入学</span>
+                <h3 class="card-title">公立学区查询：GreatSchools评分之外该看的四个指标</h3>
+                <p class="card-desc">2026年10月更新的加州学校问责报告显示，GreatSchools评分与州考通过率相关性约0.72，但家长更需关注师生比、英语学习者占比、长期缺勤率和 counselor与学生的配比。洛杉矶联合学区2026-27学年注册已于11月1日开放春季学期插班申请。</p>
+                <div class="card-tags"><span>学区</span><span>公立学校</span><span>注册</span></div>
+                <div class="card-meta"><span>查阅 2.6k</span><span>更新于 11-02</span></div>
+              </div>
+            </article>
+
+          </div>
+          <div class="filter-feedback" id="filterFeedback">没有匹配的条目，试试“DMV”“押金”“医保”等关键词。</div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section id="updates" class="section-card">
+          <h2 class="section-heading">过去七天条目更新</h2>
+          <div class="update-list">
+            <div class="update-item">
+              <span class="update-time">11-07</span>
+              <div class="update-content">
+                <strong>加州DMV笔试预约等待期缩短至11天</strong>
+                <p>洛杉矶县与圣迭戈县先行，圣莫尼卡分局11月5日最早可约11月16日。下午时段空位比上午多约三倍。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-06</span>
+              <div class="update-content">
+                <strong>全美20城租房押金中位数对比表上线</strong>
+                <p>一居室押金中位数最高为旧金山4,200美元，最低为孟菲斯850美元。中位租期押金为月租的1.2倍。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-05</span>
+              <div class="update-content">
+                <strong>2027年加州全保保费调整区间发布</strong>
+                <p>标准银计划平均上调6.4%，收入在FPL 150%-250%区间补贴后自付额增幅不超过2%。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-04</span>
+              <div class="update-content">
+                <strong>IRS确认2027年报税季1月26日开放电子申报</strong>
+                <p>1099-NEC寄出截止日为1月31日。混合收入者季度预缴不足将按联邦短期利率加3%罚款。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-03</span>
+              <div class="update-content">
+                <strong>Chase更新ITIN持有者开户文件清单</strong>
+                <p>部分网点接受外国驾照加银行对账单组合，但政策因州而异，建议先致电目标网点确认。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-02</span>
+              <div class="update-content">
+                <strong>洛杉矶联合学区开放2026-27春季学期插班申请</strong>
+                <p>申请截止12月15日。需要提交居住证明、疫苗记录和上一学年成绩单复印件。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">11-01</span>
+              <div class="update-content">
+                <strong>2027年医保开放注册期启动</strong>
+                <p>持续到2027年1月15日。加州全保11月3日发布保费调整区间，银计划平均涨6.4%。</p>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-time">10-30</span>
+              <div class="update-content">
+                <strong>德州奥斯汀更新租客权利手册</strong>
+                <p>维修请求响应时限明确为紧急问题24小时、非紧急7个工作日。此前仅写“合理时间”。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section id="categories" class="section-card">
+          <h2 class="section-heading">按生活场景分类</h2>
+          <div class="category-grid">
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🚗</span>
+              <span class="cat-name">驾照与车辆</span>
+              <span class="cat-count">12 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🏠</span>
+              <span class="cat-name">住房租赁</span>
+              <span class="cat-count">18 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🏥</span>
+              <span class="cat-name">医疗健康</span>
+              <span class="cat-count">15 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🧾</span>
+              <span class="cat-name">税务申报</span>
+              <span class="cat-count">9 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🏦</span>
+              <span class="cat-name">日常金融</span>
+              <span class="cat-count">11 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">📱</span>
+              <span class="cat-name">通信套餐</span>
+              <span class="cat-count">7 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🎓</span>
+              <span class="cat-name">教育入学</span>
+              <span class="cat-count">10 条</span>
+            </a>
+            <a href="#featured" class="category-item">
+              <span class="cat-icon">🐾</span>
+              <span class="cat-name">宠物事务</span>
+              <span class="cat-count">6 条</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析正文 -->
+        <section id="deep-dive" class="section-card deep-dive">
+          <h2 class="section-heading">州际差异下的条目判断方法</h2>
+          <h3>DMV笔试预约：等待期缩短背后的实际瓶颈</h3>
+          <p>加州DMV在2026年11月1日将洛杉矶县和圣迭戈县的笔试预约等待期从23天压缩到11天，靠的是把部分路考时段重新分配给笔试。圣莫尼卡分局11月5日的可约日期是11月16日，而同一时间河滨县东部分局仍要等31天——瓶颈不在系统，在考官人数。洛杉矶县过去12个月增加了37名持证考官，河滨县只增了4名。</p>
+          <p>判断一个分局的实际等待时间，不能只看官网显示的最早可约日。要看三个环节：预约释放时段（每天早上8点和下午1点各释放一批）、取消率（周一和周五的取消率比周中高约1.8倍）、以及是否接受walk-in。圣克拉拉县的部分分局允许没有预约的申请人排队，但只限上午11点前，且每周名额约20个。</p>
+          <div class="data-panel">
+            <div class="data-item"><strong>洛杉矶县</strong> 11天等待期，考官新增37名</div>
+            <div class="data-item"><strong>河滨县</strong> 31天等待期，考官新增4名</div>
+            <div class="data-item"><strong>圣克拉拉县</strong> 接受walk-in，每周约20个名额</div>
+            <div class="data-item"><strong>预约释放</strong> 每天8:00和13:00各一批</div>
+          </div>
+
+          <h3>租房押金：21天规则与扣款清单的核对结构</h3>
+          <p>加州民法典1950.5要求房东在退租后21天内处理押金。判断一个扣款是否合理，看清单上有没有这三项：工时数、单价、第三方发票。2026年10月圣何塞小额法庭的判例中，房东写了“清洁费300美元”但没附收据，法官判全额退还并加罚两倍押金。另一个常见问题是“日常磨损”与“损坏”的界限——地毯因正常行走造成的压痕属于磨损，不能扣；宠物抓痕需要更换整块地毯时，只能按折旧后价值扣。</p>
+          <p>租客在搬入时做的检查表（move-in checklist）是后续争议的关键。加州要求房东在租客搬入前提供一份检查表，租客可在48小时内补充。如果房东没提供，退租时房东很难证明某项损坏是租客造成的。2026年洛杉矶县有三起小额诉讼因房东缺少签字的检查表而被驳回。</p>
+
+          <h3>医保计划比价：银计划保费之外的自付上限</h3>
+          <p>2027年加州全保标准银计划平均上调6.4%，但月保费不是唯一变量。同保费档位下，Kaiser的处方药自付上限比Blue Shield低400美元，但专科医生网络窄——洛杉矶县Kaiser签约专科医生数量比Blue Shield少约23%。判断一个计划是否划算，看三个数字：年度自付上限（out-of-pocket maximum）、每次Urgent Care自付额、以及常见处方药的分级定价。</p>
+          <p>收入在FPL 150%-250%区间的人，补贴后自付额增幅不超过2%，但这部分人往往忽略银计划与铜计划的差额。铜计划月保费低，但年度自付上限高出一倍。2026年的一项分析显示，该收入区间选择铜计划的人中，有34%在年中因急诊或专科转诊产生了超过银计划全年自付额的自费支出。</p>
+
+          <h3>报税季节点：W-2与1099混合收入的预缴陷阱</h3>
+          <p>IRS确认2027年报税季从1月26日开始接受电子申报，4月15日截止。混合收入者（同时有W-2和1099）最容易踩的坑是季度预缴税不足。1099收入没有预扣，如果全年未缴足额，4月报税时会触发罚款，罚款按联邦短期利率加3%计算。2026年第三季度联邦短期利率为5.33%，罚款利率即8.33%。</p>
+          <p>判断是否需要补缴，看两个数字：W-2预扣税加已缴预缴税之和，是否达到当年应缴税的90%（或上一年应缴税的100%）。没达到就需要在1月15日前补缴第四季度预缴税。2026年有自雇收入的人中，约41%在报税时才发现预缴不足，平均罚款金额为340美元。</p>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section id="guide" class="section-card">
+          <h2 class="section-heading">内容消费与判断路径</h2>
+          <p class="section-intro">面对同一类事务的多个条目，按什么顺序看、用什么标准筛，决定了你少花多少时间。</p>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <span class="step-num">1</span>
+              <div class="step-body">
+                <strong>先确认州与县，再看条目</strong>
+                <p>DMV、租客权利、医保计划、学区注册都按州甚至按县执行。加州DMV的11天等待期在河滨县不适用。先锁定你所在州和县，再判断条目是否相关。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">2</span>
+              <div class="step-body">
+                <strong>看时间窗口，不看泛泛描述</strong>
+                <p>医保开放注册到2027年1月15日截止；报税季1月26日开放；学区春季插班申请12月15日截止。条目里如果没有具体日期，直接跳过。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">3</span>
+              <div class="step-body">
+                <strong>用材料清单反推可行性</strong>
+                <p>Chase开户需要护照、ITIN信函和地址证明。如果你没有地址证明，这个条目暂时不适用。先看材料清单里你有几项，缺的那项有没有替代方案。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">4</span>
+              <div class="step-body">
+                <strong>比较同类条目时看失败案例</strong>
+                <p>押金追回看的是房东没提供检查表的判例；医保比价看的是选铜计划后产生高额自费的案例。失败案例比成功案例更能帮你排雷。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">5</span>
+              <div class="step-body">
+                <strong>把截止日倒排成行动日期</strong>
+                <p>学区插班申请12月15日截止，往前推：成绩单需要2周开具、疫苗记录需要预约儿科医生、居住证明需要水电账单。倒排后你会发现11月中旬就得开始准备。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="faq" class="section-card">
+          <h2 class="section-heading">常见问题</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>加州DMV笔试预约最早能约到什么时候？</summary>
+              <div class="faq-answer">2026年11月1日起洛杉矶县和圣迭戈县等待期从23天缩短到11天，圣莫尼卡分局11月5日最早可约11月16日。但河滨县东部分局仍要等31天。每天早上8点和下午1点各释放一批预约，下午时段空位比上午多约三倍。</div>
+            </details>
+            <details class="faq-item">
+              <summary>房东扣了押金没给收据，能追回来吗？</summary>
+              <div class="faq-answer">加州民法典1950.5要求21天内提供逐项扣款清单，清单需含工时、单价和第三方发票。2026年10月圣何塞小额法庭判例中，房东只写“清洁费300美元”未附收据，被判全额退还并加罚两倍押金。如果房东没提供签字的move-in检查表，也很难证明损坏归属。</div>
+            </details>
+            <details class="faq-item">
+              <summary>2027年医保开放注册什么时候截止？</summary>
+              <div class="faq-answer">2027年开放注册期从2026年11月1日持续到2027年1月15日。加州全保于11月3日公布标准银计划平均上调6.4%，收入在FPL 150%-250%区间的投保人补贴后自付额增幅不超过2%。错过截止日需要符合特殊注册期条件才能投保。</div>
+            </details>
+            <details class="faq-item">
+              <summary>有1099收入需要每个季度预缴税吗？</summary>
+              <div class="faq-answer">1099收入没有预扣，如果全年预扣税加已缴预缴税之和未达到当年应缴税的90%（或上一年应缴税的100%），就需要在1月15日前补缴第四季度预缴税。2026年有自雇收入的人中约41%在报税时才发现预缴不足，平均罚款340美元。</div>
+            </details>
+            <details class="faq-item">
+              <summary>没有SSN只有ITIN能在美国银行开户吗？</summary>
+              <div class="faq-answer">Chase接受ITIN持有者开户，需提供护照、ITIN信函和一份美国地址证明（租约或水电账单）。2026年10月起部分网点接受外国驾照加银行对账单的组合，但政策因州而异，建议先致电目标网点确认。美国银行和富国银行的材料清单略有不同。</div>
+            </details>
+            <details class="faq-item">
+              <summary>公立学区注册需要提前多久准备材料？</summary>
+              <div class="faq-answer">洛杉矶联合学区2026-27春季学期插班申请12月15日截止。需要居住证明、疫苗记录和上一学年成绩单。成绩单开具约需2周，疫苗记录补打需要预约儿科医生，建议11月中旬开始准备。学区注册不接受电子版水电账单截图，需纸质原件或官方PDF。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section id="comments" class="section-card">
+          <h2 class="section-heading">用户讨论</h2>
+          <div class="comment-grid">
+            <div class="comment-card">
+              <span class="comment-user">南加老张</span>
+              <p class="comment-text">圣莫尼卡DMV下午去真的空，我上周四下午两点半到的，前面就排了六个人。上午去排队能绕到停车场。</p>
+              <span class="comment-meta">11-07</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">湾区租房人</span>
+              <p class="comment-text">押金那个21天规则，我房东拖了快两个月才退，最后扣了400说是深度清洁。没给收据。看了判例决定去小额法庭试试。</p>
+              <span class="comment-meta">11-06</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">Kaiser用户</span>
+              <p class="comment-text">医保比价那个专科网络的问题太真实了。我去年选的Kaiser，想看皮肤科等了六周，最后去了外面的Urgent Care自费180。</p>
+              <span class="comment-meta">11-05</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">1099打工人</span>
+              <p class="comment-text">季度预缴税被罚过两次，第一次罚了280，第二次学乖了1月15号前补了。现在每季度设日历提醒。</p>
+              <span class="comment-meta">11-05</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">Austin租客</span>
+              <p class="comment-text">奥斯汀那个维修响应时限，我上次空调坏了房东拖了五天才来。手册更新后是不是可以拿这个说事？</p>
+              <span class="comment-meta">11-04</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">尔湾新移民</span>
+              <p class="comment-text">Chase开户那个ITIN的，我去尔湾的网点说必须要有SSN，后来去了另一家说可以。真的看网点。</p>
+              <span class="comment-meta">11-04</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">学区纠结中</span>
+              <p class="comment-text">GreatSchools评分确实不能只看总分。我们看的那所学校8分，但counselor配比是1比800，另一个7分的学校是1比350。选了7分的。</p>
+              <span class="comment-meta">11-03</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">湾区报税狗</span>
+              <p class="comment-text">W-2加1099真的烦。去年以为预扣够了，结果1099那块没预扣，补了两千多。今年每季度老老实实交。</p>
+              <span class="comment-meta">11-03</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">圣迭戈猫奴</span>
+              <p class="comment-text">宠物医保那个板块能不能多写点？我家猫洗牙花了700，保险报了450，但等待期是14天，差点没赶上。</p>
+              <span class="comment-meta">11-02</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">河滨县打工人</span>
+              <p class="comment-text">河滨县DMV等31天是真的，我10月底约的，最早11月28号。逼得我跑了一趟安大略的分局，那边等18天。</p>
+              <span class="comment-meta">11-01</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">南湾程序员</span>
+              <p class="comment-text">医保那个铜计划陷阱，我朋友就是图便宜选了铜的，结果年中阑尾炎手术自费了六千多。银计划虽然月费贵但自付上限低一半。</p>
+              <span class="comment-meta">10-31</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">洛杉矶宝妈</span>
+              <p class="comment-text">学区插班申请12月15号截止，我上周才把疫苗记录找出来，还差一针乙肝。儿科医生说这周能打，来得及。</p>
+              <span class="comment-meta">10-30</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">搬家三次的人</span>
+              <p class="comment-text">搬家物流比价那块怎么没有？跨州搬家从洛杉矶到西雅图，三家报价差了1200。最后选了中间那家。</p>
+              <span class="comment-meta">10-30</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">纽约观望者</span>
+              <p class="comment-text">纽约那个押金托管账户的新规还在评议期吧？12月15号截止，不知道能不能通过。通过了对租客是好事。</p>
+              <span class="comment-meta">10-29</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">Fremont租客</span>
+              <p class="comment-text">move-in检查表我上次搬进来房东根本没给，退租的时候果然扯皮。后来找了法律援助才要回来一半押金。</p>
+              <span class="comment-meta">10-28</span>
+            </div>
+            <div class="comment-card">
+              <span class="comment-user">德州新居民</span>
+              <p class="comment-text">奥斯汀的维修响应时限更新了，但房东根本不鸟。打了311投诉，说要等10个工作日才有人联系。</p>
+              <span class="comment-meta">10-27</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section id="news" class="section-card">
+          <h2 class="section-heading">近期资讯</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/dmvnews/600/400" width="100" height="68" loading="lazy" alt="加州DMV办公室外排队人群">
+              <div class="news-body">
+                <strong>加州DMV扩大笔试预约试点至第三县</strong>
+                <p class="news-date">2026-11-07</p>
+                <p>橙县将从11月15日起纳入缩短等待期试点，目标将平均等待时间从27天压到14天以内。DMV发言人表示明年1月将覆盖全州。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/rentnews/600/400" width="100" height="68" loading="lazy" alt="纽约州议会大厦外景">
+              <div class="news-body">
+                <strong>纽约州押金托管新规进入公众评议期</strong>
+                <p class="news-date">2026-11-06</p>
+                <p>新规要求房东将押金存入带利息的托管账户，评议截止12月15日，预计2027年1月表决。若通过，纽约将成为东海岸第三个实施押金托管的州。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/healthnews/600/400" width="100" height="68" loading="lazy" alt="医保注册宣传材料">
+              <div class="news-body">
+                <strong>Covered California公布2027年保费调整明细</strong>
+                <p class="news-date">2026-11-05</p>
+                <p>标准银计划平均上调6.4%，但Kaiser和Blue Shield的涨幅差出2.1个百分点。补贴后自付额增幅控制在2%以内的收入区间上限为FPL 250%。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/taxnews/600/400" width="100" height="68" loading="lazy" alt="IRS办公大楼与税表">
+              <div class="news-body">
+                <strong>IRS确认2027年报税季1月26日开放电子申报</strong>
+                <p class="news-date">2026-11-04</p>
+                <p>1099-NEC寄出截止日仍为1月31日。IRS同时提醒，自雇收入超过600美元者需留意季度预缴，2026年未缴足额者罚款利率为8.33%。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/schoolnews/600/400" width="100" height="68" loading="lazy" alt="洛杉矶联合学区学校教室">
+              <div class="news-body">
+                <strong>洛杉矶联合学区开放春季插班申请</strong>
+                <p class="news-date">2026-11-02</p>
+                <p>申请截止12月15日。学区发言人称今年新增了在线疫苗记录上传通道，但居住证明仍需纸质原件或官方PDF。国际学生需额外提交成绩单翻译件。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-thumb" src="https://picsum.photos/seed/austinnews/600/400" width="100" height="68" loading="lazy" alt="奥斯汀市区街景与公寓楼">
+              <div class="news-body">
+                <strong>奥斯汀更新租客权利手册明确维修响应时限</strong>
+                <p class="news-date">2026-10-30</p>
+                <p>紧急问题24小时、非紧急7个工作日。此前仅规定“合理时间”，新手册附了投诉电话和在线表单链接。违反的房东面临最高每日200美元罚款。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section id="related" class="section-card">
+          <h2 class="section-heading">相关方向索引</h2>
+          <div class="tag-cloud">
+            <a href="#featured" class="tag-link">DMV路考预约</a>
+            <a href="#featured" class="tag-link">车辆注册与年检</a>
+            <a href="#featured" class="tag-link">租客保险比价</a>
+            <a href="#featured" class="tag-link">Urgent Care与急诊区分</a>
+            <a href="#featured" class="tag-link">处方药比价工具</a>
+            <a href="#featured" class="tag-link">标准抵扣与逐项抵扣</a>
+            <a href="#featured" class="tag-link">信用分建立与监控</a>
+            <a href="#featured" class="tag-link">家庭通信套餐</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：时间线 -->
+        <section id="timeline" class="section-card">
+          <h2 class="section-heading">条目更新时间线</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-07</div>
+              <p class="timeline-text"><strong>加州DMV笔试预约等待期</strong>更新至11天，新增橙县试点信息。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-06</div>
+              <p class="timeline-text"><strong>全美20城租房押金中位数对比表</strong>上线，旧金山4,200美元居首。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-05</div>
+              <p class="timeline-text"><strong>2027年加州全保保费调整区间</strong>发布，银计划平均上调6.4%。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-04</div>
+              <p class="timeline-text"><strong>IRS 2027年报税季</strong>确认1月26日开放电子申报。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-03</div>
+              <p class="timeline-text"><strong>Chase开户文件清单</strong>更新，ITIN持有者部分网点接受替代组合。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-02</div>
+              <p class="timeline-text"><strong>洛杉矶联合学区</strong>开放2026-27春季学期插班申请。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-01</div>
+              <p class="timeline-text"><strong>2027年医保开放注册期</strong>启动，持续到2027年1月15日。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 投稿互动 -->
+        <div class="interact-bar">
+          <div class="interact-text">
+            <strong>分享你的条目经验</strong><br>
+            租房押金纠纷、DMV预约实测、医保计划比价……你的具体经历能帮到正在查同一件事的人。
+          </div>
+          <div class="interact-actions">
+            <button class="btn-outline" type="button">投稿条目</button>
+            <button class="btn-outline" type="button">上传材料清单</button>
+            <button class="btn-outline" type="button">参与讨论</button>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- 右辅助栏 -->
+      <aside class="right-aside" aria-label="辅助信息">
+        <div class="aside-card">
+          <h3>本周查阅热度</h3>
+          <ol class="hot-list">
+            <li><span class="hot-index">1</span><a href="#featured">加州DMV笔试预约11天等待期实测</a></li>
+            <li><span class="hot-index">2</span><a href="#featured">租房押金追回：21天规则与扣款清单</a></li>
+            <li><span class="hot-index">3</span><a href="#featured">2027年加州全保银计划保费涨6.4%</a></li>
+            <li><span class="hot-index">4</span><a href="#featured">W-2与1099混合收入报税预缴陷阱</a></li>
+            <li><span class="hot-index">5</span><a href="#featured">Chase ITIN开户三份替代文件</a></li>
+          </ol>
+        </div>
+        <div class="aside-card">
+          <h3>今日更新</h3>
+          <ul class="update-feed">
+            <li>橙县DMV笔试预约纳入试点<span class="feed-date">11-07 14:30</span></li>
+            <li>20城押金中位数对比表上线<span class="feed-date">11-06 09:15</span></li>
+            <li>2027年银计划保费调整明细<span class="feed-date">11-05 16:40</span></li>
+            <li>IRS确认报税季开放日期<span class="feed-date">11-04 10:00</span></li>
+          </ul>
+        </div>
+        <div class="aside-card">
+          <h3>条目覆盖</h3>
+          <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">当前收录 8 个生活场景、37 条具体条目，其中 12 条附有2026年10月以后的规则变动说明。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-text">美国十次导航</div>
+        <p>覆盖2026年11月至2027年1月的生活事务窗口期，条目按驾照车辆、住房租赁、医疗健康、税务申报、日常金融、通信套餐、教育入学、宠物事务八类组织，每周三和周六更新各州规则变动与实测等待时间。</p>
+      </div>
+      <div class="footer-col">
+        <h4>生活场景</h4>
+        <ul>
+          <li><a href="#featured">驾照与车辆</a></li>
+          <li><a href="#featured">住房租赁</a></li>
+          <li><a href="#featured">医疗健康</a></li>
+          <li><a href="#featured">税务申报</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>实用条目</h4>
+        <ul>
+          <li><a href="#featured">DMV笔试预约</a></li>
+          <li><a href="#featured">押金追回清单</a></li>
+          <li><a href="#featured">医保计划比价</a></li>
+          <li><a href="#featured">1099预缴税</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>互动</h4>
+        <ul>
+          <li><a href="#comments">用户评论</a></li>
+          <li><a href="#news">相关资讯</a></li>
+          <li><a href="#timeline">更新时间线</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 美国十次导航 · 条目均为示例数据，具体规则以各州官方发布为准</span>
+      <span>最近更新：2026-11-08</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 移动菜单
+      const hamburger = document.getElementById('hamburgerBtn');
+      const overlay = document.getElementById('mobileOverlay');
+      const panel = document.getElementById('mobilePanel');
+      const closeBtn = document.getElementById('mobileClose');
+
+      function openMenu() {
+        overlay.classList.add('active');
+        panel.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        overlay.classList.remove('active');
+        panel.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function() {
+        if (panel.classList.contains('active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      panel.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索筛选（仅对精选卡片）
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const featuredGrid = document.getElementById('featuredGrid');
+      const filterFeedback = document.getElementById('filterFeedback');
+
+      function doSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = featuredGrid.querySelectorAll('.content-card');
+        let visibleCount = 0;
+
+        cards.forEach(function(card) {
+          const text = card.textContent.toLowerCase() + (card.getAttribute('data-searchable') || '').toLowerCase();
+          if (!query || text.indexOf(query) !== -1) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (query && visibleCount === 0) {
+          filterFeedback.classList.add('visible');
+        } else {
+          filterFeedback.classList.remove('visible');
+        }
+      }
+
+      searchBtn.addEventListener('click', doSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          doSearch();
+        }
+      });
+
+      // 频道导航高亮（简单滚动监听）
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.channel-nav a');
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function(link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.style.background = 'var(--brand-pale)';
+                link.style.color = 'var(--brand)';
+                link.style.borderLeftColor = 'var(--brand-light)';
+              } else {
+                link.style.background = '';
+                link.style.color = '';
+                link.style.borderLeftColor = '';
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -60% 0px' });
+
+      sections.forEach(function(section) {
+        observer.observe(section);
+      });
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "美国十次导航",
+    "description": "汇集赴美生活高频查阅的十个实用方向，覆盖驾照、租房、医保、报税、银行、学区、宠物与搬家物流。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "加州DMV笔试预约最早能约到什么时候？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2026年11月1日起洛杉矶县和圣迭戈县等待期从23天缩短到11天，圣莫尼卡分局11月5日最早可约11月16日。但河滨县东部分局仍要等31天。每天早上8点和下午1点各释放一批预约，下午时段空位比上午多约三倍。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "房东扣了押金没给收据，能追回来吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "加州民法典1950.5要求21天内提供逐项扣款清单，清单需含工时、单价和第三方发票。2026年10月圣何塞小额法庭判例中，房东只写清洁费300美元未附收据，被判全额退还并加罚两倍押金。如果房东没提供签字的move-in检查表，也很难证明损坏归属。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "2027年医保开放注册什么时候截止？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2027年开放注册期从2026年11月1日持续到2027年1月15日。加州全保于11月3日公布标准银计划平均上调6.4%，收入在FPL 150%-250%区间的投保人补贴后自付额增幅不超过2%。错过截止日需要符合特殊注册期条件才能投保。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "有1099收入需要每个季度预缴税吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1099收入没有预扣，如果全年预扣税加已缴预缴税之和未达到当年应缴税的90%（或上一年应缴税的100%），就需要在1月15日前补缴第四季度预缴税。2026年有自雇收入的人中约41%在报税时才发现预缴不足，平均罚款340美元。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "没有SSN只有ITIN能在美国银行开户吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chase接受ITIN持有者开户，需提供护照、ITIN信函和一份美国地址证明（租约或水电账单）。2026年10月起部分网点接受外国驾照加银行对账单的组合，但政策因州而异，建议先致电目标网点确认。美国银行和富国银行的材料清单略有不同。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "公立学区注册需要提前多久准备材料？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "洛杉矶联合学区2026-27春季学期插班申请12月15日截止。需要居住证明、疫苗记录和上一学年成绩单。成绩单开具约需2周，疫苗记录补打需要预约儿科医生，建议11月中旬开始准备。学区注册不接受电子版水电账单截图，需纸质原件或官方PDF。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+  </html>
