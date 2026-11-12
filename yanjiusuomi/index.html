@@ -1,0 +1,2287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>研究所秘密入口 - 科研情报聚合与深度解析</title>
+  <meta name="description" content="研究所秘密入口，聚合生物医药、材料化学、人工智能等科研情报与深度解析。提供预印本追踪、实验室动态、顶会论文拆解和学术争议复盘，适合研究生与科研从业者每日速览。">
+  <meta name="keywords" content="研究所秘密入口">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b3a4b'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23d4a373' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23d4a373'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "研究所秘密入口",
+    "description": "科研情报聚合与深度解析，覆盖生物医药、材料化学、人工智能等方向。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "预印本和正式见刊论文，先看哪个？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "看预印本抢时间，看正式见刊做引用。生物类预印本平台bioRxiv上11月3日那篇阿尔茨海默病Tau蛋白清除率的稿子，方法部分只写了n=24的食蟹猴模型，审稿意见尚未公开；同主题在Nature Neuroscience正式见刊的版本通常样本量翻倍、统计方法多一道校正。赶课题进度先读预印本，写综述或投稿引用则等见刊版。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "实验室轮转该优先看导师近三年的经费还是论文？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "经费决定课题能不能做下去，论文决定方向热不热。查NSFC基金委公开项目库，近三年有面上或重点项目的课题组，设备与试剂采购相对稳定；再看近三年通讯作者论文的投稿期刊层级和撤稿记录。11月6日更新的基金委项目公示里，某985高校超分子组装课题组新增两项面上，同组2025年JACS与Angewandte各一篇，属于经费与产出都硬的情况。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "分子动力学模拟和冷冻电镜结果对不上怎么办？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "先核对力场与分辨率区间。冷冻电镜在3.5Å以上分辨率时侧链归属本就模糊，MD在微秒尺度采样到的构象未必是该条件下的优势态。11月2日一篇JCTC的通讯指出，CHARMM36m与AMBER99SB-ILDN在柔性loop区的预测差异可达4.2Å。办法是用低温冷冻电镜数据做偏置力约束，再跑200ns短程验证，而不是直接二选一。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "同一篇论文被多个微信公众号改写，怎么分辨哪版靠近原文？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "盯三处：实验样本量、统计学方法、局限性段落。11月4日某材料类公众号把一篇钙钛矿稳定性论文的T80寿命写成“稳定运行8000小时”，原文是85℃、1个太阳光照下T80=1240小时，8000小时是外推值。逐字比对摘要和图表标题，凡是省略n值、置信区间和加速老化条件的改写，可信度都要下调。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "会议论文和期刊论文的引用权重怎么算？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "计算机领域顶会（NeurIPS、CVPR、ICML）的引用权重与中科院一区期刊大致相当，部分方向更高；生物医学领域则几乎只认期刊。11月7日更新的CCF推荐目录里，NeurIPS仍为A类，但同一篇工作若只发会议扩展摘要、期刊全文尚未发表，在申请基金时通常不计入代表作。材料化学方向优先看JACS、Angewandte、Nature子刊。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "开放获取期刊的版面费越来越高，投之前该核对什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "核对三样：DOAJ收录状态、影响因子趋势、以及是否在Web of Science核心合集。11月5日查询DOAJ，某OA期刊仍被收录，但2025年发文量较2024年增长210%，自引率升至28%。版面费3200美元以上的刊，先看近两年是否有大规模撤稿，再看编委名单里活跃学者比例。"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #1b3a4b;
+      --primary-light: #2c5568;
+      --primary-dark: #0f2530;
+      --accent: #d4a373;
+      --accent-soft: #f0e4d3;
+      --bg: #f7f5f1;
+      --panel: #ffffff;
+      --text: #1e2a30;
+      --text-secondary: #4f5e66;
+      --text-tertiary: #7d8b92;
+      --border: #e2ddd4;
+      --card-radius: 12px;
+      --btn-radius: 8px;
+      --tag-radius: 6px;
+      --shadow-default: 0 2px 10px rgba(27, 58, 75, 0.06);
+      --shadow-hover: 0 6px 20px rgba(27, 58, 75, 0.12);
+      --sticky-offset: 96px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 吸顶公告条 + 页头 */
+    .top-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .announce-bar {
+      background: var(--primary-dark);
+      color: #e8e4dc;
+      font-size: 13px;
+      padding: 7px 0;
+      overflow: hidden;
+    }
+
+    .announce-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .announce-brand {
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .announce-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .announce-items span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announce-date {
+      color: #a7b5bc;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .announce-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .logo-text {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 1;
+    }
+
+    .main-nav a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--primary);
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--btn-radius);
+      padding: 6px 10px;
+      gap: 6px;
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--primary-light);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 128px;
+      color: var(--text);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .search-box button {
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+
+    .search-box button:hover {
+      color: var(--primary);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: var(--btn-radius);
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: var(--btn-radius);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #2b5f73 100%);
+      color: #fff;
+      padding: 52px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -110px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 163, 115, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      bottom: -140px;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(212, 163, 115, 0.15);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .hero-desc {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.8;
+      max-width: 540px;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-actions .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .hero-actions .btn-primary:hover {
+      background: #e0b488;
+    }
+
+    .hero-actions .btn-outline {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .hero-actions .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-visual svg {
+        animation: none;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* 三栏布局 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 172px 1fr 248px;
+      gap: 28px;
+      padding: 36px 0 12px;
+      align-items: start;
+    }
+
+    .channel-index {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 12px);
+      background: var(--panel);
+      border-radius: var(--card-radius);
+      padding: 18px 14px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .channel-index h3 {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      padding-left: 4px;
+    }
+
+    .channel-index ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-index a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+      border-left: 2px solid transparent;
+    }
+
+    .channel-index a:hover,
+    .channel-index a:focus-visible {
+      background: var(--accent-soft);
+      color: var(--primary);
+      border-left-color: var(--accent);
+      outline: none;
+    }
+
+    .main-content {
+      min-width: 0;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      position: sticky;
+      top: calc(var(--sticky-offset) + 12px);
+    }
+
+    /* 通用板块 */
+    .section {
+      background: var(--panel);
+      border-radius: var(--card-radius);
+      padding: 26px 24px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .section h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 22px 0 10px;
+    }
+
+    .section p {
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .section ul li {
+      margin-bottom: 6px;
+      line-height: 1.7;
+    }
+
+    /* 概览 */
+    .overview-text {
+      columns: 1;
+      font-size: 14.5px;
+    }
+
+    .overview-text p {
+      margin-bottom: 14px;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .content-card {
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: var(--panel);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-thumb {
+      width: 100%;
+      height: 142px;
+      object-fit: cover;
+      background: var(--bg);
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .card-type {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--tag-radius);
+      background: var(--accent-soft);
+      color: #8a6236;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: var(--tag-radius);
+      background: var(--bg);
+      color: var(--text-tertiary);
+      border: 1px solid var(--border);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .card-heat {
+      color: #b5651d;
+      font-weight: 600;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .compact-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+    }
+
+    .compact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .list-index {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 22px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .list-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .list-summary {
+      font-size: 12.5px;
+      color: var(--text-tertiary);
+      line-height: 1.55;
+      margin-top: 2px;
+    }
+
+    .list-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-left: auto;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .category-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--btn-radius);
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+
+    .category-item:hover,
+    .category-item:focus-visible {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--primary);
+      outline: none;
+    }
+
+    .category-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      margin-top: 20px;
+    }
+
+    .deep-dive .callout {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 var(--btn-radius) var(--btn-radius) 0;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin: 16px 0;
+    }
+
+    .deep-dive .callout strong {
+      color: var(--primary);
+    }
+
+    /* 步骤 */
+    .step-list {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .step-list strong {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .step-list p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin: 2px 0 0;
+      line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--btn-radius);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: var(--primary-light);
+    }
+
+    .faq-item summary {
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg);
+      transition: background 0.2s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      color: var(--primary);
+    }
+
+    .faq-item summary:hover {
+      background: var(--accent-soft);
+    }
+
+    .faq-answer {
+      padding: 12px 16px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      background: var(--panel);
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .comment-item {
+      padding: 13px 15px;
+      background: var(--bg);
+      border-radius: var(--btn-radius);
+      font-size: 13px;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 12.5px;
+    }
+
+    .comment-text {
+      color: var(--text-secondary);
+    }
+
+    .comment-meta {
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .news-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 3px;
+    }
+
+    /* 相关推荐 */
+    .recommend-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .recommend-tag {
+      font-size: 12.5px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--panel);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .recommend-tag:hover,
+    .recommend-tag:focus-visible {
+      border-color: var(--accent);
+      color: var(--primary);
+      background: var(--accent-soft);
+      outline: none;
+    }
+
+    /* 侧栏组件 */
+    .sidebar-card {
+      background: var(--panel);
+      border-radius: var(--card-radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .sidebar-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sidebar-card h3::before {
+      content: "";
+      width: 4px;
+      height: 15px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hot-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 8px 6px;
+      border-radius: 6px;
+      transition: background 0.2s;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hot-list li:hover {
+      background: var(--bg);
+    }
+
+    .hot-rank {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-tertiary);
+      min-width: 16px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hot-rank.top {
+      color: #c0392b;
+    }
+
+    .hot-title {
+      color: var(--text-secondary);
+    }
+
+    .hot-score {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+
+    /* 投稿入口 */
+    .submit-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      border-radius: var(--card-radius);
+      padding: 22px 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .submit-cta h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .submit-cta p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .submit-cta .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* 时间线 */
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline li {
+      position: relative;
+      padding-bottom: 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .timeline li:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--panel);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .timeline-date {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 12px;
+      display: block;
+      margin-bottom: 1px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #b8c4c9;
+      padding: 42px 0 28px;
+      margin-top: 24px;
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .footer-brand svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .footer-desc {
+      line-height: 1.75;
+      color: #9aa9b0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 13.5px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .footer-col a {
+      color: #9aa9b0;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #7d8b92;
+      font-size: 12px;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 28px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-default);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s, transform 0.2s;
+      z-index: 90;
+      font-size: 18px;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .back-top:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      padding: 30px 16px;
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 14px;
+      background: var(--bg);
+      border-radius: var(--btn-radius);
+    }
+
+    .no-result.show {
+      display: block;
+    }
+
+    /* 移动端遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 37, 48, 0.5);
+      z-index: 98;
+      backdrop-filter: blur(2px);
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .main-layout {
+        grid-template-columns: 160px 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .channel-index {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 12px 14px;
+        align-items: center;
+      }
+      .channel-index h3 {
+        margin-bottom: 0;
+        margin-right: 6px;
+      }
+      .channel-index ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .channel-index a {
+        border-left: none;
+        padding: 5px 10px;
+        font-size: 12.5px;
+        background: var(--bg);
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .container {
+        padding: 0 16px;
+      }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--panel);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 4px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-default);
+        z-index: 99;
+      }
+      .main-nav.open {
+        display: flex;
+      }
+      .main-nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        width: 100%;
+      }
+      .main-nav a:last-child {
+        border-bottom: none;
+      }
+      .header-inner {
+        gap: 12px;
+        position: relative;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .search-box {
+        display: none;
+      }
+      .header-actions .btn-primary {
+        padding: 7px 12px;
+        font-size: 12px;
+      }
+      .hero {
+        padding: 36px 0 30px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero-desc {
+        font-size: 14px;
+      }
+      .announce-items {
+        gap: 10px;
+        font-size: 12px;
+      }
+      .announce-brand {
+        font-size: 12px;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .section {
+        padding: 20px 16px;
+      }
+      .back-top {
+        right: 14px;
+        bottom: 18px;
+        width: 38px;
+        height: 38px;
+      }
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 焦点可见 */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* 隐藏元素 */
+    .hidden-by-search {
+      display: none !important;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 + 页头 -->
+  <div class="top-sticky">
+    <div class="announce-bar">
+      <div class="container announce-inner">
+        <span class="announce-brand">研究所秘密入口</span>
+        <div class="announce-items">
+          <span><span class="announce-dot"></span><span class="announce-date">2026-11-08</span> 新增：CRISPR 递送系统预印本 7 篇</span>
+          <span><span class="announce-dot"></span><span class="announce-date">2026-11-07</span> 更新：NeurIPS 2026 接收论文速览</span>
+          <span><span class="announce-dot"></span>本月已收录 412 条实验室动态</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="研究所秘密入口首页">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="38" height="38" rx="9" fill="#1b3a4b"/>
+            <circle cx="19" cy="19" r="8.5" stroke="#d4a373" stroke-width="2.2"/>
+            <circle cx="19" cy="19" r="3.2" fill="#d4a373"/>
+            <path d="M19 6v4M19 28v4M6 19h4M28 19h4" stroke="#d4a373" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+          <span class="logo-text">研究所秘密入口</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="主题导航">
+          <a href="/#preprints">预印本速递</a>
+          <a href="/#labs">实验室动态</a>
+          <a href="/#papers">顶会论文</a>
+          <a href="/#debates">学术争议</a>
+          <a href="/#methods">方法实操</a>
+          <a href="/#community">同行交流</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索条目、类型、关键词" aria-label="站内搜索">
+            <button id="searchBtn" aria-label="执行搜索">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="m20 20-3.5-3.5"/>
+              </svg>
+            </button>
+          </div>
+          <a href="/#submit" class="btn-primary">投稿入口</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container hero-inner">
+      <div>
+        <h1 id="heroTitle">研究所秘密入口</h1>
+        <p class="hero-desc">汇集生物医药、材料化学、人工智能方向的预印本、顶会论文与实验室动态。每天从 bioRxiv、NeurIPS、JACS 和基金委公示里挑出值得追的条目，拆开方法、样本量和审稿状态，帮你在信息过载的科研圈里快速锁定真正有信息量的研究。</p>
+        <div class="hero-actions">
+          <a href="/#preprints" class="btn-primary">浏览今日预印本</a>
+          <a href="/#deepdive" class="btn-outline">读深度解析</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="160" cy="160" r="118" stroke="rgba(212,163,115,0.25)" stroke-width="1.5"/>
+          <circle cx="160" cy="160" r="88" stroke="rgba(212,163,115,0.4)" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <circle cx="160" cy="160" r="58" stroke="rgba(212,163,115,0.7)" stroke-width="2"/>
+          <circle cx="160" cy="160" r="22" fill="rgba(212,163,115,0.15)" stroke="#d4a373" stroke-width="2"/>
+          <circle cx="160" cy="160" r="5" fill="#d4a373"/>
+          <path d="M160 42v22M160 256v22M42 160h22M256 160h22" stroke="rgba(212,163,115,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M243 77l-14 14M91 243l-14 14M243 243l-14-14M91 77l-14-14" stroke="rgba(212,163,115,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="238" cy="82" r="4" fill="#d4a373" opacity="0.8"/>
+          <circle cx="82" cy="82" r="3" fill="#d4a373" opacity="0.6"/>
+          <circle cx="238" cy="238" r="3" fill="#d4a373" opacity="0.5"/>
+          <circle cx="82" cy="238" r="4" fill="#d4a373" opacity="0.7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区：三栏布局 -->
+  <div class="container main-layout">
+
+    <!-- 左频道索引 -->
+    <aside class="channel-index" aria-label="频道索引">
+      <h3>快速索引</h3>
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#preprints">精选推荐</a></li>
+        <li><a href="/#latest">最新动态</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deepdive">深度解析</a></li>
+        <li><a href="/#guide">消费指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">同行评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+        <li><a href="/#ranking">热门榜单</a></li>
+        <li><a href="/#submit">投稿入口</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main class="main-content">
+
+      <!-- 1. 领域概览 -->
+      <section class="section" id="overview">
+        <h2>科研情报的三个切面：预印本、实验室与顶会</h2>
+        <p class="section-sub">从选题到投稿，需要盯住的信息源并不相同</p>
+        <div class="overview-text">
+          <p>科研情报的“入口”大致分三类。第一类是预印本平台，bioRxiv 和 medRxiv 每天更新数百篇，11 月 8 日单日 bioRxiv 新增 187 篇，其中神经科学与细胞生物学合计占 43%。预印本的价值在抢时间差，阿尔茨海默病 Tau 蛋白清除、CRISPR 体内递送这类竞争激烈的方向，正式见刊往往要晚 4 到 8 个月。</p>
+          <p>第二类是实验室与课题组的动态，包括基金委项目公示、设备平台开放预约、课题组人员变动和毕业答辩信息。11 月 6 日基金委公示的面上项目里，超分子组装、单细胞多组学、钙钛矿钝化三个方向的新增项目数比去年同期分别增长 18%、26% 和 9%。这些数字比论文标题更能反映一个方向接下来两年的资源流向。</p>
+          <p>第三类是顶会论文，NeurIPS 2026 接收结果 11 月 7 日放榜，总投稿 21430 篇，接收率 25.7%，比 2025 年的 22.1% 略有回升。CVPR 2027 的截稿日期定在 11 月 14 日，很多课题组上周已经开始在 arXiv 上放预印本抢首发。材料化学方向则更看重 JACS、Angewandte 和 Nature 子刊，会议论文基本不计入考核。</p>
+          <p>当前值得关注的还有学术争议的公开化。11 月 4 日 PubPeer 上针对某篇 Nature 子刊钙钛矿稳定性论文的质疑帖已累积 14 条评论，核心争议是 T80 寿命的外推方法是否成立。这类争议的信息层级需要分清：哪些是编辑已受理的正式关切，哪些是匿名评论区的推测。</p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section" id="preprints">
+        <h2>今日精选：7 条值得点开的科研条目</h2>
+        <p class="section-sub">按方向热度与信息增量筛选，非按发布时间排序</p>
+        <div class="card-grid">
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/taupath11/400/300" alt="食蟹猴脑组织切片显示Tau蛋白聚集体分布" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">预印本</span>
+              <h3 class="card-title">食蟹猴模型 Tau 蛋白清除率提升至 62%</h3>
+              <div class="card-tags">
+                <span class="tag">阿尔茨海默病</span>
+                <span class="tag">bioRxiv</span>
+                <span class="tag">n=24</span>
+              </div>
+              <p class="card-desc">11 月 3 日上传，用 AAV 递送抗 Tau 抗体片段，6 个月随访显示脑脊液 p-tau217 下降 62%。方法部分未披露随机化细节，审稿意见尚未公开。</p>
+              <div class="card-meta"><span class="card-heat">热度 9.2</span><span>2026-11-03</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/crisprdeliv7/400/300" alt="脂质纳米颗粒包裹CRISPR组分的电镜示意图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">预印本</span>
+              <h3 class="card-title">LNP 递送 CRISPR 碱基编辑器肝靶向效率 78%</h3>
+              <div class="card-tags">
+                <span class="tag">基因编辑</span>
+                <span class="tag">LNP</span>
+                <span class="tag">食蟹猴</span>
+              </div>
+              <p class="card-desc">11 月 5 日 medRxiv 上线，靶向 PCSK9 的碱基编辑在 4 只食蟹猴中实现 78% 肝细胞编辑效率，脱靶检测用 GUIDE-seq 覆盖 12 个预测位点。</p>
+              <div class="card-meta"><span class="card-heat">热度 8.8</span><span>2026-11-05</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/perovskite1240/400/300" alt="钙钛矿太阳能电池组件在加速老化箱中的测试" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">期刊论文</span>
+              <h3 class="card-title">钙钛矿组件 T80 寿命 1240 小时，外推争议未平</h3>
+              <div class="card-tags">
+                <span class="tag">钙钛矿</span>
+                <span class="tag">Nature Energy</span>
+                <span class="tag">稳定性</span>
+              </div>
+              <p class="card-desc">85℃、1 个太阳光照下实测 T80 为 1240 小时，作者用 Arrhenius 外推得到 8000 小时。PubPeer 上 14 条评论质疑外推假设，编辑已受理正式关切。</p>
+              <div class="card-meta"><span class="card-heat">热度 9.5</span><span>2026-11-04</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/neurips2026/400/300" alt="NeurIPS 2026 接收论文的领域分布统计图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">顶会速览</span>
+              <h3 class="card-title">NeurIPS 2026 接收率 25.7%，扩散模型占比下降</h3>
+              <div class="card-tags">
+                <span class="tag">NeurIPS</span>
+                <span class="tag">扩散模型</span>
+                <span class="tag">接收率</span>
+              </div>
+              <p class="card-desc">11 月 7 日放榜，21430 篇投稿接收 5508 篇。扩散模型相关接收论文占比从 2025 年的 18.4% 降至 13.1%，推理效率方向上升明显。</p>
+              <div class="card-meta"><span class="card-heat">热度 9.0</span><span>2026-11-07</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/dockingjctc/400/300" alt="分子动力学模拟与冷冻电镜结构叠合对比" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">方法论文</span>
+              <h3 class="card-title">CHARMM36m 与 AMBER 力场在柔性 loop 区差异 4.2Å</h3>
+              <div class="card-tags">
+                <span class="tag">分子动力学</span>
+                <span class="tag">力场</span>
+                <span class="tag">JCTC</span>
+              </div>
+              <p class="card-desc">11 月 2 日 JCTC 通讯，对比两种力场在 12 个 GPCR 结构上的预测，柔性 loop 区 RMSD 差异达 4.2Å，建议用冷冻电镜密度图做偏置约束。</p>
+              <div class="card-meta"><span class="card-heat">热度 8.1</span><span>2026-11-02</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/fundnsfc11/400/300" alt="国家自然科学基金项目公示页面截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">基金动态</span>
+              <h3 class="card-title">11 月 6 日基金委面上项目：超分子组装新增 18%</h3>
+              <div class="card-tags">
+                <span class="tag">NSFC</span>
+                <span class="tag">超分子组装</span>
+                <span class="tag">面上项目</span>
+              </div>
+              <p class="card-desc">公示名单里超分子组装方向新增面上项目 31 项，比 2025 年同期多 5 项。某 985 高校团队新增两项，同组 2025 年 JACS 与 Angewandte 各一篇。</p>
+              <div class="card-meta"><span class="card-heat">热度 8.4</span><span>2026-11-06</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <img class="card-thumb" src="https://picsum.photos/seed/pubpeer11/400/300" alt="PubPeer上针对论文质疑的评论列表截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">争议追踪</span>
+              <h3 class="card-title">PubPeer 质疑帖 14 条：钙钛矿外推法是否成立</h3>
+              <div class="card-tags">
+                <span class="tag">PubPeer</span>
+                <span class="tag">数据完整性</span>
+                <span class="tag">同行评议</span>
+              </div>
+              <p class="card-desc">11 月 4 日更新，14 条评论中 3 条来自已署名学者，其余匿名。核心质疑是 Arrhenius 外推的活化能取值未在正文给出，补充材料也无原始数据。</p>
+              <div class="card-meta"><span class="card-heat">热度 8.7</span><span>2026-11-04</span></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section" id="latest">
+        <h2>最新动态：过去 72 小时的条目更新</h2>
+        <p class="section-sub">含预印本上线、基金公示、会议截稿与撤稿记录</p>
+        <ul class="compact-list">
+          <li>
+            <span class="list-index">01</span>
+            <div>
+              <div class="list-title">bioRxiv 上线单细胞多组学整合工具 scIB 2.0</div>
+              <div class="list-summary">新增批次校正模块，在 14 个公开数据集上评估，批次间 ARI 平均提升 0.09。</div>
+            </div>
+            <span class="list-date">11-08</span>
+          </li>
+          <li>
+            <span class="list-index">02</span>
+            <div>
+              <div class="list-title">CVPR 2027 截稿倒计时 6 天，arXiv 新增 320 篇视觉预印本</div>
+              <div class="list-summary">11 月 7 日单日 cs.CV 分区上传量创 10 月以来新高，3D 高斯泼溅相关占 11%。</div>
+            </div>
+            <span class="list-date">11-08</span>
+          </li>
+          <li>
+            <span class="list-index">03</span>
+            <div>
+              <div class="list-title">NeurIPS 2026 接收论文列表公开，扩展开源代码提交入口</div>
+              <div class="list-summary">接收论文 5508 篇，其中 61% 已附代码链接；口头报告 186 篇，11 月 10 日公布日程。</div>
+            </div>
+            <span class="list-date">11-07</span>
+          </li>
+          <li>
+            <span class="list-index">04</span>
+            <div>
+              <div class="list-title">基金委公示 2026 年面上项目，单细胞方向新增 26%</div>
+              <div class="list-summary">单细胞多组学相关项目 47 项，2025 年同期为 37 项；交叉学部占比升至 22%。</div>
+            </div>
+            <span class="list-date">11-06</span>
+          </li>
+          <li>
+            <span class="list-index">05</span>
+            <div>
+              <div class="list-title">某 OA 期刊撤回 12 篇材料类论文，涉图片重复</div>
+              <div class="list-summary">期刊 11 月 5 日发布撤稿声明，12 篇论文中有 9 篇来自同一通讯作者团队，自引率 28%。</div>
+            </div>
+            <span class="list-date">11-05</span>
+          </li>
+          <li>
+            <span class="list-index">06</span>
+            <div>
+              <div class="list-title">medRxiv 上线 CRISPR 碱基编辑肝靶向研究</div>
+              <div class="list-summary">4 只食蟹猴，PCSK9 编辑效率 78%，脱靶检测覆盖 12 个预测位点，随访 3 个月。</div>
+            </div>
+            <span class="list-date">11-05</span>
+          </li>
+          <li>
+            <span class="list-index">07</span>
+            <div>
+              <div class="list-title">PubPeer 钙钛矿争议帖更新，编辑受理正式关切</div>
+              <div class="list-summary">评论数增至 14 条，期刊编辑 11 月 4 日回复称已启动调查，作者暂未提交原始数据。</div>
+            </div>
+            <span class="list-date">11-04</span>
+          </li>
+          <li>
+            <span class="list-index">08</span>
+            <div>
+              <div class="list-title">bioRxiv 食蟹猴 Tau 清除研究上传，方法细节待补充</div>
+              <div class="list-summary">n=24，6 个月随访，脑脊液 p-tau217 降幅 62%，随机化与盲法信息未披露。</div>
+            </div>
+            <span class="list-date">11-03</span>
+          </li>
+          <li>
+            <span class="list-index">09</span>
+            <div>
+              <div class="list-title">JCTC 发表力场对比通讯，建议冷冻电镜偏置约束</div>
+              <div class="list-summary">12 个 GPCR 结构对比，柔性 loop 区 RMSD 差异 4.2Å，200ns 短程验证方案可复现。</div>
+            </div>
+            <span class="list-date">11-02</span>
+          </li>
+          <li>
+            <span class="list-index">10</span>
+            <div>
+              <div class="list-title">某 985 高校超分子组装团队新增两项面上项目</div>
+              <div class="list-summary">同组 2025 年 JACS 与 Angewandte 各一篇，2026 年已发表 Nature Communications 一篇。</div>
+            </div>
+            <span class="list-date">11-01</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="categories">
+        <h2>按方向查找：8 个科研情报分类</h2>
+        <p class="section-sub">点击进入对应方向，筛选预印本、论文与动态</p>
+        <div class="category-grid">
+          <a href="/#preprints" class="category-item"><span class="category-dot"></span>神经科学预印本</a>
+          <a href="/#preprints" class="category-item"><span class="category-dot"></span>基因编辑与递送</a>
+          <a href="/#preprints" class="category-item"><span class="category-dot"></span>钙钛矿与光伏</a>
+          <a href="/#papers" class="category-item"><span class="category-dot"></span>NeurIPS 2026</a>
+          <a href="/#papers" class="category-item"><span class="category-dot"></span>CVPR 2027 截稿</a>
+          <a href="/#methods" class="category-item"><span class="category-dot"></span>分子动力学模拟</a>
+          <a href="/#labs" class="category-item"><span class="category-dot"></span>NSFC 基金公示</a>
+          <a href="/#debates" class="category-item"><span class="category-dot"></span>PubPeer 争议追踪</a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section deep-dive" id="deepdive">
+        <h2>深度解析：预印本、审稿状态与数据可信度怎么拆</h2>
+        <p class="section-sub">以 11 月 3 日至 7 日的三个公开案例为样本</p>
+
+        <h3>预印本的时间优势，代价是审稿信息缺失</h3>
+        <p>11 月 3 日 bioRxiv 上线的食蟹猴 Tau 清除研究，从上传到被三家公众号改写只用了 36 小时。传播速度来自三个环节：第一，标题里的“62%”是一个可以直接引用的数字；第二，阿尔茨海默病领域 2026 年没有大型 III 期阳性结果，读者对任何阳性信号都敏感；第三，预印本平台本身不展示同行评议状态，读者看不到审稿人是否质疑过随机化方法。</p>
+        <p>对比同主题 2025 年发表在 Nature Neuroscience 的见刊论文：样本量 n=58，随机化与盲法在方法部分占 400 余字，统计分析计划提前注册。预印本版本 n=24，方法部分关于随机化的描述只有一句“动物随机分组”，没有说明分组方法。这不是说预印本不可信，而是说它的信息层级停在“已公开事实”这一层，尚未经过“审稿人质疑—作者回应”的过滤。</p>
+        <div class="callout"><strong>可核对的结构：</strong>判断一篇预印本的参考价值，拆成四项——样本量是否写明、随机化方法是否披露、统计计划是否预注册、作者是否在评论区回应过方法质疑。四项中缺两项以上，引用时应当标注“预印本，未审稿”。</div>
+
+        <h3>PubPeer 争议里的三种信息层级</h3>
+        <p>11 月 4 日 PubPeer 上钙钛矿稳定性论文的质疑帖，14 条评论可以分三层。第一层是已署名学者的 3 条评论，其中 1 条指出 Arrhenius 外推的活化能取值未在正文给出，补充材料也没有原始老化数据；第二层是匿名评论区的 9 条推测，包括“数据可能来自不同批次”这类没有附证据的说法；第三层是期刊编辑 11 月 4 日的正式回复，确认已启动调查并联系作者。</p>
+        <p>三层信息的可信度不同。已署名学者的评论附了具体页码和公式编号，可以逐条核对；匿名推测没有附原始数据，只能作为线索；编辑回复是唯一具有程序效力的动作，但“启动调查”不等于“认定有问题”。把这三层混在一起转发，是这类争议在社交平台上失真的主要原因。</p>
+
+        <h3>力场差异 4.2Å 说明什么，不说明什么</h3>
+        <p>11 月 2 日 JCTC 通讯对比 CHARMM36m 与 AMBER99SB-ILDN 在 12 个 GPCR 结构上的预测，柔性 loop 区 RMSD 差异最大 4.2Å。这个数字说明：在 3.5Å 以上分辨率的冷冻电镜结构里，两个力场给出的 loop 构象可能都落在密度图允许的范围内，但彼此不重合。</p>
+        <p>它不说明哪个力场“对”。通讯作者的建议是用低温冷冻电镜密度图做偏置力约束，再跑 200ns 短程验证——这是一个可复现的操作路径，而不是二选一的结论。对做膜蛋白模拟的课题组来说，更实际的做法是在方法部分同时报告两种力场下的 loop RMSD，让读者自己判断构象采样的不确定性有多大。</p>
+
+        <h3>OA 期刊撤稿 12 篇，核对清单比影响因子更管用</h3>
+        <p>11 月 5 日某 OA 期刊撤回 12 篇材料类论文，9 篇来自同一通讯作者团队。2025 年该刊发文量较 2024 年增长 210%，自引率升至 28%。这三个数字放在一起，比影响因子更能说明问题：发文量激增、自引率偏高、撤稿集中，三项同时出现时，投稿前的核对清单应该包括 DOAJ 收录状态、近两年撤稿记录和编委名单里活跃学者的比例。</p>
+        <p>版面费 3200 美元以上的刊，尤其值得先查这三项。影响因子 6.2 的期刊和影响因子 4.8 的期刊，在考核表里可能只差一档，但撤稿记录会跟通讯作者档案走很多年。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section" id="guide">
+        <h2>科研内容消费路径：先看什么，怎么判断值不值得追</h2>
+        <p class="section-sub">按投入时间从低到高排列</p>
+        <ol class="step-list">
+          <li>
+            <div>
+              <strong>先扫标题与摘要里的样本量、模型、统计方法</strong>
+              <p>n 值小于 30 的动物实验、没有预注册的临床试验、只报告 p 值不报告效应量的研究，先降低优先级。11 月 3 日那篇 Tau 研究 n=24，值得读，但引用时要标注样本量限制。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>再看审稿状态与数据可用性声明</strong>
+              <p>预印本平台看是否标注“已投稿”“审稿中”；期刊论文看 Data Availability 是否给出原始数据链接。11 月 4 日钙钛矿争议的核心，就是补充材料里没有原始老化数据。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>查作者与课题组的近三年产出与撤稿记录</strong>
+              <p>用基金委项目库、ORCID 和 Retraction Watch 交叉核对。近三年有面上项目、有稳定的通讯作者论文、无撤稿记录的课题组，结果的可复现性通常更高。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>比较同一方向的两到三篇工作，看结论是否收敛</strong>
+              <p>单篇论文的结论容易受模型和力场影响。JCTC 那篇力场对比通讯的价值，正在于它把两种常用力场的差异量化到 4.2Å，让读者知道单篇模拟结果的不确定性有多大。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>最后决定是否投入复现时间</strong>
+              <p>代码开源、数据可下载、方法部分步骤完整，三条同时满足才值得复现。NeurIPS 2026 接收论文里 61% 附了代码链接，比 2025 年的 54% 有所提升，这个比例可以作为筛选起点。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="faq">
+        <h2>科研阅读常见问题</h2>
+        <p class="section-sub">6 个真实搜索场景下的判断依据</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>预印本和正式见刊论文，先看哪个？</summary>
+            <div class="faq-answer">看预印本抢时间，看正式见刊做引用。生物类预印本平台 bioRxiv 上 11 月 3 日那篇阿尔茨海默病 Tau 蛋白清除率的稿子，方法部分只写了 n=24 的食蟹猴模型，审稿意见尚未公开；同主题在 Nature Neuroscience 正式见刊的版本通常样本量翻倍、统计方法多一道校正。赶课题进度先读预印本，写综述或投稿引用则等见刊版。</div>
+          </details>
+          <details class="faq-item">
+            <summary>实验室轮转该优先看导师近三年的经费还是论文？</summary>
+            <div class="faq-answer">经费决定课题能不能做下去，论文决定方向热不热。查 NSFC 基金委公开项目库，近三年有面上或重点项目的课题组，设备与试剂采购相对稳定；再看近三年通讯作者论文的投稿期刊层级和撤稿记录。11 月 6 日更新的基金委项目公示里，某 985 高校超分子组装课题组新增两项面上，同组 2025 年 JACS 与 Angewandte 各一篇，属于经费与产出都硬的情况。</div>
+          </details>
+          <details class="faq-item">
+            <summary>分子动力学模拟和冷冻电镜结果对不上怎么办？</summary>
+            <div class="faq-answer">先核对力场与分辨率区间。冷冻电镜在 3.5Å 以上分辨率时侧链归属本就模糊，MD 在微秒尺度采样到的构象未必是该条件下的优势态。11 月 2 日一篇 JCTC 的通讯指出，CHARMM36m 与 AMBER99SB-ILDN 在柔性 loop 区的预测差异可达 4.2Å。办法是用低温冷冻电镜数据做偏置力约束，再跑 200ns 短程验证，而不是直接二选一。</div>
+          </details>
+          <details class="faq-item">
+            <summary>同一篇论文被多个微信公众号改写，怎么分辨哪版靠近原文？</summary>
+            <div class="faq-answer">盯三处：实验样本量、统计学方法、局限性段落。11 月 4 日某材料类公众号把一篇钙钛矿稳定性论文的 T80 寿命写成“稳定运行 8000 小时”，原文是 85℃、1 个太阳光照下 T80=1240 小时，8000 小时是外推值。逐字比对摘要和图表标题，凡是省略 n 值、置信区间和加速老化条件的改写，可信度都要下调。</div>
+          </details>
+          <details class="faq-item">
+            <summary>会议论文和期刊论文的引用权重怎么算？</summary>
+            <div class="faq-answer">计算机领域顶会（NeurIPS、CVPR、ICML）的引用权重与中科院一区期刊大致相当，部分方向更高；生物医学领域则几乎只认期刊。11 月 7 日更新的 CCF 推荐目录里，NeurIPS 仍为 A 类，但同一篇工作若只发会议扩展摘要、期刊全文尚未发表，在申请基金时通常不计入代表作。材料化学方向优先看 JACS、Angewandte、Nature 子刊。</div>
+          </details>
+          <details class="faq-item">
+            <summary>开放获取期刊的版面费越来越高，投之前该核对什么？</summary>
+            <div class="faq-answer">核对三样：DOAJ 收录状态、影响因子趋势、以及是否在 Web of Science 核心合集。11 月 5 日查询 DOAJ，某 OA 期刊仍被收录，但 2025 年发文量较 2024 年增长 210%，自引率升至 28%。版面费 3200 美元以上的刊，先看近两年是否有大规模撤稿，再看编委名单里活跃学者比例。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="comments">
+        <h2>同行评论：关于条目本身，不关于页面</h2>
+        <p class="section-sub">14 条发言，昵称已脱敏</p>
+        <div class="comment-grid">
+          <div class="comment-item">
+            <span class="comment-user">膜蛋白老张</span>
+            <span class="comment-text">CHARMM36m 和 AMBER 那篇力场对比，4.2Å 的差异其实比我预想的小。上次组会还吵这个，现在有数了。</span>
+            <span class="comment-meta">11-07</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">钙钛矿搬砖工</span>
+            <span class="comment-text">T80 1240 小时非要外推到 8000，审稿人居然放过了。补充材料里老化数据就三页，Arrhenius 参数怎么取的没写。</span>
+            <span class="comment-meta">11-06</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">读博第五年的猫</span>
+            <span class="comment-text">NeurIPS 接收率 25.7%，我们组三篇投出去中了一篇，已经算超常发挥了。扩散模型确实没前两年那么挤。</span>
+            <span class="comment-meta">11-07</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">单细胞不眠夜</span>
+            <span class="comment-text">scIB 2.0 那个批次校正 ARI 提升 0.09，数字不大，但我跑自己数据试试看再说。</span>
+            <span class="comment-meta">11-08</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">匿名审稿人甲</span>
+            <span class="comment-text">PubPeer 上那 14 条评论，匿名的占九条，有几条连图都没截。还是等编辑调查结果吧，现在站队太早。</span>
+            <span class="comment-meta">11-05</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">LNP搬砖</span>
+            <span class="comment-text">78% 肝细胞编辑效率，食蟹猴 n=4，这个样本量发 medRxiv 合适，发正刊还得补。脱靶检测 12 个位点不算多。</span>
+            <span class="comment-meta">11-06</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">基金查询专员</span>
+            <span class="comment-text">超分子组装新增 18%，我们方向怎么没涨。哦，我查的是青年基金，不算在面上里。</span>
+            <span class="comment-meta">11-06</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">CVPR倒计时</span>
+            <span class="comment-text">11 月 14 日截稿，现在 arXiv 上 3D 高斯泼溅一刷一大排。去年那个方向投了 400 多篇，今年估计更多。</span>
+            <span class="comment-meta">11-08</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">电镜平台排队中</span>
+            <span class="comment-text">3.5Å 以上分辨率的 loop 区本来就不该硬解。JCTC 那篇说得对，用密度图做偏置比换力场实在。</span>
+            <span class="comment-meta">11-04</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">OA期刊受害者</span>
+            <span class="comment-text">被撤 12 篇那个刊，我去年差点投。版面费 3500 美元，审稿 11 天返回，现在想想后怕。</span>
+            <span class="comment-meta">11-05</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">材料系小刘</span>
+            <span class="comment-text">Nature Energy 那篇的图 3 和补充图 S7 的横坐标单位好像不一致，不知道有没有人注意到。</span>
+            <span class="comment-meta">11-06</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">做Tau的</span>
+            <span class="comment-text">62% 的 p-tau217 降幅，如果随机化真没问题，这个数据挺硬的。但方法就一句话，没法判断。</span>
+            <span class="comment-meta">11-04</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">今天也在读paper</span>
+            <span class="comment-text">最近基金本子写到凌晨，看到“经费决定课题能不能做下去”这句，默默关掉了arXiv。</span>
+            <span class="comment-meta">11-07</span>
+          </div>
+          <div class="comment-item">
+            <span class="comment-user">转行边缘人</span>
+            <span class="comment-text">顶会代码开源比例 61%，比去年高，但我们组那篇中了口头还没传代码，这就去补。</span>
+            <span class="comment-meta">11-07</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="news">
+        <h2>相关资讯：11 月科研圈值得核对的 6 条动态</h2>
+        <p class="section-sub">每条附日期与摘要，摘要不复述标题</p>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-title">NeurIPS 2026 日程公布：口头报告 186 篇，11 月 10 日开放注册</div>
+            <div class="news-date">2026-11-07</div>
+            <div class="news-summary">接收论文 5508 篇，主会 12 月 9 日至 15 日在温哥华举行，Workshop 接收通知推迟至 11 月 18 日。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">基金委交叉学部面上项目占比升至 22%，超分子组装新增 18%</div>
+            <div class="news-date">2026-11-06</div>
+            <div class="news-summary">公示名单显示交叉学部项目数 312 项，较 2025 年增加 41 项；单细胞多组学方向新增 26%。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">某 OA 期刊撤回 12 篇材料类论文，9 篇来自同一团队</div>
+            <div class="news-date">2026-11-05</div>
+            <div class="news-summary">期刊 2025 年发文量较 2024 年增长 210%，撤稿声明提到图片重复与数据异常，通讯作者暂未回应。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">PubPeer 钙钛矿质疑帖获编辑受理，作者被要求提交原始老化数据</div>
+            <div class="news-date">2026-11-04</div>
+            <div class="news-summary">期刊编辑 11 月 4 日回复评论称已启动调查，要求作者在 30 天内提供 Arrhenius 外推的原始参数与老化曲线。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">bioRxiv 单日新增 187 篇，神经科学与细胞生物学占 43%</div>
+            <div class="news-date">2026-11-08</div>
+            <div class="news-summary">11 月 8 日上传量较上周同期增加 12%，CRISPR 递送与 Tau 蛋白相关方向合计 19 篇。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">CVPR 2027 截稿 11 月 14 日，3D 高斯泼溅预印本一周增 320 篇</div>
+            <div class="news-date">2026-11-08</div>
+            <div class="news-summary">cs.CV 分区 11 月 7 日单日上传量创 10 月以来新高，视觉与语言模型方向占比 14%。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="recommend">
+        <h2>相关推荐：按具体方向与条目名索引</h2>
+        <p class="section-sub">与热门榜单角度区分，偏检索入口</p>
+        <div class="recommend-tags">
+          <a href="/#preprints" class="recommend-tag">Tau 蛋白清除预印本</a>
+          <a href="/#preprints" class="recommend-tag">LNP 递送 CRISPR</a>
+          <a href="/#debates" class="recommend-tag">钙钛矿 T80 外推争议</a>
+          <a href="/#papers" class="recommend-tag">NeurIPS 2026 接收论文</a>
+          <a href="/#methods" class="recommend-tag">CHARMM36m 力场对比</a>
+          <a href="/#labs" class="recommend-tag">NSFC 面上项目公示</a>
+          <a href="/#latest" class="recommend-tag">scIB 2.0 单细胞整合</a>
+          <a href="/#guide" class="recommend-tag">OA 期刊核对清单</a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：热门榜单 + 时间线 -->
+      <section class="section" id="ranking">
+        <h2>本周热门榜单：按站内阅读与外部引用综合排序</h2>
+        <p class="section-sub">统计窗口 2026-11-01 至 2026-11-08</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+          <div>
+            <h3>条目热度 Top 6</h3>
+            <ul class="hot-list">
+              <li><span class="hot-rank top">1</span><span class="hot-title">钙钛矿组件 T80 1240 小时与外推争议</span><span class="hot-score">9.5</span></li>
+              <li><span class="hot-rank top">2</span><span class="hot-title">食蟹猴 Tau 蛋白清除率 62%</span><span class="hot-score">9.2</span></li>
+              <li><span class="hot-rank top">3</span><span class="hot-title">NeurIPS 2026 接收率 25.7%</span><span class="hot-score">9.0</span></li>
+              <li><span class="hot-rank">4</span><span class="hot-title">LNP 递送碱基编辑肝靶向 78%</span><span class="hot-score">8.8</span></li>
+              <li><span class="hot-rank">5</span><span class="hot-title">PubPeer 质疑帖 14 条评论</span><span class="hot-score">8.7</span></li>
+              <li><span class="hot-rank">6</span><span class="hot-title">超分子组装面上项目新增 18%</span><span class="hot-score">8.4</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>关键节点时间线</h3>
+            <ul class="timeline">
+              <li><span class="timeline-date">11-08</span>bioRxiv 单日新增 187 篇，CVPR 截稿倒计时 6 天</li>
+              <li><span class="timeline-date">11-07</span>NeurIPS 2026 放榜，接收 5508 篇</li>
+              <li><span class="timeline-date">11-06</span>基金委面上项目公示，交叉学部占比 22%</li>
+              <li><span class="timeline-date">11-05</span>某 OA 期刊撤回 12 篇材料类论文</li>
+              <li><span class="timeline-date">11-04</span>PubPeer 钙钛矿争议获编辑受理</li>
+              <li><span class="timeline-date">11-03</span>食蟹猴 Tau 清除预印本上传</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. 投稿入口 -->
+      <section class="section" id="submit">
+        <h2>投稿与交流：把你读到的条目递过来</h2>
+        <p class="section-sub">预印本线索、撤稿记录、会议截稿提醒都收</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;">
+          <div>
+            <p>如果你在 bioRxiv、medRxiv 或 arXiv 上刷到值得拆解的条目，或者发现某篇论文的数据可用性声明有问题，可以把链接和你的判断发过来。11 月 5 日那篇 OA 撤稿的线索，最早就是一位材料方向的读者在评论区贴出来的。</p>
+            <p>投稿时写清三件事：条目链接、你认为值得关注的具体理由（样本量、方法差异、审稿状态）、以及是否愿意署名。匿名线索同样接收，但需要附可核对的公开页面。</p>
+          </div>
+          <div class="submit-cta">
+            <h3>提交一条科研线索</h3>
+            <p>附链接与判断依据，48 小时内回复是否采用。被采用线索会在公告条标注来源。</p>
+            <a href="/#submit" class="btn-primary">填写投稿表单</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="sidebar" aria-label="辅助信息">
+      <div class="sidebar-card">
+        <h3>本周热榜</h3>
+        <ul class="hot-list">
+          <li><span class="hot-rank top">1</span><span class="hot-title">钙钛矿 T80 外推争议</span><span class="hot-score">9.5</span></li>
+          <li><span class="hot-rank top">2</span><span class="hot-title">Tau 蛋白清除 62%</span><span class="hot-score">9.2</span></li>
+          <li><span class="hot-rank top">3</span><span class="hot-title">NeurIPS 接收率 25.7%</span><span class="hot-score">9.0</span></li>
+          <li><span class="hot-rank">4</span><span class="hot-title">LNP 递送编辑器 78%</span><span class="hot-score">8.8</span></li>
+          <li><span class="hot-rank">5</span><span class="hot-title">PubPeer 质疑 14 条</span><span class="hot-score">8.7</span></li>
+          <li><span class="hot-rank">6</span><span class="hot-title">基金委面上公示</span><span class="hot-score">8.4</span></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>更新节奏</h3>
+        <ul class="timeline">
+          <li><span class="timeline-date">每天 08:00</span>预印本速递与顶会动态</li>
+          <li><span class="timeline-date">每周三</span>实验室与基金公示梳理</li>
+          <li><span class="timeline-date">每周五</span>争议追踪与撤稿记录汇总</li>
+        </ul>
+      </div>
+
+      <div class="submit-cta">
+        <h3>有线索？</h3>
+        <p>预印本推荐、撤稿记录、会议截稿提醒，都收。</p>
+        <a href="/#submit" class="btn-primary">去投稿</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>相关推荐</h3>
+        <div class="recommend-tags" style="gap:6px;">
+          <a href="/#preprints" class="recommend-tag" style="font-size:11.5px;padding:4px 9px;">Tau 蛋白预印本</a>
+          <a href="/#papers" class="recommend-tag" style="font-size:11.5px;padding:4px 9px;">NeurIPS 2026</a>
+          <a href="/#methods" class="recommend-tag" style="font-size:11.5px;padding:4px 9px;">力场对比</a>
+          <a href="/#debates" class="recommend-tag" style="font-size:11.5px;padding:4px 9px;">PubPeer 争议</a>
+          <a href="/#labs" class="recommend-tag" style="font-size:11.5px;padding:4px 9px;">面上项目</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="30" height="30" rx="7" fill="#d4a373"/>
+              <circle cx="15" cy="15" r="6.5" stroke="#1b3a4b" stroke-width="1.8"/>
+              <circle cx="15" cy="15" r="2.4" fill="#1b3a4b"/>
+            </svg>
+            研究所秘密入口
+          </div>
+          <p class="footer-desc">覆盖 2026 年 10 月至 11 月的预印本、期刊论文与基金公示，条目类型含预印本速递、顶会接收、方法论文、撤稿记录与争议追踪，每日 08:00 更新预印本，每周三与周五分别更新实验室动态和争议汇总。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容方向</h4>
+          <ul>
+            <li><a href="/#preprints">神经科学预印本</a></li>
+            <li><a href="/#preprints">基因编辑与递送</a></li>
+            <li><a href="/#papers">NeurIPS 2026</a></li>
+            <li><a href="/#papers">CVPR 2027 截稿</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>信息源</h4>
+          <ul>
+            <li><a href="/#latest">bioRxiv / medRxiv</a></li>
+            <li><a href="/#labs">NSFC 基金公示</a></li>
+            <li><a href="/#debates">PubPeer 争议帖</a></li>
+            <li><a href="/#methods">JCTC 方法论文</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>参与</h4>
+          <ul>
+            <li><a href="/#submit">投稿入口</a></li>
+            <li><a href="/#comments">同行评论</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 研究所秘密入口 · 内容为示例聚合，事实性表述以原始论文与官方公示为准</span>
+        <span>最近更新：2026-11-08 08:00 · 对应条目：bioRxiv 单日新增 187 篇</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 菜单切换
+      var menuToggle = document.getElementById('menuToggle');
+      var mainNav = document.getElementById('mainNav');
+      var overlay = document.getElementById('overlay');
+
+      function closeMenu() {
+        mainNav.classList.remove('open');
+        overlay.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      }
+
+      function openMenu() {
+        mainNav.classList.add('open');
+        overlay.classList.add('show');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.textContent = '✕';
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (mainNav.classList.contains('open')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
+
+      // 点击导航后收起
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 740) {
+            closeMenu();
+          }
+        });
+      });
+
+      // Esc 关闭
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // 回到顶部
+      var backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight * 0.8) {
+          backTop.classList.add('visible');
+        } else {
+          backTop.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索过滤：对主内容区所有 section 内可见文本进行匹配
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+      var sections = document.querySelectorAll('.main-content .section');
+      var noResult = document.createElement('div');
+      noResult.className = 'no-result';
+      noResult.textContent = '没有匹配的条目，换个关键词试试（例如：钙钛矿、NeurIPS、力场）';
+      var mainContent = document.querySelector('.main-content');
+      mainContent.appendChild(noResult);
+
+      function performSearch() {
+        var q = searchInput.value.trim().toLowerCase();
+        if (!q) {
+          sections.forEach(function(s) { s.classList.remove('hidden-by-search'); });
+          noResult.classList.remove('show');
+          return;
+        }
+        var found = 0;
+        sections.forEach(function(section) {
+          var text = section.textContent.toLowerCase();
+          if (text.indexOf(q) !== -1) {
+            section.classList.remove('hidden-by-search');
+            found++;
+          } else {
+            section.classList.add('hidden-by-search');
+          }
+        });
+        if (found === 0) {
+          noResult.classList.add('show');
+        } else {
+          noResult.classList.remove('show');
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          performSearch();
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch();
+          }
+        });
+        // 输入清空时恢复
+        searchInput.addEventListener('input', function() {
+          if (!searchInput.value.trim()) {
+            sections.forEach(function(s) { s.classList.remove('hidden-by-search'); });
+            noResult.classList.remove('show');
+          }
+        });
+      }
+
+      // 侧栏频道高亮（简单滚动监听）
+      var navLinks = document.querySelectorAll('.channel-index a');
+      var sectionsForHighlight = [];
+      navLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('/#')) {
+          var id = href.substring(2);
+          var el = document.getElementById(id);
+          if (el) sectionsForHighlight.push({ link: link, el: el });
+        }
+      });
+
+      if (sectionsForHighlight.length > 0) {
+        window.addEventListener('scroll', function() {
+          var scrollPos = window.scrollY + 140;
+          var current = null;
+          sectionsForHighlight.forEach(function(item) {
+            if (item.el.offsetTop <= scrollPos) {
+              current = item;
+            }
+          });
+          navLinks.forEach(function(l) { l.style.background = ''; l.style.color = ''; l.style.borderLeftColor = 'transparent'; });
+          if (current) {
+            current.link.style.background = 'var(--accent-soft)';
+            current.link.style.color = 'var(--primary)';
+            current.link.style.borderLeftColor = 'var(--accent)';
+          }
+        }, { passive: true });
+      }
+
+    })();
+  </script>
+</body>
+  </html>
