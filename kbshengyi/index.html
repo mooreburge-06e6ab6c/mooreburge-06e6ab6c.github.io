@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KB绳艺网女烈专区 - 绳缚题材作品与图文合集</title>
+<meta name="description" content="KB绳艺网女烈专区聚合女性英烈题材绳缚摄影、图文系列与创作交流内容，收录《赤绳·英烈谱》等系列、教程拆解、作品榜单与读者评论，适合关注绳缚美学与历史题材融合的读者浏览。">
+<meta name="keywords" content="KB绳艺网女烈专区">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1c1a'/%3E%3Cpath d='M18 20c10 6 18 16 28 24M46 20C36 26 28 36 18 44' stroke='%23c8553d' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='7' fill='none' stroke='%23e8c07a' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --main:#8f2f2a;
+  --main-light:#b5463c;
+  --main-dark:#5e1c1a;
+  --gold:#c9a15c;
+  --bg:#f6f1e9;
+  --panel:#fffaf3;
+  --panel-2:#f0e7da;
+  --text:#2c2320;
+  --text-2:#5f534c;
+  --text-3:#8d7f76;
+  --line:#e0d4c4;
+  --radius-card:10px;
+  --radius-btn:6px;
+  --radius-tag:4px;
+  --shadow:0 1px 3px rgba(60,36,26,.08);
+  --shadow-hover:0 6px 18px rgba(60,36,26,.14);
+  --announce-h:38px;
+  --header-h:62px;
+  --maxw:1340px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--announce-h) + var(--header-h) + 12px);}
+body{
+  margin:0;
+  font-family:"Songti SC","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  font-size:15.5px;
+}
+a{color:var(--main);text-decoration:none;}
+a:hover{color:var(--main-light);}
+img{display:block;max-width:100%;height:auto;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0 0 .9em;}
+ul,ol{margin:0 0 .9em;padding-left:1.3em;}
+button{font-family:inherit;cursor:pointer;}
+:focus-visible{outline:2px solid var(--main-light);outline-offset:2px;}
+
+/* 吸顶公告条 */
+.announce{
+  position:sticky;top:0;z-index:60;
+  height:var(--announce-h);
+  background:linear-gradient(90deg,var(--main-dark),var(--main));
+  color:#f7e9d8;
+  display:flex;align-items:center;
+  font-size:13px;
+  overflow:hidden;
+}
+.announce-in{
+  max-width:var(--maxw);margin:0 auto;width:100%;padding:0 16px;
+  display:flex;align-items:center;gap:18px;white-space:nowrap;overflow:hidden;
+  mask-image:linear-gradient(90deg,#000 92%,transparent);
+}
+.announce .brand-chip{
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  padding:1px 8px;border-radius:var(--radius-tag);font-size:12px;letter-spacing:.5px;
+}
+.announce b{color:#f5cf8a;font-weight:600;}
+.announce .dot{opacity:.5;}
+
+/* 页头 */
+.site-header{
+  position:sticky;top:var(--announce-h);z-index:55;
+  background:rgba(255,250,243,.93);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  height:var(--header-h);
+}
+.header-in{
+  max-width:var(--maxw);margin:0 auto;height:100%;padding:0 16px;
+  display:flex;align-items:center;gap:20px;
+}
+.logo{display:flex;align-items:center;gap:9px;flex-shrink:0;}
+.logo svg{width:34px;height:34px;}
+.logo-text{font-size:17px;font-weight:700;color:var(--main-dark);letter-spacing:.5px;}
+.logo-text small{display:block;font-size:10px;font-weight:400;color:var(--text-3);letter-spacing:2px;}
+.top-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1;}
+.top-nav a{
+  font-size:13.5px;color:var(--text-2);padding:5px 9px;border-radius:var(--radius-btn);
+  white-space:nowrap;
+}
+.top-nav a:hover,.top-nav a.active{background:var(--panel-2);color:var(--main);}
+.search-box{
+  display:flex;align-items:center;gap:6px;flex-shrink:0;
+}
+.search-box input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:var(--radius-btn);
+  background:var(--panel);font-size:13px;font-family:inherit;color:var(--text);
+}
+.search-box input:focus{border-color:var(--main-light);}
+.search-box button{
+  padding:6px 11px;background:var(--main);color:#fff;border:0;border-radius:var(--radius-btn);font-size:13px;
+}
+.search-box button:hover{background:var(--main-light);}
+.hamburger{
+  display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-btn);
+  width:38px;height:34px;padding:0;align-items:center;justify-content:center;flex-shrink:0;
+}
+.hamburger span{display:block;width:18px;height:2px;background:var(--main-dark);position:relative;}
+.hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--main-dark);}
+.hamburger span::before{top:-6px;}
+.hamburger span::after{top:6px;}
+
+/* 移动端抽屉 */
+.mobile-drawer{
+  position:fixed;inset:0;z-index:80;display:none;
+}
+.mobile-drawer.open{display:block;}
+.drawer-mask{position:absolute;inset:0;background:rgba(30,18,14,.45);}
+.drawer-panel{
+  position:absolute;top:0;right:0;width:78%;max-width:320px;height:100%;
+  background:var(--panel);box-shadow:-6px 0 24px rgba(0,0,0,.2);padding:18px 16px;
+  overflow-y:auto;
+}
+.drawer-panel h4{font-size:13px;color:var(--text-3);letter-spacing:1px;margin-bottom:8px;}
+.drawer-panel a{display:block;padding:9px 6px;border-bottom:1px solid var(--line);font-size:15px;color:var(--text);}
+.drawer-close{background:none;border:0;font-size:22px;color:var(--text-2);float:right;line-height:1;padding:0 4px;}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 30%,rgba(201,161,92,.30),transparent 46%),
+    radial-gradient(circle at 12% 78%,rgba(143,47,42,.22),transparent 52%),
+    linear-gradient(135deg,#241715 0%,#3b2320 52%,#5a2a26 100%);
+  color:#f4e5d2;
+}
+.hero-in{
+  max-width:var(--maxw);margin:0 auto;padding:56px 20px 50px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:38px;align-items:center;
+  position:relative;z-index:2;
+}
+.hero .eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:3px;color:var(--gold);
+  border:1px solid rgba(201,161,92,.5);padding:2px 12px;border-radius:20px;margin-bottom:16px;
+}
+.hero h1{
+  font-size:clamp(30px,4vw,46px);letter-spacing:2px;color:#fdf3e5;
+  text-shadow:0 2px 16px rgba(0,0,0,.35);
+}
+.hero-sub{
+  margin-top:14px;color:#e2cdb5;font-size:15px;max-width:560px;line-height:1.85;
+}
+.hero-actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--gold);color:#3a2413;padding:9px 22px;border-radius:var(--radius-btn);
+  font-weight:700;font-size:14px;border:0;
+}
+.btn-primary:hover{background:#dcb877;color:#3a2413;}
+.btn-ghost{
+  border:1px solid rgba(244,229,210,.45);color:#f4e5d2;padding:9px 20px;border-radius:var(--radius-btn);
+  font-size:14px;background:transparent;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.1);color:#fff;}
+.hero-figure{position:relative;}
+.hero-figure svg{width:100%;height:auto;filter:drop-shadow(0 8px 26px rgba(0,0,0,.4));}
+.hero .rope-anim{animation:ropeSway 7s ease-in-out infinite;}
+@keyframes ropeSway{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* 主容器 */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px;}
+.layout{
+  display:grid;grid-template-columns:180px minmax(0,1fr) 248px;
+  gap:26px;padding:30px 0 10px;align-items:start;
+}
+.layout.no-side{grid-template-columns:minmax(0,1fr);}
+.layout.two{grid-template-columns:minmax(0,1fr) 280px;}
+
+/* 左频道索引 */
+.channel-col{
+  position:sticky;top:calc(var(--announce-h) + var(--header-h) + 16px);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 12px;box-shadow:var(--shadow);
+}
+.channel-col h3{
+  font-size:12px;letter-spacing:2px;color:var(--text-3);font-weight:600;margin-bottom:10px;padding-left:4px;
+}
+.channel-col nav{display:flex;flex-direction:column;gap:1px;}
+.channel-col nav a{
+  font-size:13.5px;padding:7px 9px;border-radius:var(--radius-btn);color:var(--text-2);
+  border-left:3px solid transparent;line-height:1.5;
+}
+.channel-col nav a:hover{background:var(--panel-2);color:var(--main);}
+.channel-col nav a.current{background:var(--panel-2);color:var(--main);border-left-color:var(--main);font-weight:600;}
+.channel-col .side-note{
+  margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);
+  font-size:12px;color:var(--text-3);line-height:1.65;
+}
+
+/* 右辅助栏 */
+.aside-col{display:flex;flex-direction:column;gap:20px;}
+.aside-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 14px 12px;box-shadow:var(--shadow);
+}
+.aside-card h3{
+  font-size:13px;color:var(--main-dark);margin-bottom:10px;letter-spacing:.5px;
+  padding-bottom:7px;border-bottom:1px solid var(--line);
+}
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk;}
+.rank-list li{
+  display:flex;gap:8px;align-items:flex-start;padding:6px 0;font-size:13px;line-height:1.55;
+  border-bottom:1px dotted var(--line);
+}
+.rank-list li:last-child{border-bottom:0;}
+.rank-list li::before{
+  counter-increment:rk;content:counter(rk);
+  flex:0 0 18px;height:18px;line-height:18px;text-align:center;font-size:11px;
+  background:var(--panel-2);color:var(--text-2);border-radius:3px;margin-top:2px;
+}
+.rank-list li:nth-child(-n+3)::before{background:var(--main);color:#fff;}
+.rank-list a{color:var(--text);}
+.rank-list a:hover{color:var(--main);}
+.rank-list .hot{color:var(--main-light);font-size:11px;margin-left:auto;flex-shrink:0;padding-left:6px;}
+
+.update-flow{list-style:none;padding:0;margin:0;}
+.update-flow li{font-size:12.5px;padding:6px 0;border-bottom:1px dotted var(--line);line-height:1.6;color:var(--text-2);}
+.update-flow li:last-child{border-bottom:0;}
+.update-flow time{color:var(--text-3);font-size:11.5px;display:block;}
+
+/* 通用板块 */
+.section{
+  margin-bottom:38px;scroll-margin-top:calc(var(--announce-h) + var(--header-h) + 12px);
+}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+.sec-head h2{
+  font-size:21px;color:var(--main-dark);letter-spacing:.5px;position:relative;padding-left:13px;
+}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:.28em;width:5px;height:1.05em;background:var(--main);border-radius:2px;
+}
+.sec-head .lead{font-size:13px;color:var(--text-3);flex:1;min-width:180px;}
+.sec-head .more-link{font-size:13px;color:var(--main);white-space:nowrap;}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);
+  border-radius:var(--radius-card);padding:20px 24px;box-shadow:var(--shadow);
+}
+.overview p{font-size:15px;line-height:1.9;margin-bottom:.85em;}
+.overview p:last-child{margin-bottom:0;}
+.overview .kw{color:var(--main-dark);font-weight:600;}
+
+/* 卡片网格 */
+.card-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px;
+}
+.content-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.content-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.content-card .thumb{position:relative;}
+.content-card .thumb img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.content-card .type-badge{
+  position:absolute;left:10px;top:10px;background:rgba(94,28,26,.88);color:#f6e6cf;
+  font-size:11.5px;padding:2px 9px;border-radius:var(--radius-tag);letter-spacing:.5px;
+}
+.content-card .body{padding:13px 15px 15px;display:flex;flex-direction:column;flex:1;}
+.content-card h3{font-size:16px;color:var(--main-dark);margin-bottom:6px;line-height:1.45;}
+.content-card h3 a{color:inherit;}
+.content-card .desc{font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:10px;flex:1;}
+.tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px;}
+.tag{
+  font-size:11.5px;background:var(--panel-2);color:var(--text-2);padding:1px 8px;border-radius:var(--radius-tag);
+  line-height:1.7;
+}
+.meta-row{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:8px;gap:8px;
+}
+.meta-row .heat{color:var(--main-light);}
+
+/* 动态列表 */
+.news-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden;}
+.news-item{
+  display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;
+  padding:15px 18px;border-bottom:1px solid var(--line);
+}
+.news-item:last-child{border-bottom:0;}
+.news-item time{font-size:12.5px;color:var(--text-3);padding-top:2px;}
+.news-item h3{font-size:15.5px;margin-bottom:4px;color:var(--text);}
+.news-item h3 a{color:var(--text);}
+.news-item h3 a:hover{color:var(--main);}
+.news-item p{font-size:13px;color:var(--text-2);margin:0;line-height:1.7;}
+.news-item .nl-tag{font-size:11.5px;color:var(--main);background:var(--panel-2);padding:0 7px;border-radius:var(--radius-tag);margin-left:6px;white-space:nowrap;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+.cat-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:13px 14px;box-shadow:var(--shadow);transition:border-color .18s,transform .18s;
+  display:block;
+}
+.cat-item:hover{border-color:var(--main-light);transform:translateY(-2px);}
+.cat-item strong{display:block;font-size:14.5px;color:var(--main-dark);margin-bottom:3px;}
+.cat-item span{font-size:12px;color:var(--text-3);line-height:1.55;display:block;}
+
+/* 深度解析 */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:26px 30px;box-shadow:var(--shadow);
+}
+.deep h2{font-size:22px;color:var(--main-dark);margin-bottom:6px;padding-left:0;}
+.deep h2::before{display:none;}
+.deep .deep-lead{color:var(--text-2);font-size:14px;margin-bottom:20px;border-bottom:1px solid var(--line);padding-bottom:14px;}
+.deep h3{font-size:17px;color:var(--main);margin:24px 0 10px;}
+.deep h3:first-of-type{margin-top:0;}
+.deep p{font-size:15px;line-height:1.95;}
+.deep ul,.deep ol{font-size:14.5px;line-height:1.85;}
+.deep li{margin-bottom:.35em;}
+.deep .callout{
+  background:var(--panel-2);border-left:3px solid var(--main-light);border-radius:0 var(--radius-btn) var(--radius-btn) 0;
+  padding:12px 16px;margin:14px 0;font-size:14px;line-height:1.8;
+}
+.deep .callout strong{color:var(--main-dark);}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;line-height:1.65;}
+.compare-table th{background:var(--panel-2);color:var(--main-dark);font-weight:600;}
+.compare-table td{color:var(--text-2);}
+.compare-table tr:nth-child(even) td{background:#fdf9f2;}
+
+/* 指南步骤 */
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.guide-step{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:16px 18px;box-shadow:var(--shadow);position:relative;
+}
+.guide-step .num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--main);color:#fff;font-size:13px;font-weight:700;
+  margin-bottom:9px;
+}
+.guide-step h3{font-size:15px;color:var(--main-dark);margin-bottom:6px;}
+.guide-step p{font-size:13px;color:var(--text-2);line-height:1.75;margin:0;}
+
+/* FAQ */
+.faq-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden;}
+.faq-list details{border-bottom:1px solid var(--line);}
+.faq-list details:last-child{border-bottom:0;}
+.faq-list summary{
+  padding:14px 18px;font-size:15px;font-weight:600;color:var(--text);cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-list summary::after{content:"+";color:var(--main);font-size:19px;line-height:1;flex-shrink:0;font-weight:400;}
+.faq-list details[open] summary::after{content:"−";}
+.faq-list summary:hover{color:var(--main);}
+.faq-list .ans{padding:0 18px 16px;font-size:14px;color:var(--text-2);line-height:1.85;}
+.faq-list .ans p{margin-bottom:.6em;}
+.faq-list .ans p:last-child{margin-bottom:0;}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px;}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:13px 15px;box-shadow:var(--shadow);font-size:13.5px;line-height:1.8;
+}
+.comment .who{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.comment .avatar{
+  width:26px;height:26px;border-radius:50%;background:var(--panel-2);color:var(--main-dark);
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;
+}
+.comment .name{font-weight:600;color:var(--main-dark);font-size:13px;}
+.comment .time{font-size:11px;color:var(--text-3);margin-left:auto;flex-shrink:0;}
+.comment p{margin:0;color:var(--text-2);}
+.comment .ref{color:var(--main);font-size:12px;display:inline-block;margin-top:6px;background:var(--panel-2);padding:0 6px;border-radius:3px;}
+
+/* 资讯 */
+.info-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.info-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:16px 18px;box-shadow:var(--shadow);
+}
+.info-item time{font-size:12px;color:var(--main-light);letter-spacing:.5px;}
+.info-item h3{font-size:15.5px;margin:5px 0 6px;color:var(--text);line-height:1.5;}
+.info-item h3 a{color:var(--text);}
+.info-item h3 a:hover{color:var(--main);}
+.info-item p{font-size:13px;color:var(--text-2);margin:0;line-height:1.75;}
+
+/* 推荐标签 */
+.rec-wrap{display:flex;flex-wrap:wrap;gap:9px;}
+.rec-tag{
+  font-size:13px;background:var(--panel);border:1px solid var(--line);color:var(--text-2);
+  padding:6px 13px;border-radius:20px;box-shadow:var(--shadow);transition:all .18s;
+}
+.rec-tag:hover{border-color:var(--main-light);color:var(--main);background:var(--panel-2);}
+
+/* 榜单 + 时间线 */
+.two-panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;}
+.panel-box{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:18px 20px;box-shadow:var(--shadow);}
+.panel-box h3{font-size:16px;color:var(--main-dark);margin-bottom:12px;}
+.bill-row{
+  display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;
+  padding:8px 0;border-bottom:1px dotted var(--line);font-size:13.5px;
+}
+.bill-row:last-child{border-bottom:0;}
+.bill-row .no{font-weight:700;color:var(--main-light);font-size:14px;}
+.bill-row .nm{color:var(--text);line-height:1.5;}
+.bill-row .nm small{display:block;color:var(--text-3);font-size:11.5px;font-weight:400;}
+.bill-row .sc{color:var(--main-dark);font-size:12.5px;white-space:nowrap;}
+.timeline{list-style:none;padding:0;margin:0;}
+.timeline li{position:relative;padding:0 0 14px 18px;border-left:1px solid var(--line);font-size:13px;line-height:1.7;}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0;}
+.timeline li::before{
+  content:"";position:absolute;left:-4px;top:.5em;width:7px;height:7px;border-radius:50%;
+  background:var(--gold);border:1px solid var(--panel);
+}
+.timeline time{display:block;font-size:11.5px;color:var(--text-3);margin-bottom:1px;}
+.timeline strong{color:var(--main-dark);}
+
+/* 投稿互动 */
+.submit-box{
+  background:linear-gradient(135deg,#3b2320,#5e1c1a);color:#f1ddc3;border-radius:var(--radius-card);
+  padding:24px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;
+}
+.submit-box h2{color:#f7e9d8;font-size:19px;margin-bottom:6px;padding-left:0;}
+.submit-box h2::before{display:none;}
+.submit-box p{font-size:13.5px;color:#dfc6a9;margin:0;line-height:1.75;}
+.submit-box .btns{display:flex;gap:10px;flex-wrap:wrap;}
+.submit-box .btns a{
+  padding:8px 18px;border-radius:var(--radius-btn);font-size:13.5px;white-space:nowrap;
+  border:1px solid rgba(241,221,195,.4);color:#f1ddc3;
+}
+.submit-box .btns a.primary{background:var(--gold);color:#3a2413;border-color:var(--gold);font-weight:700;}
+.submit-box .btns a:hover{background:rgba(255,255,255,.12);}
+.submit-box .btns a.primary:hover{background:#dcb877;}
+
+/* 搜索无结果 */
+.no-result{
+  display:none;background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius-card);
+  padding:20px;text-align:center;color:var(--text-3);font-size:14px;margin-bottom:22px;
+}
+
+/* 页尾 */
+.site-footer{background:#241715;color:#c7b3a0;margin-top:28px;padding:36px 16px 22px;font-size:13px;}
+.footer-in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;}
+.footer-brand .logo-text{color:#f0dcc3;font-size:16px;}
+.footer-brand .logo-text small{color:#9a8574;}
+.footer-brand p{font-size:12.5px;line-height:1.8;color:#a48e7c;margin-top:10px;max-width:300px;}
+.footer-col h4{font-size:13px;color:#e8d3b8;margin-bottom:9px;letter-spacing:1px;}
+.footer-col a{display:block;font-size:12.5px;color:#a48e7c;padding:2px 0;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{
+  max-width:var(--maxw);margin:24px auto 0;padding-top:14px;border-top:1px solid #3d2b25;
+  font-size:12px;color:#87715f;line-height:1.8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 回到顶部 */
+.back-top{
+  position:fixed;right:20px;bottom:24px;z-index:50;
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--line);
+  background:var(--panel);color:var(--main);box-shadow:var(--shadow-hover);
+  display:none;align-items:center;justify-content:center;font-size:17px;
+}
+.back-top.show{display:flex;}
+
+/* 响应式 */
+@media (max-width:1080px){
+  .layout{grid-template-columns:minmax(0,1fr) 260px;}
+  .channel-col{display:none;}
+  .hero-in{grid-template-columns:minmax(0,1fr);gap:22px;}
+  .hero-figure{max-width:420px;}
+  .footer-in{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:860px){
+  .top-nav{display:none;}
+  .hamburger{display:flex;}
+  .search-box input{width:110px;}
+  .layout{grid-template-columns:minmax(0,1fr);}
+  .aside-col{flex-direction:row;flex-wrap:wrap;}
+  .aside-card{flex:1 1 240px;}
+  .two-panel{grid-template-columns:minmax(0,1fr);}
+  .submit-box{grid-template-columns:minmax(0,1fr);}
+}
+@media (max-width:740px){
+  body{font-size:15px;}
+  .search-box{display:none;}
+  .news-item{grid-template-columns:minmax(0,1fr);gap:3px;}
+  .news-item time{font-size:12px;}
+  .hero-in{padding:38px 16px 34px;}
+  .deep{padding:20px 18px;}
+  .overview{padding:16px 18px;}
+  .card-grid{grid-template-columns:minmax(0,1fr);}
+  .comment-grid{grid-template-columns:minmax(0,1fr);}
+  .footer-in{grid-template-columns:1fr;}
+  .back-top{right:14px;bottom:16px;}
+  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce">
+  <div class="announce-in">
+    <span class="brand-chip">KB绳艺网女烈专区</span>
+    <span><b>11-08</b> 新增《赤绳·英烈谱》第三辑 12 张</span>
+    <span class="dot">·</span>
+    <span><b>11-06</b> 上线「光影塑形」布光教程（含 3 组对照）</span>
+    <span class="dot">·</span>
+    <span><b>本周</b> 专题榜收录 46 组作品</span>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-header">
+  <div class="header-in">
+    <a class="logo" href="/#top" aria-label="KB绳艺网女烈专区首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#2b1c1a"/>
+        <path d="M18 20c10 6 18 16 28 24M46 20C36 26 28 36 18 44" stroke="#c8553d" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="32" cy="32" r="7" fill="none" stroke="#e8c07a" stroke-width="3"/>
+      </svg>
+      <span class="logo-text">KB绳艺网女烈专区<small>ROPE · FIGURE</small></span>
+    </a>
+    <nav class="top-nav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#category">分类索引</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">读者评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#submit">投稿交流</a>
+    </nav>
+    <div class="search-box">
+      <input type="search" id="siteSearch" placeholder="搜索作品或系列" aria-label="站内搜索">
+      <button type="button" id="searchBtn">查找</button>
+    </div>
+    <button class="hamburger" id="menuBtn" aria-label="打开导航菜单" aria-expanded="false" aria-controls="drawer">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 移动抽屉 -->
+<div class="mobile-drawer" id="drawer" role="dialog" aria-modal="true" aria-label="移动导航">
+  <div class="drawer-mask" id="drawerMask"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawerClose" aria-label="关闭导航">×</button>
+    <h4>频道索引</h4>
+    <a href="/#overview">领域概览</a>
+    <a href="/#featured">精选作品</a>
+    <a href="/#updates">最新动态</a>
+    <a href="/#category">分类索引</a>
+    <a href="/#deep">深度解析</a>
+    <a href="/#guide">体验指南</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">读者评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#submit">投稿交流</a>
+  </div>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <span class="eyebrow">绳缚美学 × 英烈叙事</span>
+      <h1>KB绳艺网女烈专区</h1>
+      <p class="hero-sub">汇集女性英烈题材的绳缚摄影、分辑图集与布光笔记，收录《赤绳·英烈谱》《铁窗绣》等系列，附分辑目录、创作过程与读者讨论。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#featured">浏览精选作品</a>
+        <a class="btn-ghost" href="/#deep">读深度解析</a>
+      </div>
+    </div>
+    <div class="hero-figure" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#c9a15c" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#8f2f2a" stop-opacity=".5"/>
+          </linearGradient>
+        </defs>
+        <circle cx="300" cy="90" r="72" fill="url(#hg)" opacity=".28"/>
+        <rect x="52" y="58" width="200" height="230" rx="8" fill="none" stroke="#c9a15c" stroke-opacity=".55" stroke-width="1.5"/>
+        <rect x="72" y="78" width="160" height="190" rx="4" fill="#3b2320" stroke="#c9a15c" stroke-opacity=".35"/>
+        <g class="rope-anim" stroke="#c8553d" stroke-width="3.4" fill="none" stroke-linecap="round">
+          <path d="M96 110c34 22 58 62 96 96"/>
+          <path d="M216 110c-34 22-58 62-96 96"/>
+          <path d="M104 180c26 8 68 8 94 0"/>
+        </g>
+        <circle cx="152" cy="152" r="24" fill="none" stroke="#e8c07a" stroke-width="2.4"/>
+        <path d="M152 136v-10M152 178v10M136 152h-10M168 152h10" stroke="#e8c07a" stroke-width="2" stroke-linecap="round"/>
+        <g fill="#c9a15c" opacity=".8">
+          <circle cx="330" cy="220" r="3"/>
+          <circle cx="356" cy="188" r="2"/>
+          <circle cx="312" cy="252" r="2"/>
+          <circle cx="374" cy="244" r="2.6"/>
+        </g>
+        <path d="M300 250c18-12 34-10 46 2" stroke="#c9a15c" stroke-opacity=".6" stroke-width="1.6" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="no-result" id="noResult">没有找到匹配的作品或系列，换一个关键词试试，例如「赤绳」「布光」「分辑」。</div>
+
+  <div class="layout" id="mainLayout">
+
+    <!-- 左频道索引 -->
+    <aside class="channel-col" aria-label="频道索引">
+      <h3>频道索引</h3>
+      <nav>
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选作品</a>
+        <a href="/#updates">最新动态</a>
+        <a href="/#category">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">读者评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#bill">作品榜单</a>
+        <a href="/#submit">投稿交流</a>
+      </nav>
+      <div class="side-note">
+        分辑图集与布光笔记每周二、周五更新，投稿作品经编辑初筛后进入专栏。
+      </div>
+    </aside>
+
+    <!-- 主内容 -->
+    <main>
+
+      <!-- 1 领域概览 -->
+      <section class="section" id="overview">
+        <div class="sec-head">
+          <h2>女烈题材绳缚摄影的取材方向</h2>
+          <span class="lead">从历史叙事、绳结语言到布光造型</span>
+        </div>
+        <div class="overview">
+          <p>女烈题材的绳缚摄影，取材对象是近代史中参与抗争的女性人物，以及围绕她们展开的牢狱、审讯、行刑等场景想象。它和普通人体绳缚最大的区别，在于画面里始终有一层叙事：绳索不只是造型工具，还承担着“束缚—抵抗”的关系表达。常见的取材方向包括革命女性狱中场景、女交通员被捕瞬间、女战士受审剪影，以及不带具体人物的象征性构图。</p>
+          <p>绳结语言是这类作品的核心看点。<span class="kw">龟甲缚</span>、<span class="kw">菱绳</span>、<span class="kw">胸缚</span>这些基础结构在女烈题材里通常被压缩、打散，只保留局部，配合粗麻绳、锈铁链、旧木椅等道具，形成“未完成感”。粗麻绳的纤维毛刺、绳结收口的方向、绳尾垂落的长度，都会影响画面读起来是“被擒”还是“自缚”。</p>
+          <p>布光方面，主流做法是单侧硬光加低角度反光板，制造脸部半明半暗的审讯感。近两年出现一批用暖色钨丝灯模拟牢房油灯的作品，反差比冷光小，但皮肤质感更真实。还有创作者尝试在暗部加入少量红橙色补光，让绳痕在阴影里仍可辨认，这类处理在《赤绳·英烈谱》第二辑里用得比较集中。</p>
+          <p>值得关注的还有叙事完整性。单张图能交代的信息有限，分辑图集通常用 8—15 张构成一个场景段落：被捕、押解、审讯、独处。段落之间的留白比单张的冲击力更重要，这也是判断一组作品完成度的直接依据。</p>
+        </div>
+      </section>
+
+      <!-- 2 精选作品 -->
+      <section class="section" id="featured">
+        <div class="sec-head">
+          <h2>精选作品与系列</h2>
+          <a class="more-link" href="/#bill">查看榜单 →</a>
+        </div>
+        <div class="card-grid">
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbchisheng01/400/300" width="400" height="300" loading="lazy" alt="《赤绳·英烈谱》第三辑 牢房单侧硬光场景">
+              <span class="type-badge">分辑图集</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">赤绳·英烈谱 第三辑</a></h3>
+              <p class="desc">12 张，取材女交通员被捕段落。粗麻绳做菱绳局部，铁窗投影落在肩胛，第三张起改用低角度反光板，脸部明暗比例约 7:3。</p>
+              <div class="tag-row"><span class="tag">菱绳</span><span class="tag">单侧硬光</span><span class="tag">牢房场景</span></div>
+              <div class="meta-row"><span>2026-11-08 更新</span><span class="heat">热度 9.4k</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbtiechuang02/400/300" width="400" height="300" loading="lazy" alt="《铁窗绣》系列 女子在铁窗前低头缝补的绳缚构图">
+              <span class="type-badge">场景系列</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">铁窗绣 第二组</a></h3>
+              <p class="desc">把缝补动作和腕部束缚放进同一画面，绳尾从指缝穿出，针线筐作为前景道具。全组 9 张，第 5 张的手部特写被多次转载。</p>
+              <div class="tag-row"><span class="tag">腕缚</span><span class="tag">前景道具</span><span class="tag">手部特写</span></div>
+              <div class="meta-row"><span>2026-11-05 更新</span><span class="heat">热度 8.1k</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbguangying03/400/300" width="400" height="300" loading="lazy" alt="暖色钨丝灯下绳痕与皮肤质感的对照拍摄">
+              <span class="type-badge">布光教程</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">暖钨丝灯下的绳痕质感</a></h3>
+              <p class="desc">三组对照：冷光、暖光、暖光加红橙暗部补光。同一位模特、同一组龟甲缚，重点看绳痕在阴影里的可辨程度与肤色还原差异。</p>
+              <div class="tag-row"><span class="tag">龟甲缚</span><span class="tag">暗部补光</span><span class="tag">对照拍摄</span></div>
+              <div class="meta-row"><span>2026-11-06 更新</span><span class="heat">收藏 1.2k</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbshenpan04/400/300" width="400" height="300" loading="lazy" alt="《审判剪影》低机位逆光构图，人物只剩轮廓">
+              <span class="type-badge">剪影构图</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">审判剪影 单幅</a></h3>
+              <p class="desc">低机位逆光，人物只有轮廓，胸缚的绳路靠轮廓缺口辨认。创作者自述反复拍了 40 多张才让绳尾垂落角度对齐门框。</p>
+              <div class="tag-row"><span class="tag">胸缚</span><span class="tag">逆光</span><span class="tag">轮廓叙事</span></div>
+              <div class="meta-row"><span>2026-10-30 更新</span><span class="heat">热度 6.7k</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbjiaodai05/400/300" width="400" height="300" loading="lazy" alt="《暗号》系列中交通员被捕瞬间的肩背构图">
+              <span class="type-badge">叙事组图</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">暗号 被捕段落</a></h3>
+              <p class="desc">8 张，讲交通员接头失败被按在墙上的几十秒。第二张的绳结只打了一半，创作者刻意保留未收口状态，用来区分“押解”与“被捕”。</p>
+              <div class="tag-row"><span class="tag">半结</span><span class="tag">墙面场景</span><span class="tag">动作捕捉</span></div>
+              <div class="meta-row"><span>2026-10-28 更新</span><span class="heat">热度 7.5k</span></div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/kbcanju06/400/300" width="400" height="300" loading="lazy" alt="残局系列中以旧木椅和散落麻绳为主的静物与人像">
+              <span class="type-badge">静物融合</span>
+            </div>
+            <div class="body">
+              <h3><a href="/#featured">残局 六联</a></h3>
+              <p class="desc">六张一组，人物始终背对镜头，视线落在散落的麻绳和翻倒的木椅上。绳缚只保留肩背部分的菱绳，其余交给道具叙事。</p>
+              <div class="tag-row"><span class="tag">菱绳</span><span class="tag">背影构图</span><span class="tag">道具叙事</span></div>
+              <div class="meta-row"><span>2026-10-24 更新</span><span class="heat">热度 5.9k</span></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3 最新动态 -->
+      <section class="section" id="updates">
+        <div class="sec-head">
+          <h2>最新更新与动态</h2>
+          <span class="lead">截至 2026-11-08</span>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <time datetime="2026-11-08">11-08</time>
+            <div>
+              <h3><a href="/#featured">赤绳·英烈谱 第三辑上线</a><span class="nl-tag">分辑</span></h3>
+              <p>共 12 张，首次采用低角度反光板代替柔光箱，脸部明暗比例从 5:5 调到 7:3。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-11-07">11-07</time>
+            <div>
+              <h3><a href="/#deep">「光影塑形」布光教程补充对照页</a><span class="nl-tag">教程</span></h3>
+              <p>新增冷光、暖光、暖光加红橙补光三组同机位样片，模特与绳结保持一致。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-11-05">11-05</time>
+            <div>
+              <h3><a href="/#featured">铁窗绣 第二组发布</a><span class="nl-tag">系列</span></h3>
+              <p>9 张，缝补动作与腕缚同框，第 5 张手部特写在三个社群被转发。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-11-03">11-03</time>
+            <div>
+              <h3><a href="/#news">绳材讨论：8mm 黄麻与 6mm 棉绳的取舍</a><span class="nl-tag">讨论</span></h3>
+              <p>社群里两组对照照显示，黄麻绳痕更深但收口难，棉绳贴身但逆光下细节弱。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-11-01">11-01</time>
+            <div>
+              <h3><a href="/#bill">十月专题榜结算，46 组作品入选</a><span class="nl-tag">榜单</span></h3>
+              <p>《赤绳·英烈谱》第二辑以 9.1 分居首，《残局 六联》首次进入前五。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-10-29">10-29</time>
+            <div>
+              <h3><a href="/#comments">读者对「剪影单幅」争议集中</a><span class="nl-tag">争议</span></h3>
+              <p>争议点在于轮廓叙事是否牺牲了绳结细节，支持方与反对方各执一词。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-10-26">10-26</time>
+            <div>
+              <h3><a href="/#guide">新手路径页更新：先看分辑再拆单张</a><span class="nl-tag">指南</span></h3>
+              <p>调整了阅读顺序建议，把布光笔记从推荐首位移到分辑图集之后。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-10-22">10-22</time>
+            <div>
+              <h3><a href="/#submit">第三季度投稿作品初筛结果</a><span class="nl-tag">投稿</span></h3>
+              <p>收到 87 组，初筛通过 21 组，未通过的主要原因是场景叙事不完整。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="section" id="category">
+        <div class="sec-head">
+          <h2>分类索引</h2>
+          <span class="lead">按取材、绳结与呈现方式划分</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured"><strong>狱中场景</strong><span>铁窗、木椅、牢房墙面，最常见的一类</span></a>
+          <a class="cat-item" href="/#featured"><strong>押解与被捕</strong><span>动作幅度大，讲究绳结半完成状态</span></a>
+          <a class="cat-item" href="/#featured"><strong>审讯剪影</strong><span>逆光轮廓，弱化细节强化关系</span></a>
+          <a class="cat-item" href="/#featured"><strong>龟甲缚变体</strong><span>压缩胸背绳路，保留收口方向</span></a>
+          <a class="cat-item" href="/#featured"><strong>菱绳局部</strong><span>肩背与腰腹局部化处理</span></a>
+          <a class="cat-item" href="/#featured"><strong>布光笔记</strong><span>硬光、暖钨丝灯、暗部补光</span></a>
+          <a class="cat-item" href="/#featured"><strong>道具与静物</strong><span>麻绳、铁链、针线筐、旧木箱</span></a>
+          <a class="cat-item" href="/#featured"><strong>分辑图集</strong><span>8—15 张构成完整场景段落</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="section" id="deep">
+        <div class="deep">
+          <h2>女烈题材绳缚的分辑逻辑与判断标准</h2>
+          <p class="deep-lead">单张图能成立，不代表一组图能成立；分辑的难点在段落之间的衔接，而不在单张的冲击力。</p>
+
+          <h3>一、单张成立与分辑成立是两套标准</h3>
+          <p>《赤绳·英烈谱》第二辑有 15 张，其中第 3、7、11 张单独看都足够完整，但整组读完会觉得中间松。问题出在第 8 到第 10 张：三张都在同一个审讯场景里换角度，信息量没有推进。第 11 张的独处镜头本该承担情绪转折，前面却没铺垫“审讯结束”这个节点。</p>
+          <p>反观《暗号 被捕段落》只有 8 张，第 2 张绳结只打了一半，第 4 张才补完整，中间插了 1 张只有墙面的空镜。这个空镜在单张标准下几乎不成立——没有人物、没有绳结，但它把“被发现”到“被按住”之间的时间差交代清楚了。判断一组分辑是否成立，可以看两个点：段落之间有没有时间推进的痕迹，空镜或留白是否承担了具体叙事功能。</p>
+          <div class="callout">
+            <strong>可核对的判断拆解：</strong>把一组图按“被捕—押解—审讯—独处”四段拆开，统计每段张数与信息新增项。若某段只有角度变化而没有新增信息（新道具、新绳结状态、新表情或新环境），该段即为冗余段。第二辑的冗余段在第 8—10 张，共 3 张。
+          </div>
+
+          <h3>二、绳结状态决定画面读法</h3>
+          <p>同样是胸缚，收口朝上还是朝下，读起来完全不同。收口朝上、绳尾向上收拢，画面偏向“被押解前的整理”；收口朝下、绳尾自然垂落，更接近“审讯后的松解”。这一细节在多数作品里被忽略，但在《残局 六联》里被放大：六张里绳尾垂落的角度依次从 30 度增加到 75 度，配合人物背部姿态，读起来是一段逐步卸力的过程。</p>
+          <table class="compare-table">
+            <thead>
+              <tr><th>绳结状态</th><th>常见画面读法</th><th>典型作品</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>半结未收口</td><td>被捕瞬间、押解途中</td><td>《暗号 被捕段落》第 2 张</td></tr>
+              <tr><td>收口朝上、绳尾上收</td><td>审讯前整理、身份确认</td><td>《赤绳·英烈谱》第三辑第 4 张</td></tr>
+              <tr><td>收口朝下、绳尾垂落</td><td>审讯后松解、独处</td><td>《残局 六联》第 4—6 张</td></tr>
+              <tr><td>绳路被打散</td><td>挣扎、脱缚未遂</td><td>《铁窗绣》第 7 张</td></tr>
+            </tbody>
+          </table>
+
+          <h3>三、布光不是越暗越有戏剧性</h3>
+          <p>女烈题材容易滑向“越暗越沉重”的处理。2026 年 10 月的一组对照照显示，把主光从 45 度侧顶光改成 70 度高位硬光后，眼窝阴影加深，但绳痕在肩胛的走向反而看不清。第三辑的做法是主光仍用 45 度，暗部加一块红橙反光板，色温约 3200K，与主光的 5600K 形成冷暖分界。这样绳痕在暗部仍保留可辨的轮廓，皮肤也没有被压成灰调。</p>
+          <p>暖钨丝灯模拟牢房油灯是近半年的新趋势，优点是肤色真实，缺点是色温低时绳材的纤维毛刺容易被糊掉。解决办法是把光圈收小半档，牺牲一点景深换锐度。这个取舍在《铁窗绣》第二组里做得比较明显：前景针线筐清晰，人物面部略软，视觉重心自然落到手部动作上。</p>
+
+          <h3>四、历史题材的边界在哪</h3>
+          <p>女烈题材涉及真实历史人物，创作者普遍采用虚构化处理：不写具体姓名，不还原真实刑讯细节，场景道具做年代模糊。已公开的讨论里，社群对“是否应标注虚构声明”有分歧。一部分创作者在分辑首页加一行小字“人物与情节均为虚构”，另一部分认为这会破坏画面沉浸感。</p>
+          <p>从可核对的角度看，两组做法的差异不在声明本身，而在声明的位置。放在分辑首页的，读者在进入叙事前就知道这是虚构；放在末页的，读者读完才看到。前者更接近出版物的处理方式，后者更接近展览的尾注。两种做法都能成立，关键是别把声明藏在图片说明的折叠层里——那等于没有。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="section" id="guide">
+        <div class="sec-head">
+          <h2>阅读与比较的路径</h2>
+          <span class="lead">先看什么、怎么比、什么时候可以跳过</span>
+        </div>
+        <div class="guide">
+          <div class="guide-step">
+            <span class="num">1</span>
+            <h3>先读分辑，不拆单张</h3>
+            <p>分辑图集的信息密度高于单张。按顺序读一遍，注意段落之间有没有时间推进，再回头拆单张看细节。</p>
+          </div>
+          <div class="guide-step">
+            <span class="num">2</span>
+            <h3>看绳结状态是否服务于叙事</h3>
+            <p>半结、收口方向、绳尾长度，这三项能快速判断一组图是随手拍的还是设计过的。三项都对不上的，多半是拼凑。</p>
+          </div>
+          <div class="guide-step">
+            <span class="num">3</span>
+            <h3>布光笔记放在分辑之后看</h3>
+            <p>先看成品再看布光拆解，比反过来更有效。布光笔记里的对照样片，要和分辑里的成片对照着读。</p>
+          </div>
+          <div class="guide-step">
+            <span class="num">4</span>
+            <h3>同类作品横向比三组</h3>
+            <p>同题材至少比三组，看谁在道具、绳结、布光三项里有两项以上做了新处理。只改一项的，通常只是换皮。</p>
+          </div>
+          <div class="guide-step">
+            <span class="num">5</span>
+            <h3>争议作品先看评论再决定</h3>
+            <p>剪影类、极简类作品的评价分化大。先看评论里对绳结细节的讨论，再判断值不值得花时间细读。</p>
+          </div>
+          <div class="guide-step">
+            <span class="num">6</span>
+            <h3>投稿前先做段落自检</h3>
+            <p>按四段拆分自己的组图，统计每段新增信息项。少于两项的段落删掉或重拍，再提交。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="section" id="faq">
+        <div class="sec-head">
+          <h2>常见问答</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>女烈题材绳缚和普通人像绳缚，绳结上有什么不同？</summary>
+            <div class="ans">
+              <p>差异主要在完整度。普通人像绳缚追求绳路完整、结构对称，女烈题材反而常保留半结、断头、未收口的绳尾。<span>《暗号 被捕段落》</span>第 2 张就是典型：绳结只打了一半，用来交代“正在被制服”这个时间点。完整绳路适合静态肖像，半完成状态适合动作叙事。</p>
+            </div>
+          </details>
+          <details>
+            <summary>为什么这类作品大多用粗麻绳，棉绳不行吗？</summary>
+            <div class="ans">
+              <p>8mm 黄麻绳的纤维毛刺在硬光下会形成细碎高光，质感更强；6mm 棉绳贴身舒适，但逆光时边缘发虚，绳路轮廓容易糊。2026 年 11 月 3 日的社群对照照里，同一组菱绳用两种绳材拍，黄麻版本的绳痕深度明显更清楚，代价是收口更难打紧。</p>
+            </div>
+          </details>
+          <details>
+            <summary>龟甲缚在女烈题材里为什么经常只保留肩背部分？</summary>
+            <div class="ans">
+              <p>完整龟甲缚的菱形网格对称感太强，容易把画面拉向装饰性。只保留肩背局部，菱形被衣服边缘或阴影切断，读起来更像“被绑过”而不是“被绑好”。《赤绳·英烈谱》第一辑第 6 张就只留了三格半菱形。</p>
+            </div>
+          </details>
+          <details>
+            <summary>剪影作品看不到绳结细节，还算绳缚摄影吗？</summary>
+            <div class="ans">
+              <p>算，但评价标准要换。剪影靠轮廓缺口辨认绳路，判断依据从“绳结打得准不准”变成“轮廓是否交代了绳缚关系”。《审判剪影 单幅》里胸缚的绳路全靠肩线外凸的那一小段缺口识别，拍废的 40 多张主要败在绳尾垂落角度和门框没对齐。</p>
+            </div>
+          </details>
+          <details>
+            <summary>涉及真实历史人物，作品需要标注虚构声明吗？</summary>
+            <div class="ans">
+              <p>社群做法不统一，但位置比有无更关键。放在分辑首页的声明，读者进叙事前就知道是虚构；放在末页或图片说明折叠层里，效果接近没有。2026 年 10 月的讨论里，多数意见倾向于首页加一行小字，既不影响沉浸，也把边界说清楚。</p>
+            </div>
+          </details>
+          <details>
+            <summary>暖钨丝灯布光，绳痕总是糊掉怎么办？</summary>
+            <div class="ans">
+              <p>先收光圈。暖光色温低，纤维毛刺的对比度天然偏弱，光圈收小半档能换回锐度，景深损失对这类构图影响不大。《铁窗绣》第二组就是这么处理的：前景针线筐保持清晰，面部略软，视觉重心自然落到手部。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 评论 -->
+      <section class="section" id="comments">
+        <div class="sec-head">
+          <h2>读者评论</h2>
+          <span class="lead">围绕具体作品与具体处理</span>
+        </div>
+        <div class="comment-grid">
+
+          <div class="comment">
+            <div class="who"><span class="avatar">阿</span><span class="name">阿柘</span><span class="time">11-08</span></div>
+            <p>第三辑第 4 张那个收口朝上的处理，第一眼没看懂，翻回去看第 3 张才明白是在整理衣服。这种前后呼应现在不多见了。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">青</span><span class="name">青瓦台前</span><span class="time">11-07</span></div>
+            <p>暖钨丝灯那组对照照确实有用，我按 3200K 试了一次，肤色是真实了，就是绳痕边缘有点肉。收光圈的建议记下了。</p>
+            <span class="ref">《暖钨丝灯下的绳痕质感》</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">断</span><span class="name">断绳结</span><span class="time">11-07</span></div>
+            <p>铁窗绣第 5 张手部特写，指缝里穿出来的绳尾角度太巧了，像是随手一放又刚好对。后来看说明才知道重拍了十几次。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">南</span><span class="name">南墙不撞</span><span class="time">11-06</span></div>
+            <p>剪影那组我持保留意见。轮廓叙事是成立的，但绳缚的部分被削得太薄，看三张就腻了。</p>
+            <span class="ref">《审判剪影 单幅》</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">木</span><span class="name">木椅子腿</span><span class="time">11-06</span></div>
+            <p>残局六联的绳尾角度递增，这个细节我看了两遍才发现。30 度到 75 度，配合背部姿态确实是一段卸力过程。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">老</span><span class="name">老麻绳</span><span class="time">11-05</span></div>
+            <p>8mm 黄麻收口难打紧这点深有体会，冬天手指僵的时候更费劲。6mm 棉绳舒服但拍出来确实差口气。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">一</span><span class="name">一只筐</span><span class="time">11-05</span></div>
+            <p>针线筐当前景这个思路好，比堆铁链自然多了。铁链用多了容易变成道具展。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">周</span><span class="name">周末补光</span><span class="time">11-04</span></div>
+            <p>红橙补光板那块，我用的是 1/4 橙加 1/4 红，色温大概 3400K，效果接近。就是板子面积得够大，小了暗部会有硬边。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">半</span><span class="name">半截绳头</span><span class="time">11-03</span></div>
+            <p>第二辑中间那三张确实松，我当时还以为是故意留白，看了拆解才确认是冗余段。删掉反而顺。</p>
+            <span class="ref">《赤绳·英烈谱》第二辑</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">路</span><span class="name">路过看一眼</span><span class="time">11-03</span></div>
+            <p>不太懂绳结，纯粹觉得光线好看。牢房那种半明半暗的感觉挺抓人的。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">小</span><span class="name">小满</span><span class="time">11-02</span></div>
+            <p>虚构声明放首页这个我支持。上次看到一组分辑读到末尾才看到小字，前面一直以为是纪实，感觉被摆了一道。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">铁</span><span class="name">铁窗花</span><span class="time">11-01</span></div>
+            <p>铁窗绣第二组第 7 张，绳路被打散那段，肩上的绳子走向有点乱，不太像挣扎留下的痕迹，更像没绑好。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">慢</span><span class="name">慢门三秒</span><span class="time">10-31</span></div>
+            <p>龟甲缚只留三格半菱形那个处理，第一次看觉得残缺，看久了才明白是把对称感破坏掉。学到了。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">纸</span><span class="name">纸灯罩</span><span class="time">10-30</span></div>
+            <p>建议布光笔记多放点失败样片，成功的那几张反而学不到东西。第 3 组对照里那张过曝的其实最有参考价值。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">夜</span><span class="name">夜班回来</span><span class="time">10-29</span></div>
+            <p>更新节奏挺稳的，周二周五基本都有新东西。就是分辑和单张混在一起，找起来有点费劲。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">阿</span><span class="name">阿戊</span><span class="time">10-28</span></div>
+            <p>暗号那组第 4 张补完整绳结的瞬间，表情和手部动作对得上，这个是真难。多数作品到这一步就只剩摆姿势了。</p>
+            <span class="ref">《暗号 被捕段落》</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">三</span><span class="name">三脚架</span><span class="time">10-27</span></div>
+            <p>低机位逆光拍剪影，门框对齐那段我试过，真的很难。差两厘米轮廓就散了。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">清</span><span class="name">清早六点</span><span class="time">10-25</span></div>
+            <p>题材本身有点重，看多了会累。现在基本只看分辑，单张刷过去。</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="section" id="news">
+        <div class="sec-head">
+          <h2>相关资讯</h2>
+        </div>
+        <div class="info-list">
+          <article class="info-item">
+            <time datetime="2026-11-06">2026-11-06</time>
+            <h3><a href="/#news">「光影塑形」布光教程补充三组同机位对照样片</a></h3>
+            <p>新增样片统一用 50mm 定焦、f/4 光圈拍摄，模特与龟甲缚绳结保持不变，便于逐张比对暗部绳痕的可辨度。</p>
+          </article>
+          <article class="info-item">
+            <time datetime="2026-11-03">2026-11-03</time>
+            <h3><a href="/#news">8mm 黄麻与 6mm 棉绳对照照引发绳材讨论</a></h3>
+            <p>两组照片在同一布光下拍摄，黄麻版本绳痕深度高出约一档，但收口时间多出近一倍，讨论集中在效率与质感的取舍。</p>
+          </article>
+          <article class="info-item">
+            <time datetime="2026-11-01">2026-11-01</time>
+            <h3><a href="/#news">十月专题榜结算，46 组作品入选</a></h3>
+            <p>《赤绳·英烈谱》第二辑以 9.1 分居首，《残局 六联》首次进入前五，评分构成中叙事完整度权重上调至 40%。</p>
+          </article>
+          <article class="info-item">
+            <time datetime="2026-10-29">2026-10-29</time>
+            <h3><a href="/#news">剪影类作品评价分化，争议集中在绳结细节</a></h3>
+            <p>支持方认为轮廓叙事更贴近历史压迫感，反对方指出三张之后信息重复，双方在评论区来回十余条。</p>
+          </article>
+          <article class="info-item">
+            <time datetime="2026-10-26">2026-10-26</time>
+            <h3><a href="/#news">新手路径页调整阅读顺序建议</a></h3>
+            <p>布光笔记从推荐首位移到分辑图集之后，新增“同类作品横向比三组”的对照方法，路径页访问量当日上升 18%。</p>
+          </article>
+          <article class="info-item">
+            <time datetime="2026-10-22">2026-10-22</time>
+            <h3><a href="/#news">第三季度投稿初筛通过 21 组</a></h3>
+            <p>共收到 87 组投稿，未通过的 66 组中，场景叙事不完整占 41 组，绳结状态与情节不符占 17 组。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="recommend">
+        <div class="sec-head">
+          <h2>相关推荐</h2>
+          <span class="lead">按具体条目与处理手法索引</span>
+        </div>
+        <div class="rec-wrap">
+          <a class="rec-tag" href="/#featured">赤绳·英烈谱 第二辑</a>
+          <a class="rec-tag" href="/#featured">半结未收口处理</a>
+          <a class="rec-tag" href="/#featured">菱绳肩背局部</a>
+          <a class="rec-tag" href="/#featured">暖钨丝灯 3200K</a>
+          <a class="rec-tag" href="/#featured">铁窗投影布光</a>
+          <a class="rec-tag" href="/#featured">针线筐前景</a>
+          <a class="rec-tag" href="/#featured">绳尾角度递增</a>
+          <a class="rec-tag" href="/#featured">虚构声明位置</a>
+        </div>
+      </section>
+
+      <!-- 11 榜单与时间线 -->
+      <section class="section" id="bill">
+        <div class="sec-head">
+          <h2>作品榜单与创作时间线</h2>
+          <span class="lead">评分含叙事完整度、绳结处理、布光三项</span>
+        </div>
+        <div class="two-panel">
+          <div class="panel-box">
+            <h3>十月专题榜 · 前六</h3>
+            <div class="bill-row"><span class="no">1</span><span class="nm">赤绳·英烈谱 第二辑<small>15 张 · 叙事完整度 9.4</small></span><span class="sc">9.1</span></div>
+            <div class="bill-row"><span class="no">2</span><span class="nm">铁窗绣 第二组<small>9 张 · 布光 9.0</small></span><span class="sc">8.8</span></div>
+            <div class="bill-row"><span class="no">3</span><span class="nm">暗号 被捕段落<small>8 张 · 绳结处理 8.9</small></span><span class="sc">8.6</span></div>
+            <div class="bill-row"><span class="no">4</span><span class="nm">暖钨丝灯下的绳痕质感<small>教程 · 对照完整度 9.2</small></span><span class="sc">8.5</span></div>
+            <div class="bill-row"><span class="no">5</span><span class="nm">残局 六联<small>6 张 · 道具叙事 8.7</small></span><span class="sc">8.3</span></div>
+            <div class="bill-row"><span class="no">6</span><span class="nm">审判剪影 单幅<small>单幅 · 轮廓处理 8.4</small></span><span class="sc">7.9</span></div>
+          </div>
+          <div class="panel-box">
+            <h3>《赤绳·英烈谱》创作时间线</h3>
+            <ul class="timeline">
+              <li><time datetime="2026-09-12">2026-09-12</time><strong>第一辑定稿</strong>，9 张，龟甲缚只保留三格半菱形。</li>
+              <li><time datetime="2026-10-03">2026-10-03</time><strong>第二辑开拍</strong>，改用 8mm 黄麻绳，收口时间增加近一倍。</li>
+              <li><time datetime="2026-10-18">2026-10-18</time><strong>第二辑补拍第 8—10 张</strong>，后被判定为冗余段。</li>
+              <li><time datetime="2026-10-30">2026-10-30</time><strong>第三辑试光</strong>，低角度反光板替代柔光箱。</li>
+              <li><time datetime="2026-11-08">2026-11-08</time><strong>第三辑上线</strong>，12 张，脸部明暗比例 7:3。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 投稿交流 -->
+      <section class="section" id="submit">
+        <div class="submit-box">
+          <div>
+            <h2>投稿与创作交流</h2>
+            <p>分辑图集、单张作品、布光笔记都可以投。初筛看四项：段落是否有时间推进、绳结状态是否与情节对得上、布光是否让绳痕可辨、虚构声明是否放在首页。第三季度 87 组投稿中通过 21 组。</p>
+          </div>
+          <div class="btns">
+            <a class="primary" href="/#submit">提交作品</a>
+            <a href="/#submit">上传布光笔记</a>
+            <a href="/#comments">参与讨论</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="aside-col" aria-label="辅助栏">
+
+      <div class="aside-card">
+        <h3>本周热榜</h3>
+        <ol class="rank-list">
+          <li><a href="/#featured">赤绳·英烈谱 第三辑</a><span class="hot">9.4k</span></li>
+          <li><a href="/#featured">铁窗绣 第二组</a><span class="hot">8.1k</span></li>
+          <li><a href="/#featured">暗号 被捕段落</a><span class="hot">7.5k</span></li>
+          <li><a href="/#featured">审判剪影 单幅</a><span class="hot">6.7k</span></li>
+          <li><a href="/#featured">残局 六联</a><span class="hot">5.9k</span></li>
+        </ol>
+      </div>
+
+      <div class="aside-card">
+        <h3>更新流</h3>
+        <ul class="update-flow">
+          <li><time datetime="2026-11-08">11-08</time>第三辑 12 张上线</li>
+          <li><time datetime="2026-11-07">11-07</time>布光教程补充对照页</li>
+          <li><time datetime="2026-11-05">11-05</time>铁窗绣 第二组发布</li>
+          <li><time datetime="2026-11-03">11-03</time>绳材对照照更新</li>
+          <li><time datetime="2026-11-01">11-01</time>十月专题榜结算</li>
+          <li><time datetime="2026-10-30">10-30</time>第三辑试光记录</li>
+        </ul>
+      </div>
+
+      <div class="aside-card">
+        <h3>阅读提示</h3>
+        <p style="font-size:12.5px;color:var(--text-2);line-height:1.75;margin:0;">分辑图集按发布顺序读，布光笔记放在成品之后对照。剪影类作品评价分化大，可先翻评论再决定。</p>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-in">
+    <div class="footer-brand">
+      <span class="logo-text">KB绳艺网女烈专区<small>ROPE · FIGURE</small></span>
+      <p>内容覆盖 2026 年 9 月至 11 月的分辑图集、单张作品与布光笔记，条目类型含叙事组图、静物融合、剪影构图与教程对照，分辑按周二、周五节奏更新。</p>
+    </div>
+    <div class="footer-col">
+      <h4>栏目</h4>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#category">分类索引</a>
+      <a href="/#deep">深度解析</a>
+    </div>
+    <div class="footer-col">
+      <h4>参与</h4>
+      <a href="/#comments">读者评论</a>
+      <a href="/#submit">投稿交流</a>
+      <a href="/#bill">作品榜单</a>
+      <a href="/#guide">体验指南</a>
+    </div>
+    <div class="footer-col">
+      <h4>说明</h4>
+      <a href="/#faq">常见问答</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#news">相关资讯</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>KB绳艺网女烈专区 · 示例内容页面，作品名称、评分与日期均为演示数据，人物与情节均为虚构。</span>
+    <span>内容更新至 2026-11-08</span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var drawer = document.getElementById('drawer');
+  var drawerMask = document.getElementById('drawerMask');
+  var drawerClose = document.getElementById('drawerClose');
+  var backTop = document.getElementById('backTop');
+  var layout = document.getElementById('mainLayout');
+  var noResult = document.getElementById('noResult');
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+
+  function openDrawer(){
+    drawer.classList.add('open');
+    menuBtn.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+    drawerClose.focus();
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+    menuBtn.focus();
+  }
+  menuBtn.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  drawerMask.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeDrawer);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && drawer.classList.contains('open')){
+      closeDrawer();
+    }
+  });
+
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.8){
+      backTop.classList.add('show');
+    }else{
+      backTop.classList.remove('show');
+    }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var sections = document.querySelectorAll('main section[id]');
+  var channelLinks = document.querySelectorAll('.channel-col nav a');
+  if('IntersectionObserver' in window && channelLinks.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          channelLinks.forEach(function(link){
+            link.classList.toggle('current', link.getAttribute('href') === '/#' + entry.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    sections.forEach(function(s){ observer.observe(s); });
+  }
+
+  function doSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    var cards = document.querySelectorAll('.content-card');
+    if(!q){
+      cards.forEach(function(c){ c.style.display=''; });
+      noResult.style.display='none';
+      return;
+    }
+    var hit = 0;
+    cards.forEach(function(c){
+      var text = c.textContent.toLowerCase();
+      if(text.indexOf(q) !== -1){
+        c.style.display='';
+        hit++;
+      }else{
+        c.style.display='none';
+      }
+    });
+    noResult.style.display = hit ? 'none' : 'block';
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()){ doSearch(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"KB绳艺网女烈专区",
+  "description":"聚合女性英烈题材绳缚摄影、分辑图集与布光笔记的内容专区。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"女烈题材绳缚和普通人像绳缚，绳结上有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"差异主要在完整度。普通人像绳缚追求绳路完整、结构对称，女烈题材反而常保留半结、断头、未收口的绳尾。《暗号 被捕段落》第 2 张就是典型：绳结只打了一半，用来交代正在被制服这个时间点。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么这类作品大多用粗麻绳，棉绳不行吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"8mm 黄麻绳的纤维毛刺在硬光下会形成细碎高光，质感更强；6mm 棉绳贴身舒适，但逆光时边缘发虚，绳路轮廓容易糊。2026 年 11 月 3 日的社群对照照里，黄麻版本的绳痕深度明显更清楚，代价是收口更难打紧。"}
+    },
+    {
+      "@type":"Question",
+      "name":"龟甲缚在女烈题材里为什么经常只保留肩背部分？",
+      "acceptedAnswer":{"@type":"Answer","text":"完整龟甲缚的菱形网格对称感太强，容易把画面拉向装饰性。只保留肩背局部，菱形被衣服边缘或阴影切断，读起来更像被绑过而不是被绑好。《赤绳·英烈谱》第一辑第 6 张就只留了三格半菱形。"}
+    },
+    {
+      "@type":"Question",
+      "name":"剪影作品看不到绳结细节，还算绳缚摄影吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"算，但评价标准要换。剪影靠轮廓缺口辨认绳路，判断依据从绳结打得准不准变成轮廓是否交代了绳缚关系。《审判剪影 单幅》里胸缚的绳路全靠肩线外凸的那一小段缺口识别。"}
+    },
+    {
+      "@type":"Question",
+      "name":"涉及真实历史人物，作品需要标注虚构声明吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"社群做法不统一，但位置比有无更关键。放在分辑首页的声明，读者进叙事前就知道是虚构；放在末页或图片说明折叠层里，效果接近没有。2026 年 10 月的讨论里，多数意见倾向于首页加一行小字。"}
+    },
+    {
+      "@type":"Question",
+      "name":"暖钨丝灯布光，绳痕总是糊掉怎么办？",
+      "acceptedAnswer":{"@type":"Answer","text":"先收光圈。暖光色温低，纤维毛刺的对比度天然偏弱，光圈收小半档能换回锐度，景深损失对这类构图影响不大。《铁窗绣》第二组就是这么处理的：前景针线筐保持清晰，面部略软。"}
+    }
+  ]
+}
+</script>
+
+</body>
+                </html>
